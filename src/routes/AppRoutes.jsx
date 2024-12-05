@@ -12,6 +12,7 @@ import BindStatus from "@/pages/BindPage";
 import EventPage from "@/pages/EventPage";
 import SendCashbackPage from "@/pages/SendCashbackPage";
 import ReferralCodesPage from "@/pages/ReferralCodesPage";
+import PlatformPage from "@/pages/PlatformPage";
 
 export default function AppRoutes() {
   return (
@@ -79,6 +80,14 @@ function AppLayout() {
             element={
               <ProtectedRoute>
                 <ReferralCodesPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/platforms"
+            element={
+              <ProtectedRoute>
+                <PlatformPage />
               </ProtectedRoute>
             }
           />
