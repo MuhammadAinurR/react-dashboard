@@ -49,6 +49,7 @@ export default function PlatformPage() {
   const [isAddDialogOpen, setIsAddDialogOpen] = useState(false);
   const [platformToEdit, setPlatformToEdit] = useState(null);
   const { toast } = useToast();
+  const [selectedImage, setSelectedImage] = useState(null);
 
   const addForm = useForm({
     resolver: zodResolver(platformFormSchema),
@@ -124,6 +125,10 @@ export default function PlatformPage() {
         discount: parseFloat(data.discount),
         averageRebate: parseFloat(data.averageRebate),
         marketPrice: parseFloat(data.marketPrice),
+        limitPrice: parseFloat(data.limitPrice),
+        url: data.url || "",
+        imageUrl: data.imageUrl || "",
+        titleImageUrl: data.titleImageUrl || "",
       };
 
       await fetch(`/platforms/${platformToEdit.id}`, {
@@ -386,6 +391,7 @@ export default function PlatformPage() {
             <Table>
               <TableHeader>
                 <TableRow className="bg-muted/50">
+                  <TableHead className="font-semibold">Image</TableHead>
                   <TableHead className="font-semibold">Name</TableHead>
                   <TableHead className="font-semibold">Label</TableHead>
                   <TableHead className="font-semibold">Cashback (%)</TableHead>
@@ -405,6 +411,38 @@ export default function PlatformPage() {
                 ) : (
                   platforms.map((platform) => (
                     <TableRow key={platform.id} className="hover:bg-muted/50">
+                      <TableCell>
+                        {platform.imageUrl ? (
+                          <>
+                            <div
+                              className="relative w-16 h-12 rounded-lg overflow-hidden cursor-pointer"
+                              onClick={() => setSelectedImage(platform.imageUrl)}
+                            >
+                              <img
+                                src={platform.imageUrl}
+                                alt={platform.name}
+                                className="object-cover w-full h-full hover:scale-110 transition-transform duration-200"
+                              />
+                            </div>
+                            <Dialog
+                              open={selectedImage === platform.imageUrl}
+                              onOpenChange={() => setSelectedImage(null)}
+                            >
+                              <DialogContent className="max-w-3xl">
+                                <img
+                                  src={platform.imageUrl}
+                                  alt={platform.name}
+                                  className="w-full h-auto object-contain"
+                                />
+                              </DialogContent>
+                            </Dialog>
+                          </>
+                        ) : (
+                          <div className="w-16 h-12 bg-muted rounded-lg flex items-center justify-center">
+                            <span className="text-xs text-muted-foreground">No image</span>
+                          </div>
+                        )}
+                      </TableCell>
                       <TableCell className="font-medium">{platform.name}</TableCell>
                       <TableCell>{platform.label}</TableCell>
                       <TableCell>{platform.cashback}</TableCell>
@@ -498,6 +536,58 @@ export default function PlatformPage() {
                                         <FormLabel>Market Price</FormLabel>
                                         <FormControl>
                                           <Input type="number" {...field} />
+                                        </FormControl>
+                                        <FormMessage />
+                                      </FormItem>
+                                    )}
+                                  />
+                                  <FormField
+                                    control={editForm.control}
+                                    name="limitPrice"
+                                    render={({ field }) => (
+                                      <FormItem>
+                                        <FormLabel>Limit Price</FormLabel>
+                                        <FormControl>
+                                          <Input type="number" {...field} />
+                                        </FormControl>
+                                        <FormMessage />
+                                      </FormItem>
+                                    )}
+                                  />
+                                  <FormField
+                                    control={editForm.control}
+                                    name="url"
+                                    render={({ field }) => (
+                                      <FormItem>
+                                        <FormLabel>URL</FormLabel>
+                                        <FormControl>
+                                          <Input {...field} />
+                                        </FormControl>
+                                        <FormMessage />
+                                      </FormItem>
+                                    )}
+                                  />
+                                  <FormField
+                                    control={editForm.control}
+                                    name="imageUrl"
+                                    render={({ field }) => (
+                                      <FormItem>
+                                        <FormLabel>Image URL</FormLabel>
+                                        <FormControl>
+                                          <Input {...field} />
+                                        </FormControl>
+                                        <FormMessage />
+                                      </FormItem>
+                                    )}
+                                  />
+                                  <FormField
+                                    control={editForm.control}
+                                    name="titleImageUrl"
+                                    render={({ field }) => (
+                                      <FormItem>
+                                        <FormLabel>Title Image URL</FormLabel>
+                                        <FormControl>
+                                          <Input {...field} />
                                         </FormControl>
                                         <FormMessage />
                                       </FormItem>
