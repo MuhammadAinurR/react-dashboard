@@ -101,7 +101,7 @@ export function AppSidebar() {
                   <span>Account</span>
                 </DropdownMenuItem>
                 <DropdownMenuItem>
-                  <span>Billing</span>
+                  <span>Settings</span>
                 </DropdownMenuItem>
                 <DropdownMenuItem onClick={handleLogout}>
                   <span>Sign out</span>
