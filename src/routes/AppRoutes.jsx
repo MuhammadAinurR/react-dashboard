@@ -6,15 +6,14 @@ import { AuthProvider } from "../context/AuthContext";
 import { ProtectedRoute } from "../components/ProtectedRoute";
 import Login from "../pages/Login";
 import Dashboard from "../pages/Dashboard";
-import Navbar from "../components/Navbar";
-import { SidebarProvider } from "@/components/ui/sidebar";
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/AppSidebar";
 import BindStatus from "@/pages/BindStatus";
 
 export default function AppRoutes() {
   return (
-    <AuthProvider>
-      <BrowserRouter>
+    <BrowserRouter>
+      <AuthProvider>
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route
@@ -26,8 +25,8 @@ export default function AppRoutes() {
             }
           />
         </Routes>
-      </BrowserRouter>
-    </AuthProvider>
+      </AuthProvider>
+    </BrowserRouter>
   );
 }
 
@@ -36,7 +35,9 @@ function AppLayout() {
     <>
       <AppSidebar />
       <main className="w-full bg-gray-200">
-        <Navbar />
+        <div className="md:hidden fixed p-2 bottom-3 left-3 bg-gray-700 hover:bg-white rounded-full">
+          <SidebarTrigger />
+        </div>
         <Routes>
           <Route
             path="/dashboard"

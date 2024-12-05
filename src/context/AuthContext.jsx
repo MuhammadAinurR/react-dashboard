@@ -1,9 +1,10 @@
 import { createContext, useContext, useState } from "react";
 import { jwtDecode } from "jwt-decode";
-
+import { useNavigate } from "react-router-dom";
 const AuthContext = createContext(null);
 
 export function AuthProvider({ children }) {
+  const navigate = useNavigate();
   const [isAuthenticated, setIsAuthenticated] = useState(() => {
     return localStorage.getItem("token") !== null;
   });
@@ -28,6 +29,7 @@ export function AuthProvider({ children }) {
     localStorage.removeItem("token");
     setUser(null);
     setIsAuthenticated(false);
+    navigate("/login");
   };
 
   return (
