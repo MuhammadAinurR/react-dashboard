@@ -8,7 +8,8 @@ import Login from "../pages/Login";
 import Dashboard from "../pages/Dashboard";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/AppSidebar";
-import BindStatus from "@/pages/BindStatus";
+import BindStatus from "@/pages/BindPage";
+import EventPage from "@/pages/EventPage";
 
 export default function AppRoutes() {
   return (
@@ -56,9 +57,14 @@ function AppLayout() {
             }
           />
           <Route
-            path="/profile"
-            element={<ProtectedRoute>{/* <Profile /> */}</ProtectedRoute>}
+            path="/events"
+            element={
+              <ProtectedRoute>
+                <EventPage />
+              </ProtectedRoute>
+            }
           />
+          <Route path="/profile" element={<ProtectedRoute>{/* <Profile /> */}</ProtectedRoute>} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
