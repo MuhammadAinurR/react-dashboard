@@ -34,8 +34,6 @@ export default function BindStatus() {
 
   useEffect(() => {
     fetchBindStatus(filterStatus, currentPage);
-    console.log("Current Page:", currentPage);
-    console.log("Total Pages:", totalPages);
   }, [filterStatus, currentPage]);
 
   const updateBindStatus = async (bindingId, newStatus) => {

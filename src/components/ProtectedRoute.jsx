@@ -5,9 +5,8 @@ import { useAuth } from "../context/AuthContext";
 export const ProtectedRoute = ({ children }) => {
   const { isAuthenticated, isLoading } = useAuth();
   const location = useLocation();
-  console.log("isAuthenticated", isAuthenticated);
   if (isLoading) {
-    return <div>Loading...</div>; // Or your loading component
+    return <div>Loading...</div>;
   }
 
   if (!isAuthenticated) {

@@ -10,7 +10,6 @@ const privateFetch = () => {
   const navigate = useNavigate();
 
   const authFetch = async (url, options = {}) => {
-    console.log("token", token);
     try {
       const response = await publicFetch(`${url}`, {
         ...options,

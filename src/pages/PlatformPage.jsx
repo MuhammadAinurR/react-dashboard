@@ -171,8 +171,6 @@ export default function PlatformPage() {
         titleImageUrl: data.titleImageUrl || "",
       };
 
-      console.log("Sending data:", formattedData);
-
       const response = await fetch("/platforms", {
         method: "POST",
         headers: {
