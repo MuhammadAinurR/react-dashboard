@@ -1,4 +1,4 @@
-import { Calendar, ChevronUp, Home, Inbox, Search, Settings, Send } from "lucide-react";
+import { Calendar, ChevronUp, Home, Inbox, Search, Settings, Send, Code, History, Wallet, Server } from "lucide-react";
 
 import {
   Sidebar,
@@ -33,19 +33,29 @@ const items = [
     icon: Calendar,
   },
   {
+    title: "Platforms",
+    url: "/platforms",
+    icon: Server,
+  },
+  {
     title: "Send Cashback",
     url: "/send-cashback",
     icon: Send,
   },
   {
-    title: "Search",
-    url: "#",
-    icon: Search,
+    title: "Referral Codes",
+    url: "/referral-codes",
+    icon: Code,
   },
   {
-    title: "Settings",
-    url: "#",
-    icon: Settings,
+    title: "Withdraw History",
+    url: "/withdraw-history",
+    icon: History,
+  },
+  {
+    title: "User Platform Wallet",
+    url: "/user-platform-wallet",
+    icon: Wallet,
   },
 ];
 

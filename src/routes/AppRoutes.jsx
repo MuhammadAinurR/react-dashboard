@@ -11,6 +11,7 @@ import { AppSidebar } from "@/components/AppSidebar";
 import BindStatus from "@/pages/BindPage";
 import EventPage from "@/pages/EventPage";
 import SendCashbackPage from "@/pages/SendCashbackPage";
+import ReferralCodesPage from "@/pages/ReferralCodesPage";
 
 export default function AppRoutes() {
   return (
@@ -73,7 +74,14 @@ function AppLayout() {
               </ProtectedRoute>
             }
           />
-          <Route path="/profile" element={<ProtectedRoute>{/* <Profile /> */}</ProtectedRoute>} />
+          <Route
+            path="/referral-codes"
+            element={
+              <ProtectedRoute>
+                <ReferralCodesPage />
+              </ProtectedRoute>
+            }
+          />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
