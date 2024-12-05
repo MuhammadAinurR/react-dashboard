@@ -10,6 +10,7 @@ import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/AppSidebar";
 import BindStatus from "@/pages/BindPage";
 import EventPage from "@/pages/EventPage";
+import SendCashbackPage from "@/pages/SendCashbackPage";
 
 export default function AppRoutes() {
   return (
@@ -61,6 +62,14 @@ function AppLayout() {
             element={
               <ProtectedRoute>
                 <EventPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/send-cashback"
+            element={
+              <ProtectedRoute>
+                <SendCashbackPage />
               </ProtectedRoute>
             }
           />

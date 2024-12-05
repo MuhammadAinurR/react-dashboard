@@ -1,4 +1,4 @@
-import { Calendar, ChevronUp, Home, Inbox, Search, Settings } from "lucide-react";
+import { Calendar, ChevronUp, Home, Inbox, Search, Settings, Send } from "lucide-react";
 
 import {
   Sidebar,
@@ -31,6 +31,11 @@ const items = [
     title: "Events",
     url: "/events",
     icon: Calendar,
+  },
+  {
+    title: "Send Cashback",
+    url: "/send-cashback",
+    icon: Send,
   },
   {
     title: "Search",
