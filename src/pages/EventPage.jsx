@@ -48,6 +48,7 @@ export default function EventPage() {
   const [eventToEdit, setEventToEdit] = useState(null);
   const { toast } = useToast();
   const [isAddDialogOpen, setIsAddDialogOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
 
   const form = useForm({
     resolver: zodResolver(eventFormSchema),
@@ -351,6 +352,7 @@ export default function EventPage() {
             <Table>
               <TableHeader>
                 <TableRow className="bg-muted/50">
+                  <TableHead className="font-semibold">Image</TableHead>
                   <TableHead className="font-semibold">Title</TableHead>
                   <TableHead className="font-semibold">Language</TableHead>
                   <TableHead className="font-semibold">Start Date</TableHead>
@@ -362,13 +364,38 @@ export default function EventPage() {
               <TableBody>
                 {events.length === 0 ? (
                   <TableRow>
-                    <TableCell colSpan={6} className="text-center h-24">
+                    <TableCell colSpan={7} className="text-center h-24">
                       No events found
                     </TableCell>
                   </TableRow>
                 ) : (
                   events.map((event) => (
                     <TableRow key={event.id} className="hover:bg-muted/50">
+                      <TableCell>
+                        {event.imageUrl ? (
+                          <>
+                            <div
+                              className="relative w-16 h-12 rounded-lg overflow-hidden cursor-pointer"
+                              onClick={() => setSelectedImage(event.imageUrl)}
+                            >
+                              <img
+                                src={event.imageUrl}
+                                alt={event.title}
+                                className="object-cover w-full h-full hover:scale-110 transition-transform duration-200"
+                              />
+                            </div>
+                            <Dialog open={selectedImage === event.imageUrl} onOpenChange={() => setSelectedImage(null)}>
+                              <DialogContent className="max-w-3xl">
+                                <img src={event.imageUrl} alt={event.title} className="w-full h-auto object-contain" />
+                              </DialogContent>
+                            </Dialog>
+                          </>
+                        ) : (
+                          <div className="w-16 h-12 bg-muted rounded-lg flex items-center justify-center">
+                            <span className="text-xs text-muted-foreground">No image</span>
+                          </div>
+                        )}
+                      </TableCell>
                       <TableCell className="font-medium">{event.title}</TableCell>
                       <TableCell>{event.language}</TableCell>
                       <TableCell>{new Date(event.startDate).toLocaleDateString()}</TableCell>
