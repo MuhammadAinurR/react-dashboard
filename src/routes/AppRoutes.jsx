@@ -44,6 +44,14 @@ function AppLayout() {
         </div>
         <Routes>
           <Route
+            path="/"
+            element={
+              <ProtectedRoute>
+                <Dashboard />
+              </ProtectedRoute>
+            }
+          />
+          <Route
             path="/dashboard"
             element={
               <ProtectedRoute>
