@@ -76,11 +76,21 @@ jobs:
                 listen 80;
                 server_name dashboard-staging.degenmax.ainurrofiq.site;
 
+                # Explicitly set root directory
                 root /var/www/dashboard-staging-degenmax;
                 index index.html;
 
+                # More specific location block for the dashboard
                 location / {
                     try_files $uri $uri/ /index.html;
+                    # Prevent proxy_pass to API
+                    proxy_pass_request_headers off;
+                    proxy_pass_request_body off;
+                }
+
+                # Deny access to any potential API paths to prevent confusion
+                location /api {
+                    return 404;
                 }
             }
             EOF
