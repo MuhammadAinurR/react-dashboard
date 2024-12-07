@@ -13,7 +13,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: "18"
+          node-version: "22.4.0"
 
       - name: Install dependencies
         run: npm install
@@ -51,7 +51,7 @@ jobs:
           host: ${{ env.HOST }}
           username: ${{ env.USERNAME }}
           key: ${{ env.KEY }}
-          source: "build/*" # Copy only the build folder
+          source: "dist/*" # Copy only the build folder
           target: "/var/www/dashboard-staging-degenmax"
           strip_components: 1 # This removes the 'build' directory name
 
