@@ -72,26 +72,44 @@ jobs:
           script: |
             # Create Nginx configuration
             sudo tee /etc/nginx/sites-available/dashboard-staging.degenmax.ainurrofiq.site << 'EOF'
+            # Main server block for HTTPS
             server {
-                listen 80;
+                listen 443 ssl;
                 server_name dashboard-staging.degenmax.ainurrofiq.site;
+
+                # SSL configuration
+                ssl_certificate /etc/letsencrypt/live/dashboard-staging.degenmax.ainurrofiq.site/fullchain.pem;
+                ssl_certificate_key /etc/letsencrypt/live/dashboard-staging.degenmax.ainurrofiq.site/privkey.pem;
+                include /etc/letsencrypt/options-ssl-nginx.conf;
+                ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
 
                 # Explicitly set root directory
                 root /var/www/dashboard-staging-degenmax;
                 index index.html;
 
-                # More specific location block for the dashboard
+                # Handle all routes for React Router
                 location / {
                     try_files $uri $uri/ /index.html;
-                    # Prevent proxy_pass to API
-                    proxy_pass_request_headers off;
-                    proxy_pass_request_body off;
+                    add_header Cache-Control "no-cache";
                 }
 
-                # Deny access to any potential API paths to prevent confusion
+                # Handle static files
+                location /assets {
+                    expires 1y;
+                    add_header Cache-Control "public, no-transform";
+                }
+
+                # Deny access to any potential API paths
                 location /api {
                     return 404;
                 }
+            }
+
+            # Redirect HTTP to HTTPS
+            server {
+                listen 80;
+                server_name dashboard-staging.degenmax.ainurrofiq.site;
+                return 301 https://$server_name$request_uri;
             }
             EOF
 
