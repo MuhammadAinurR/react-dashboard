@@ -3,6 +3,8 @@ import { privateFetch } from "@/hooks/useFetch";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Pagination } from "@/components/ui/pagination";
+import { Button } from "@/components/ui/button";
+import { ReferralTree } from "@/components/ReferralTree";
 
 export default function ReferralCodesPage() {
   const fetch = privateFetch();
@@ -11,6 +13,9 @@ export default function ReferralCodesPage() {
   const [isLoading, setIsLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
+  const [selectedTree, setSelectedTree] = useState(null);
+  const [treeModalOpen, setTreeModalOpen] = useState(false);
+  const [requestedUserId, setRequestedUserId] = useState(null);
 
   const fetchReferralCodes = async (page = 1) => {
     try {
@@ -24,6 +29,18 @@ export default function ReferralCodesPage() {
       setError(err);
     } finally {
       setIsLoading(false);
+    }
+  };
+
+  const fetchReferralTree = async (userId) => {
+    try {
+      setRequestedUserId(userId);
+      const res = await fetch(`/referral-codes/tree/${userId}`);
+      const data = await res.json();
+      setSelectedTree(data);
+      setTreeModalOpen(true);
+    } catch (err) {
+      console.error(err);
     }
   };
 
@@ -60,6 +77,7 @@ export default function ReferralCodesPage() {
                   <TableHead className="font-semibold">User ID</TableHead>
                   <TableHead className="font-semibold">Referral Code</TableHead>
                   <TableHead className="font-semibold">Referred By</TableHead>
+                  <TableHead className="font-semibold">Actions</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -75,6 +93,11 @@ export default function ReferralCodesPage() {
                       <TableCell className="font-mono text-sm">{referral.userId}</TableCell>
                       <TableCell className="font-mono text-sm">{referral.referralCode}</TableCell>
                       <TableCell className="font-mono text-sm">{referral.referredBy}</TableCell>
+                      <TableCell>
+                        <Button variant="outline" size="sm" onClick={() => fetchReferralTree(referral.userId)}>
+                          View Tree
+                        </Button>
+                      </TableCell>
                     </TableRow>
                   ))
                 )}
@@ -92,6 +115,12 @@ export default function ReferralCodesPage() {
           </>
         )}
       </CardContent>
+      <ReferralTree
+        isOpen={treeModalOpen}
+        onClose={() => setTreeModalOpen(false)}
+        treeData={selectedTree}
+        requestedUserId={requestedUserId}
+      />
     </Card>
   );
 }
