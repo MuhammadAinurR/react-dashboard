@@ -22,7 +22,73 @@ import { useForm } from "react-hook-form";
 import * as z from "zod";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/hooks/use-toast";
+import { toast, useToast } from "@/hooks/use-toast";
+import { eventsApi } from "@/services/api/events";
+
+const ITEMS_PER_PAGE = 10;
+
+const useEventOperations = (fetch) => {
+  const api = eventsApi(fetch);
+  const { toast } = useToast();
+
+  const handleApiError = (error, customMessage) => {
+    toast({
+      title: "Error",
+      description: error.message || customMessage,
+      variant: "destructive",
+    });
+    return error;
+  };
+
+  const handleSuccess = (message) => {
+    toast({
+      title: "Success",
+      description: message,
+      variant: "success",
+    });
+  };
+
+  return {
+    fetchEvents: async (page, search) => {
+      try {
+        const data = await api.getEvents(page, search);
+        return {
+          events: data.rows,
+          totalPages: Math.ceil(data.count / ITEMS_PER_PAGE),
+        };
+      } catch (error) {
+        throw handleApiError(error, "Failed to fetch events");
+      }
+    },
+
+    deleteEvent: async (eventId) => {
+      try {
+        await api.deleteEvent(eventId);
+        handleSuccess("Event deleted successfully");
+      } catch (error) {
+        throw handleApiError(error, "Failed to delete event");
+      }
+    },
+
+    updateEvent: async (eventId, data) => {
+      try {
+        await api.updateEvent(eventId, data);
+        handleSuccess("Event updated successfully");
+      } catch (error) {
+        throw handleApiError(error, "Failed to update event");
+      }
+    },
+
+    createEvent: async (data) => {
+      try {
+        await api.createEvent(data);
+        handleSuccess("Event created successfully");
+      } catch (error) {
+        throw handleApiError(error, "Failed to create event");
+      }
+    },
+  };
+};
 
 const eventFormSchema = z.object({
   title: z.string().min(1, "Title is required"),
@@ -37,6 +103,7 @@ const eventFormSchema = z.object({
 
 export default function EventPage() {
   const fetch = privateFetch();
+  const eventOperations = useEventOperations(fetch);
   const [events, setEvents] = useState([]);
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -46,7 +113,6 @@ export default function EventPage() {
   const [eventToDelete, setEventToDelete] = useState(null);
   const [isEditDialogOpen, setIsEditDialogOpen] = useState(false);
   const [eventToEdit, setEventToEdit] = useState(null);
-  const { toast } = useToast();
   const [isAddDialogOpen, setIsAddDialogOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
 
@@ -80,14 +146,17 @@ export default function EventPage() {
 
   const fetchEvents = async (page = 1, search = "") => {
     try {
-      const query = `?page=${page}&limit=10${search ? `&search=${search}` : ""}`;
-      const res = await fetch(`/events${query}`);
-      const data = await res.json();
-      setEvents(data.rows);
-      setTotalPages(Math.ceil(data.count / 10));
+      const data = await eventOperations.fetchEvents(page, search);
+      setEvents(data.events);
+      setTotalPages(data.totalPages);
       setError(null);
     } catch (err) {
       setError(err);
+      toast({
+        title: "Error",
+        description: err.message || "Failed to fetch events",
+        variant: "destructive",
+      });
     } finally {
       setIsLoading(false);
     }
@@ -101,10 +170,8 @@ export default function EventPage() {
     if (!eventToDelete) return;
 
     try {
-      await fetch(`/events/${eventToDelete}`, {
-        method: "DELETE",
-      });
-      fetchEvents(currentPage, searchQuery);
+      await eventOperations.deleteEvent(eventToDelete);
+      await fetchEvents(currentPage, searchQuery);
     } catch (err) {
       setError(err);
     } finally {
@@ -114,32 +181,10 @@ export default function EventPage() {
 
   const handleEdit = async (data) => {
     try {
-      const formattedData = {
-        ...data,
-        tags: data.tags ? data.tags.split(",").map((tag) => tag.trim()) : [],
-      };
-
-      await fetch(`/events/${eventToEdit.id}`, {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formattedData),
-      });
-
+      await eventOperations.updateEvent(eventToEdit.id, data);
       await fetchEvents(currentPage, searchQuery);
       setIsEditDialogOpen(false);
-      toast({
-        title: "Success",
-        description: "Event updated successfully",
-        variant: "success",
-      });
     } catch (err) {
-      toast({
-        title: "Error",
-        description: "Failed to update event",
-        variant: "destructive",
-      });
       setError(err);
     }
   };
@@ -161,33 +206,11 @@ export default function EventPage() {
 
   const handleAdd = async (data) => {
     try {
-      const formattedData = {
-        ...data,
-        tags: data.tags ? data.tags.split(",").map((tag) => tag.trim()) : [],
-      };
-
-      await fetch("/events", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formattedData),
-      });
-
+      await eventOperations.createEvent(data);
       await fetchEvents(currentPage, searchQuery);
       setIsAddDialogOpen(false);
       addEventForm.reset();
-      toast({
-        title: "Success",
-        description: "Event created successfully",
-        variant: "success",
-      });
     } catch (err) {
-      toast({
-        title: "Error",
-        description: "Failed to create event",
-        variant: "destructive",
-      });
       setError(err);
     }
   };
