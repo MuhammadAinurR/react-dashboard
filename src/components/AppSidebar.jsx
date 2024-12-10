@@ -1,4 +1,5 @@
 import { Calendar, ChevronUp, Home, Inbox, Search, Settings, Send, Code, History, Wallet, Server } from "lucide-react";
+import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 
 import {
   Sidebar,
@@ -92,6 +93,10 @@ export function AppSidebar() {
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <SidebarMenuButton>
+                  <Avatar className="h-6 w-6 mr-2">
+                    <AvatarImage src="https://github.com/shadcn.png" alt="Profile" />
+                    <AvatarFallback>{user?.username?.charAt(0)?.toUpperCase() || "U"}</AvatarFallback>
+                  </Avatar>
                   {user?.username}
                   <ChevronUp className="ml-auto" />
                 </SidebarMenuButton>
