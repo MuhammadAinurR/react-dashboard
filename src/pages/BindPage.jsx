@@ -149,7 +149,13 @@ export default function BindStatus() {
                                 </SelectTrigger>
                                 <SelectContent>
                                   <SelectItem value="approved">Approved</SelectItem>
-                                  <SelectItem value="pending">Pending</SelectItem>
+                                  <SelectItem
+                                    value="pending"
+                                    disabled={binding.isBind === "pending"}
+                                    className="hidden"
+                                  >
+                                    Pending
+                                  </SelectItem>
                                   <SelectItem value="reject">Rejected</SelectItem>
                                 </SelectContent>
                               </Select>

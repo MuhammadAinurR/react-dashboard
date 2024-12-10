@@ -240,10 +240,10 @@ export default function PlatformPage() {
             <DialogTrigger asChild>
               <Button>Add Platform</Button>
             </DialogTrigger>
-            <DialogContent className="max-w-[800px]">
-              <DialogHeader>
+            <DialogContent className="max-w-[800px] max-h-[90vh] overflow-y-auto">
+              <DialogHeader className="sticky top-0 bg-background z-10 pb-4 border-b">
                 <DialogTitle>Add New Platform</DialogTitle>
-                <div className="flex items-center justify-center space-x-4 mt-4">
+                <div className="flex flex-wrap items-center justify-center gap-4 mt-4">
                   <div className={`flex items-center ${formStep === 1 ? "text-primary" : "text-muted-foreground"}`}>
                     <div
                       className={`w-8 h-8 rounded-full border-2 flex items-center justify-center mr-2
@@ -253,7 +253,7 @@ export default function PlatformPage() {
                     </div>
                     <span className="text-sm">Basic Info</span>
                   </div>
-                  <div className="h-[2px] w-12 bg-muted" />
+                  <div className="hidden sm:block h-[2px] w-12 bg-muted" />
                   <div className={`flex items-center ${formStep === 2 ? "text-primary" : "text-muted-foreground"}`}>
                     <div
                       className={`w-8 h-8 rounded-full border-2 flex items-center justify-center mr-2
@@ -263,7 +263,7 @@ export default function PlatformPage() {
                     </div>
                     <span className="text-sm">Pricing</span>
                   </div>
-                  <div className="h-[2px] w-12 bg-muted" />
+                  <div className="hidden sm:block h-[2px] w-12 bg-muted" />
                   <div className={`flex items-center ${formStep === 3 ? "text-primary" : "text-muted-foreground"}`}>
                     <div
                       className={`w-8 h-8 rounded-full border-2 flex items-center justify-center mr-2
@@ -279,7 +279,7 @@ export default function PlatformPage() {
                 <form onSubmit={addForm.handleSubmit(handleAdd)} className="space-y-6 mt-4">
                   {formStep === 1 && (
                     <div className="space-y-4">
-                      <div className="grid grid-cols-2 gap-4">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <FormField
                           control={addForm.control}
                           name="name"
@@ -325,7 +325,7 @@ export default function PlatformPage() {
 
                   {formStep === 2 && (
                     <div className="space-y-6">
-                      <div className="grid grid-cols-2 gap-6">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <div className="space-y-4">
                           <h3 className="text-sm font-medium">Rewards</h3>
                           <FormField
@@ -562,143 +562,202 @@ export default function PlatformPage() {
                                 Edit
                               </Button>
                             </DialogTrigger>
-                            <DialogContent className="max-w-[500px]">
-                              <DialogHeader>
-                                <DialogTitle>Edit Platform</DialogTitle>
+                            <DialogContent className="max-w-[800px] max-h-[90vh] overflow-y-auto">
+                              <DialogHeader className="sticky top-0 bg-background z-10 pb-4 border-b">
+                                <DialogTitle>Edit Platform: {platformToEdit?.name}</DialogTitle>
                               </DialogHeader>
                               <Form {...editForm}>
-                                <form onSubmit={editForm.handleSubmit(handleEdit)} className="space-y-4">
-                                  <FormField
-                                    control={editForm.control}
-                                    name="name"
-                                    render={({ field }) => (
-                                      <FormItem>
-                                        <FormLabel>Name</FormLabel>
-                                        <FormControl>
-                                          <Input {...field} />
-                                        </FormControl>
-                                        <FormMessage />
-                                      </FormItem>
-                                    )}
-                                  />
-                                  <FormField
-                                    control={editForm.control}
-                                    name="label"
-                                    render={({ field }) => (
-                                      <FormItem>
-                                        <FormLabel>Label</FormLabel>
-                                        <FormControl>
-                                          <Input {...field} />
-                                        </FormControl>
-                                        <FormMessage />
-                                      </FormItem>
-                                    )}
-                                  />
-                                  <FormField
-                                    control={editForm.control}
-                                    name="cashback"
-                                    render={({ field }) => (
-                                      <FormItem>
-                                        <FormLabel>Cashback (%)</FormLabel>
-                                        <FormControl>
-                                          <Input type="number" {...field} />
-                                        </FormControl>
-                                        <FormMessage />
-                                      </FormItem>
-                                    )}
-                                  />
-                                  <FormField
-                                    control={editForm.control}
-                                    name="discount"
-                                    render={({ field }) => (
-                                      <FormItem>
-                                        <FormLabel>Discount (%)</FormLabel>
-                                        <FormControl>
-                                          <Input type="number" {...field} />
-                                        </FormControl>
-                                        <FormMessage />
-                                      </FormItem>
-                                    )}
-                                  />
-                                  <FormField
-                                    control={editForm.control}
-                                    name="averageRebate"
-                                    render={({ field }) => (
-                                      <FormItem>
-                                        <FormLabel>Avg. Rebate</FormLabel>
-                                        <FormControl>
-                                          <Input type="number" {...field} />
-                                        </FormControl>
-                                        <FormMessage />
-                                      </FormItem>
-                                    )}
-                                  />
-                                  <FormField
-                                    control={editForm.control}
-                                    name="marketPrice"
-                                    render={({ field }) => (
-                                      <FormItem>
-                                        <FormLabel>Market Price</FormLabel>
-                                        <FormControl>
-                                          <Input type="number" {...field} />
-                                        </FormControl>
-                                        <FormMessage />
-                                      </FormItem>
-                                    )}
-                                  />
-                                  <FormField
-                                    control={editForm.control}
-                                    name="limitPrice"
-                                    render={({ field }) => (
-                                      <FormItem>
-                                        <FormLabel>Limit Price</FormLabel>
-                                        <FormControl>
-                                          <Input type="number" {...field} />
-                                        </FormControl>
-                                        <FormMessage />
-                                      </FormItem>
-                                    )}
-                                  />
-                                  <FormField
-                                    control={editForm.control}
-                                    name="url"
-                                    render={({ field }) => (
-                                      <FormItem>
-                                        <FormLabel>URL</FormLabel>
-                                        <FormControl>
-                                          <Input {...field} />
-                                        </FormControl>
-                                        <FormMessage />
-                                      </FormItem>
-                                    )}
-                                  />
-                                  <FormField
-                                    control={editForm.control}
-                                    name="imageUrl"
-                                    render={({ field }) => (
-                                      <FormItem>
-                                        <FormLabel>Image URL</FormLabel>
-                                        <FormControl>
-                                          <Input {...field} />
-                                        </FormControl>
-                                        <FormMessage />
-                                      </FormItem>
-                                    )}
-                                  />
-                                  <FormField
-                                    control={editForm.control}
-                                    name="titleImageUrl"
-                                    render={({ field }) => (
-                                      <FormItem>
-                                        <FormLabel>Title Image URL</FormLabel>
-                                        <FormControl>
-                                          <Input {...field} />
-                                        </FormControl>
-                                        <FormMessage />
-                                      </FormItem>
-                                    )}
-                                  />
-                                  <div className="flex justify-end gap-2">
+                                <form onSubmit={editForm.handleSubmit(handleEdit)} className="space-y-6">
+                                  <div className="space-y-6">
+                                    {/* Basic Information */}
+                                    <div className="space-y-4">
+                                      <h3 className="text-sm font-medium border-b pb-2 sticky top-0 bg-background">
+                                        Basic Information
+                                      </h3>
+                                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                        <FormField
+                                          control={editForm.control}
+                                          name="name"
+                                          render={({ field }) => (
+                                            <FormItem>
+                                              <FormLabel>Platform Name*</FormLabel>
+                                              <FormControl>
+                                                <Input placeholder="Enter platform name" {...field} />
+                                              </FormControl>
+                                              <FormMessage />
+                                            </FormItem>
+                                          )}
+                                        />
+                                        <FormField
+                                          control={editForm.control}
+                                          name="label"
+                                          render={({ field }) => (
+                                            <FormItem>
+                                              <FormLabel>Display Label*</FormLabel>
+                                              <FormControl>
+                                                <Input placeholder="Enter display label" {...field} />
+                                              </FormControl>
+                                              <FormMessage />
+                                            </FormItem>
+                                          )}
+                                        />
+                                      </div>
+                                      <FormField
+                                        control={editForm.control}
+                                        name="url"
+                                        render={({ field }) => (
+                                          <FormItem>
+                                            <FormLabel>Platform URL</FormLabel>
+                                            <FormControl>
+                                              <Input placeholder="https://example.com" {...field} />
+                                            </FormControl>
+                                            <FormMessage />
+                                          </FormItem>
+                                        )}
+                                      />
+                                    </div>
+
+                                    {/* Rewards and Pricing */}
+                                    <div className="space-y-4">
+                                      <h3 className="text-sm font-medium border-b pb-2 sticky top-0 bg-background">
+                                        Rewards & Pricing
+                                      </h3>
+                                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                        <div className="space-y-4">
+                                          <h4 className="text-sm font-medium text-muted-foreground">Rewards</h4>
+                                          <FormField
+                                            control={editForm.control}
+                                            name="cashback"
+                                            render={({ field }) => (
+                                              <FormItem>
+                                                <FormLabel>Cashback (%)</FormLabel>
+                                                <FormControl>
+                                                  <Input type="number" step="0.01" {...field} />
+                                                </FormControl>
+                                                <FormMessage />
+                                              </FormItem>
+                                            )}
+                                          />
+                                          <FormField
+                                            control={editForm.control}
+                                            name="discount"
+                                            render={({ field }) => (
+                                              <FormItem>
+                                                <FormLabel>Discount (%)</FormLabel>
+                                                <FormControl>
+                                                  <Input type="number" step="0.01" {...field} />
+                                                </FormControl>
+                                                <FormMessage />
+                                              </FormItem>
+                                            )}
+                                          />
+                                          <FormField
+                                            control={editForm.control}
+                                            name="averageRebate"
+                                            render={({ field }) => (
+                                              <FormItem>
+                                                <FormLabel>Average Rebate</FormLabel>
+                                                <FormControl>
+                                                  <Input type="number" step="0.01" {...field} />
+                                                </FormControl>
+                                                <FormMessage />
+                                              </FormItem>
+                                            )}
+                                          />
+                                        </div>
+                                        <div className="space-y-4">
+                                          <h4 className="text-sm font-medium text-muted-foreground">Pricing</h4>
+                                          <FormField
+                                            control={editForm.control}
+                                            name="marketPrice"
+                                            render={({ field }) => (
+                                              <FormItem>
+                                                <FormLabel>Market Price</FormLabel>
+                                                <FormControl>
+                                                  <Input type="number" step="0.01" {...field} />
+                                                </FormControl>
+                                                <FormMessage />
+                                              </FormItem>
+                                            )}
+                                          />
+                                          <FormField
+                                            control={editForm.control}
+                                            name="limitPrice"
+                                            render={({ field }) => (
+                                              <FormItem>
+                                                <FormLabel>Limit Price</FormLabel>
+                                                <FormControl>
+                                                  <Input type="number" step="0.01" {...field} />
+                                                </FormControl>
+                                                <FormMessage />
+                                              </FormItem>
+                                            )}
+                                          />
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    {/* Media */}
+                                    <div className="space-y-4">
+                                      <h3 className="text-sm font-medium border-b pb-2 sticky top-0 bg-background">
+                                        Media
+                                      </h3>
+                                      <div className="grid grid-cols-1 gap-4">
+                                        <FormField
+                                          control={editForm.control}
+                                          name="imageUrl"
+                                          render={({ field }) => (
+                                            <FormItem>
+                                              <FormLabel>Logo Image URL</FormLabel>
+                                              <FormControl>
+                                                <div className="space-y-2">
+                                                  <Input placeholder="https://example.com/logo.png" {...field} />
+                                                  {field.value && (
+                                                    <div className="w-20 h-20 rounded-lg overflow-hidden border">
+                                                      <img
+                                                        src={field.value}
+                                                        alt="Logo preview"
+                                                        className="w-full h-full object-cover"
+                                                        onError={(e) => (e.target.style.display = "none")}
+                                                      />
+                                                    </div>
+                                                  )}
+                                                </div>
+                                              </FormControl>
+                                              <FormMessage />
+                                            </FormItem>
+                                          )}
+                                        />
+                                        <FormField
+                                          control={editForm.control}
+                                          name="titleImageUrl"
+                                          render={({ field }) => (
+                                            <FormItem>
+                                              <FormLabel>Title Image URL</FormLabel>
+                                              <FormControl>
+                                                <div className="space-y-2">
+                                                  <Input placeholder="https://example.com/title.png" {...field} />
+                                                  {field.value && (
+                                                    <div className="w-40 h-20 rounded-lg overflow-hidden border">
+                                                      <img
+                                                        src={field.value}
+                                                        alt="Title preview"
+                                                        className="w-full h-full object-cover"
+                                                        onError={(e) => (e.target.style.display = "none")}
+                                                      />
+                                                    </div>
+                                                  )}
+                                                </div>
+                                              </FormControl>
+                                              <FormMessage />
+                                            </FormItem>
+                                          )}
+                                        />
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div className="flex justify-end gap-2 pt-4 border-t sticky bottom-0 bg-background">
                                     <Button type="button" variant="outline" onClick={() => setIsEditDialogOpen(false)}>
                                       Cancel
                                     </Button>
