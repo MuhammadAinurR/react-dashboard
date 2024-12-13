@@ -2,9 +2,9 @@ import { i18n } from "@lingui/core";
 
 export const locales = {
   en: "English",
-  ko: "Korean",
   ja: "Japanese",
-  id: "Indonesian",
+  ar: "Arabic",
+  cn: "Chinese Simplified",
 };
 export const defaultLocale = "en";
 
