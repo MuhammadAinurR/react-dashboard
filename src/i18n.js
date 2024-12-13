@@ -4,7 +4,7 @@ export const locales = {
   en: "English",
   ja: "Japanese",
   ar: "Arabic",
-  cn: "Chinese Simplified",
+  zh: "Chinese Simplified",
 };
 export const defaultLocale = "en";
 
