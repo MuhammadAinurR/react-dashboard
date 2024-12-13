@@ -8,7 +8,7 @@ msgstr ""
 "Language: ar\n"
 "Project-Id-Version: degenmax-dashboard\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2024-12-13 14:45\n"
+"PO-Revision-Date: 2024-12-13 14:48\n"
 "Last-Translator: \n"
 "Language-Team: Arabic\n"
 "Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
@@ -20,7 +20,7 @@ msgstr ""
 
 #: src/pages/EventPage.jsx:424
 msgid "Actions"
-msgstr ""
+msgstr "الإجراءات"
 
 #: src/pages/EventPage.jsx:250
 msgid "Add Event"
@@ -29,104 +29,104 @@ msgstr "إضافة حدث"
 #. placeholder {0}: event.title
 #: src/pages/EventPage.jsx:640
 msgid "Are you sure you want to delete {0}?"
-msgstr ""
+msgstr "هل أنت متأكد من أنك تريد حذف {0}؟"
 
 #: src/pages/EventPage.jsx:618
 #: src/pages/EventPage.jsx:648
 msgid "Cancel"
-msgstr ""
+msgstr "إلغاء"
 
 #: src/pages/EventPage.jsx:386
 msgid "Create Event"
-msgstr ""
+msgstr "إنشاء حدث"
 
 #: src/pages/EventPage.jsx:634
 #: src/pages/EventPage.jsx:651
 msgid "Delete"
-msgstr ""
+msgstr "حذف"
 
 #: src/pages/EventPage.jsx:483
 msgid "Edit"
-msgstr ""
+msgstr "تحرير"
 
 #: src/pages/EventPage.jsx:489
 msgid "Edit Event"
-msgstr ""
+msgstr "تعديل الحدث"
 
 #: src/pages/EventPage.jsx:356
 #: src/pages/EventPage.jsx:418
 #: src/pages/EventPage.jsx:591
 msgid "End Date"
-msgstr ""
+msgstr "تاريخ الانتهاء"
 
 #: src/pages/EventPage.jsx:224
 #: src/pages/EventPage.jsx:238
 msgid "Events"
-msgstr ""
+msgstr "الأحداث"
 
 #: src/pages/EventPage.jsx:406
 msgid "Image"
-msgstr ""
+msgstr "صورة"
 
 #: src/pages/EventPage.jsx:295
 #: src/pages/EventPage.jsx:530
 msgid "Image URL"
-msgstr ""
+msgstr "رابط الصورة"
 
 #: src/pages/EventPage.jsx:325
 #: src/pages/EventPage.jsx:412
 #: src/pages/EventPage.jsx:560
 msgid "Language"
-msgstr ""
+msgstr "اللغة"
 
 #: src/pages/EventPage.jsx:398
 msgid "Loading..."
-msgstr ""
+msgstr "تحميل..."
 
 #: src/pages/EventPage.jsx:432
 msgid "No events found"
-msgstr ""
+msgstr "لم يتم العثور على أحداث"
 
 #: src/pages/EventPage.jsx:460
 msgid "No image"
-msgstr ""
+msgstr "لا توجد صورة"
 
 #: src/pages/EventPage.jsx:621
 msgid "Save Changes"
-msgstr ""
+msgstr "حفظ التغييرات"
 
 #: src/pages/EventPage.jsx:341
 #: src/pages/EventPage.jsx:415
 #: src/pages/EventPage.jsx:576
 msgid "Start Date"
-msgstr ""
+msgstr "تاريخ البدء"
 
 #: src/pages/EventPage.jsx:280
 #: src/pages/EventPage.jsx:515
 msgid "Subtitle"
-msgstr ""
+msgstr "الترجمة"
 
 #: src/pages/EventPage.jsx:421
 msgid "Tags"
-msgstr ""
+msgstr "الوسوم"
 
 #: src/pages/EventPage.jsx:372
 #: src/pages/EventPage.jsx:607
 msgid "Tags (comma-separated)"
-msgstr ""
+msgstr "علامات (مفصولة بفاصلة)"
 
 #: src/pages/EventPage.jsx:643
 msgid "This action cannot be undone. This will permanently delete the event."
-msgstr ""
+msgstr "لا يمكن التراجع عن هذا الإجراء. سيؤدي هذا إلى حذف الحدث بشكل دائم."
 
 #: src/pages/EventPage.jsx:265
 #: src/pages/EventPage.jsx:409
 #: src/pages/EventPage.jsx:500
 msgid "Title"
-msgstr ""
+msgstr "العنوان"
 
 #: src/pages/EventPage.jsx:310
 #: src/pages/EventPage.jsx:545
 msgid "URL"
-msgstr ""
+msgstr "الرابط"
 

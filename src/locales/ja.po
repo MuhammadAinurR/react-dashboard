@@ -8,7 +8,7 @@ msgstr ""
 "Language: ja\n"
 "Project-Id-Version: degenmax-dashboard\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2024-12-13 14:45\n"
+"PO-Revision-Date: 2024-12-13 14:48\n"
 "Last-Translator: \n"
 "Language-Team: Japanese\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -20,7 +20,7 @@ msgstr ""
 
 #: src/pages/EventPage.jsx:424
 msgid "Actions"
-msgstr ""
+msgstr "アクション"
 
 #: src/pages/EventPage.jsx:250
 msgid "Add Event"
@@ -29,104 +29,104 @@ msgstr "イベントを追加"
 #. placeholder {0}: event.title
 #: src/pages/EventPage.jsx:640
 msgid "Are you sure you want to delete {0}?"
-msgstr ""
+msgstr "{0} を削除してもよろしいですか？"
 
 #: src/pages/EventPage.jsx:618
 #: src/pages/EventPage.jsx:648
 msgid "Cancel"
-msgstr ""
+msgstr "キャンセル"
 
 #: src/pages/EventPage.jsx:386
 msgid "Create Event"
-msgstr ""
+msgstr "イベントを作成"
 
 #: src/pages/EventPage.jsx:634
 #: src/pages/EventPage.jsx:651
 msgid "Delete"
-msgstr ""
+msgstr "削除"
 
 #: src/pages/EventPage.jsx:483
 msgid "Edit"
-msgstr ""
+msgstr "編集"
 
 #: src/pages/EventPage.jsx:489
 msgid "Edit Event"
-msgstr ""
+msgstr "予定を編集"
 
 #: src/pages/EventPage.jsx:356
 #: src/pages/EventPage.jsx:418
 #: src/pages/EventPage.jsx:591
 msgid "End Date"
-msgstr ""
+msgstr "終了日"
 
 #: src/pages/EventPage.jsx:224
 #: src/pages/EventPage.jsx:238
 msgid "Events"
-msgstr ""
+msgstr "イベント"
 
 #: src/pages/EventPage.jsx:406
 msgid "Image"
-msgstr ""
+msgstr "画像"
 
 #: src/pages/EventPage.jsx:295
 #: src/pages/EventPage.jsx:530
 msgid "Image URL"
-msgstr ""
+msgstr "画像URL"
 
 #: src/pages/EventPage.jsx:325
 #: src/pages/EventPage.jsx:412
 #: src/pages/EventPage.jsx:560
 msgid "Language"
-msgstr ""
+msgstr "言語"
 
 #: src/pages/EventPage.jsx:398
 msgid "Loading..."
-msgstr ""
+msgstr "読み込み中..."
 
 #: src/pages/EventPage.jsx:432
 msgid "No events found"
-msgstr ""
+msgstr "予定が見つかりません"
 
 #: src/pages/EventPage.jsx:460
 msgid "No image"
-msgstr ""
+msgstr "画像がありません"
 
 #: src/pages/EventPage.jsx:621
 msgid "Save Changes"
-msgstr ""
+msgstr "変更を保存"
 
 #: src/pages/EventPage.jsx:341
 #: src/pages/EventPage.jsx:415
 #: src/pages/EventPage.jsx:576
 msgid "Start Date"
-msgstr ""
+msgstr "開始日"
 
 #: src/pages/EventPage.jsx:280
 #: src/pages/EventPage.jsx:515
 msgid "Subtitle"
-msgstr ""
+msgstr "サブタイトル"
 
 #: src/pages/EventPage.jsx:421
 msgid "Tags"
-msgstr ""
+msgstr "タグ"
 
 #: src/pages/EventPage.jsx:372
 #: src/pages/EventPage.jsx:607
 msgid "Tags (comma-separated)"
-msgstr ""
+msgstr "タグ (カンマ区切り)"
 
 #: src/pages/EventPage.jsx:643
 msgid "This action cannot be undone. This will permanently delete the event."
-msgstr ""
+msgstr "この操作は元に戻せません。この操作はイベントを永久に削除します。"
 
 #: src/pages/EventPage.jsx:265
 #: src/pages/EventPage.jsx:409
 #: src/pages/EventPage.jsx:500
 msgid "Title"
-msgstr ""
+msgstr "タイトル"
 
 #: src/pages/EventPage.jsx:310
 #: src/pages/EventPage.jsx:545
 msgid "URL"
-msgstr ""
+msgstr "URL"
 
