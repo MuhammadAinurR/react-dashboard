@@ -24,6 +24,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { Textarea } from "@/components/ui/textarea";
 import { toast, useToast } from "@/hooks/use-toast";
 import { eventsApi } from "@/services/api/events";
+import { Trans } from "@lingui/react/macro";
 
 const ITEMS_PER_PAGE = 10;
 
@@ -241,7 +242,9 @@ export default function EventPage() {
           />
           <Dialog open={isAddDialogOpen} onOpenChange={setIsAddDialogOpen}>
             <DialogTrigger asChild>
-              <Button>Add Event</Button>
+              <Button>
+                <Trans>Add Event</Trans>
+              </Button>
             </DialogTrigger>
             <DialogContent className="max-w-[500px]">
               <DialogHeader>
