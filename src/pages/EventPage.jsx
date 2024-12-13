@@ -220,7 +220,9 @@ export default function EventPage() {
     return (
       <Card className="max-w-4xl mx-auto mt-8">
         <CardHeader>
-          <CardTitle>Events</CardTitle>
+          <CardTitle>
+            <Trans>Events</Trans>
+          </CardTitle>
         </CardHeader>
         <CardContent>
           <p className="text-destructive">Error: {error.message || error}</p>
@@ -232,7 +234,9 @@ export default function EventPage() {
   return (
     <Card className="max-w-6xl mx-auto mt-8">
       <CardHeader className="flex flex-row items-center justify-between">
-        <CardTitle>Events</CardTitle>
+        <CardTitle>
+          <Trans>Events</Trans>
+        </CardTitle>
         <div className="flex gap-4">
           <Input
             placeholder="Search events..."
@@ -257,7 +261,9 @@ export default function EventPage() {
                     name="title"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Title</FormLabel>
+                        <FormLabel>
+                          <Trans>Title</Trans>
+                        </FormLabel>
                         <FormControl>
                           <Input {...field} />
                         </FormControl>
@@ -270,7 +276,9 @@ export default function EventPage() {
                     name="subTitle"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Subtitle</FormLabel>
+                        <FormLabel>
+                          <Trans>Subtitle</Trans>
+                        </FormLabel>
                         <FormControl>
                           <Textarea {...field} />
                         </FormControl>
@@ -283,7 +291,9 @@ export default function EventPage() {
                     name="imageUrl"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Image URL</FormLabel>
+                        <FormLabel>
+                          <Trans>Image URL</Trans>
+                        </FormLabel>
                         <FormControl>
                           <Input {...field} />
                         </FormControl>
@@ -296,7 +306,9 @@ export default function EventPage() {
                     name="url"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>URL</FormLabel>
+                        <FormLabel>
+                          <Trans>URL</Trans>
+                        </FormLabel>
                         <FormControl>
                           <Input {...field} />
                         </FormControl>
@@ -309,7 +321,9 @@ export default function EventPage() {
                     name="language"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Language</FormLabel>
+                        <FormLabel>
+                          <Trans>Language</Trans>
+                        </FormLabel>
                         <FormControl>
                           <Input {...field} />
                         </FormControl>
@@ -323,7 +337,9 @@ export default function EventPage() {
                       name="startDate"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Start Date</FormLabel>
+                          <FormLabel>
+                            <Trans>Start Date</Trans>
+                          </FormLabel>
                           <FormControl>
                             <Input type="date" {...field} />
                           </FormControl>
@@ -336,7 +352,9 @@ export default function EventPage() {
                       name="endDate"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>End Date</FormLabel>
+                          <FormLabel>
+                            <Trans>End Date</Trans>
+                          </FormLabel>
                           <FormControl>
                             <Input type="date" {...field} />
                           </FormControl>
@@ -350,7 +368,9 @@ export default function EventPage() {
                     name="tags"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Tags (comma-separated)</FormLabel>
+                        <FormLabel>
+                          <Trans>Tags (comma-separated)</Trans>
+                        </FormLabel>
                         <FormControl>
                           <Input {...field} placeholder="tag1, tag2, tag3" />
                         </FormControl>
@@ -362,7 +382,9 @@ export default function EventPage() {
                     <Button type="button" variant="outline" onClick={() => setIsAddDialogOpen(false)}>
                       Cancel
                     </Button>
-                    <Button type="submit">Create Event</Button>
+                    <Button type="submit">
+                      <Trans>Create Event</Trans>
+                    </Button>
                   </div>
                 </form>
               </Form>
@@ -372,26 +394,42 @@ export default function EventPage() {
       </CardHeader>
       <CardContent>
         {isLoading ? (
-          <p>Loading...</p>
+          <p>
+            <Trans>Loading...</Trans>
+          </p>
         ) : (
           <>
             <Table>
               <TableHeader>
                 <TableRow className="bg-muted/50">
-                  <TableHead className="font-semibold">Image</TableHead>
-                  <TableHead className="font-semibold">Title</TableHead>
-                  <TableHead className="font-semibold">Language</TableHead>
-                  <TableHead className="font-semibold">Start Date</TableHead>
-                  <TableHead className="font-semibold">End Date</TableHead>
-                  <TableHead className="font-semibold">Tags</TableHead>
-                  <TableHead className="font-semibold text-right">Actions</TableHead>
+                  <TableHead className="font-semibold">
+                    <Trans>Image</Trans>
+                  </TableHead>
+                  <TableHead className="font-semibold">
+                    <Trans>Title</Trans>
+                  </TableHead>
+                  <TableHead className="font-semibold">
+                    <Trans>Language</Trans>
+                  </TableHead>
+                  <TableHead className="font-semibold">
+                    <Trans>Start Date</Trans>
+                  </TableHead>
+                  <TableHead className="font-semibold">
+                    <Trans>End Date</Trans>
+                  </TableHead>
+                  <TableHead className="font-semibold">
+                    <Trans>Tags</Trans>
+                  </TableHead>
+                  <TableHead className="font-semibold text-right">
+                    <Trans>Actions</Trans>
+                  </TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
                 {events.length === 0 ? (
                   <TableRow>
                     <TableCell colSpan={7} className="text-center h-24">
-                      No events found
+                      <Trans>No events found</Trans>
                     </TableCell>
                   </TableRow>
                 ) : (
@@ -418,7 +456,9 @@ export default function EventPage() {
                           </>
                         ) : (
                           <div className="w-16 h-12 bg-muted rounded-lg flex items-center justify-center">
-                            <span className="text-xs text-muted-foreground">No image</span>
+                            <span className="text-xs text-muted-foreground">
+                              <Trans>No image</Trans>
+                            </span>
                           </div>
                         )}
                       </TableCell>
@@ -440,12 +480,14 @@ export default function EventPage() {
                           <Dialog open={isEditDialogOpen} onOpenChange={setIsEditDialogOpen}>
                             <DialogTrigger asChild>
                               <Button variant="outline" size="sm" onClick={() => handleEditClick(event)}>
-                                Edit
+                                <Trans>Edit</Trans>
                               </Button>
                             </DialogTrigger>
                             <DialogContent className="max-w-[500px]">
                               <DialogHeader>
-                                <DialogTitle>Edit Event</DialogTitle>
+                                <DialogTitle>
+                                  <Trans>Edit Event</Trans>
+                                </DialogTitle>
                               </DialogHeader>
                               <Form {...form}>
                                 <form onSubmit={form.handleSubmit(handleEdit)} className="space-y-4">
@@ -454,7 +496,9 @@ export default function EventPage() {
                                     name="title"
                                     render={({ field }) => (
                                       <FormItem>
-                                        <FormLabel>Title</FormLabel>
+                                        <FormLabel>
+                                          <Trans>Title</Trans>
+                                        </FormLabel>
                                         <FormControl>
                                           <Input {...field} />
                                         </FormControl>
@@ -467,7 +511,9 @@ export default function EventPage() {
                                     name="subTitle"
                                     render={({ field }) => (
                                       <FormItem>
-                                        <FormLabel>Subtitle</FormLabel>
+                                        <FormLabel>
+                                          <Trans>Subtitle</Trans>
+                                        </FormLabel>
                                         <FormControl>
                                           <Textarea {...field} />
                                         </FormControl>
@@ -480,7 +526,9 @@ export default function EventPage() {
                                     name="imageUrl"
                                     render={({ field }) => (
                                       <FormItem>
-                                        <FormLabel>Image URL</FormLabel>
+                                        <FormLabel>
+                                          <Trans>Image URL</Trans>
+                                        </FormLabel>
                                         <FormControl>
                                           <Input {...field} />
                                         </FormControl>
@@ -493,7 +541,9 @@ export default function EventPage() {
                                     name="url"
                                     render={({ field }) => (
                                       <FormItem>
-                                        <FormLabel>URL</FormLabel>
+                                        <FormLabel>
+                                          <Trans>URL</Trans>
+                                        </FormLabel>
                                         <FormControl>
                                           <Input {...field} />
                                         </FormControl>
@@ -506,7 +556,9 @@ export default function EventPage() {
                                     name="language"
                                     render={({ field }) => (
                                       <FormItem>
-                                        <FormLabel>Language</FormLabel>
+                                        <FormLabel>
+                                          <Trans>Language</Trans>
+                                        </FormLabel>
                                         <FormControl>
                                           <Input {...field} />
                                         </FormControl>
@@ -520,7 +572,9 @@ export default function EventPage() {
                                       name="startDate"
                                       render={({ field }) => (
                                         <FormItem>
-                                          <FormLabel>Start Date</FormLabel>
+                                          <FormLabel>
+                                            <Trans>Start Date</Trans>
+                                          </FormLabel>
                                           <FormControl>
                                             <Input type="date" {...field} />
                                           </FormControl>
@@ -533,7 +587,9 @@ export default function EventPage() {
                                       name="endDate"
                                       render={({ field }) => (
                                         <FormItem>
-                                          <FormLabel>End Date</FormLabel>
+                                          <FormLabel>
+                                            <Trans>End Date</Trans>
+                                          </FormLabel>
                                           <FormControl>
                                             <Input type="date" {...field} />
                                           </FormControl>
@@ -547,7 +603,9 @@ export default function EventPage() {
                                     name="tags"
                                     render={({ field }) => (
                                       <FormItem>
-                                        <FormLabel>Tags (comma-separated)</FormLabel>
+                                        <FormLabel>
+                                          <Trans>Tags (comma-separated)</Trans>
+                                        </FormLabel>
                                         <FormControl>
                                           <Input {...field} placeholder="tag1, tag2, tag3" />
                                         </FormControl>
@@ -557,9 +615,11 @@ export default function EventPage() {
                                   />
                                   <div className="flex justify-end gap-2">
                                     <Button type="button" variant="outline" onClick={() => setIsEditDialogOpen(false)}>
-                                      Cancel
+                                      <Trans>Cancel</Trans>
                                     </Button>
-                                    <Button type="submit">Save Changes</Button>
+                                    <Button type="submit">
+                                      <Trans>Save Changes</Trans>
+                                    </Button>
                                   </div>
                                 </form>
                               </Form>
@@ -571,19 +631,25 @@ export default function EventPage() {
                           >
                             <AlertDialogTrigger asChild>
                               <Button variant="destructive" size="sm" onClick={() => setEventToDelete(event.id)}>
-                                Delete
+                                <Trans>Delete</Trans>
                               </Button>
                             </AlertDialogTrigger>
                             <AlertDialogContent>
                               <AlertDialogHeader>
-                                <AlertDialogTitle>Are you sure you want to delete {event.title}?</AlertDialogTitle>
+                                <AlertDialogTitle>
+                                  <Trans>Are you sure you want to delete {event.title}?</Trans>
+                                </AlertDialogTitle>
                                 <AlertDialogDescription>
-                                  This action cannot be undone. This will permanently delete the event.
+                                  <Trans>This action cannot be undone. This will permanently delete the event.</Trans>
                                 </AlertDialogDescription>
                               </AlertDialogHeader>
                               <AlertDialogFooter>
-                                <AlertDialogCancel>Cancel</AlertDialogCancel>
-                                <AlertDialogAction onClick={handleDelete}>Delete</AlertDialogAction>
+                                <AlertDialogCancel>
+                                  <Trans>Cancel</Trans>
+                                </AlertDialogCancel>
+                                <AlertDialogAction onClick={handleDelete}>
+                                  <Trans>Delete</Trans>
+                                </AlertDialogAction>
                               </AlertDialogFooter>
                             </AlertDialogContent>
                           </AlertDialog>
