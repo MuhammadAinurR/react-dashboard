@@ -18,7 +18,114 @@ msgstr ""
 "X-Crowdin-File: /development/src/locales/en.po\n"
 "X-Crowdin-File-ID: 10\n"
 
-#: src/pages/EventPage.jsx:246
+#: src/pages/EventPage.jsx:424
+msgid "Actions"
+msgstr ""
+
+#: src/pages/EventPage.jsx:250
 msgid "Add Event"
 msgstr ""
 
+#. placeholder {0}: event.title
+#: src/pages/EventPage.jsx:640
+msgid "Are you sure you want to delete {0}?"
+msgstr ""
+
+#: src/pages/EventPage.jsx:618
+#: src/pages/EventPage.jsx:648
+msgid "Cancel"
+msgstr ""
+
+#: src/pages/EventPage.jsx:386
+msgid "Create Event"
+msgstr ""
+
+#: src/pages/EventPage.jsx:634
+#: src/pages/EventPage.jsx:651
+msgid "Delete"
+msgstr ""
+
+#: src/pages/EventPage.jsx:483
+msgid "Edit"
+msgstr ""
+
+#: src/pages/EventPage.jsx:489
+msgid "Edit Event"
+msgstr ""
+
+#: src/pages/EventPage.jsx:356
+#: src/pages/EventPage.jsx:418
+#: src/pages/EventPage.jsx:591
+msgid "End Date"
+msgstr ""
+
+#: src/pages/EventPage.jsx:224
+#: src/pages/EventPage.jsx:238
+msgid "Events"
+msgstr ""
+
+#: src/pages/EventPage.jsx:406
+msgid "Image"
+msgstr ""
+
+#: src/pages/EventPage.jsx:295
+#: src/pages/EventPage.jsx:530
+msgid "Image URL"
+msgstr ""
+
+#: src/pages/EventPage.jsx:325
+#: src/pages/EventPage.jsx:412
+#: src/pages/EventPage.jsx:560
+msgid "Language"
+msgstr ""
+
+#: src/pages/EventPage.jsx:398
+msgid "Loading..."
+msgstr ""
+
+#: src/pages/EventPage.jsx:432
+msgid "No events found"
+msgstr ""
+
+#: src/pages/EventPage.jsx:460
+msgid "No image"
+msgstr ""
+
+#: src/pages/EventPage.jsx:621
+msgid "Save Changes"
+msgstr ""
+
+#: src/pages/EventPage.jsx:341
+#: src/pages/EventPage.jsx:415
+#: src/pages/EventPage.jsx:576
+msgid "Start Date"
+msgstr ""
+
+#: src/pages/EventPage.jsx:280
+#: src/pages/EventPage.jsx:515
+msgid "Subtitle"
+msgstr ""
+
+#: src/pages/EventPage.jsx:421
+msgid "Tags"
+msgstr ""
+
+#: src/pages/EventPage.jsx:372
+#: src/pages/EventPage.jsx:607
+msgid "Tags (comma-separated)"
+msgstr ""
+
+#: src/pages/EventPage.jsx:643
+msgid "This action cannot be undone. This will permanently delete the event."
+msgstr ""
+
+#: src/pages/EventPage.jsx:265
+#: src/pages/EventPage.jsx:409
+#: src/pages/EventPage.jsx:500
+msgid "Title"
+msgstr ""
+
+#: src/pages/EventPage.jsx:310
+#: src/pages/EventPage.jsx:545
+msgid "URL"
+msgstr ""
