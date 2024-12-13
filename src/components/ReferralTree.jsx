@@ -1,49 +1,120 @@
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import ReactFlow, { Background, Controls, MiniMap, useNodesState, useEdgesState } from "reactflow";
+import "reactflow/dist/style.css";
+import { useCallback, useEffect } from "react";
 
-function TreeNode({ node, rootUserId }) {
-  if (!node) return null;
-
-  const isCurrentUser = node.userId === rootUserId;
-  const hasChildren = node.children && node.children.length > 0;
-
+// Custom Node Component
+function CustomNode({ data }) {
   return (
-    <div className="flex flex-col items-center">
-      <div className={`p-2 border rounded-lg bg-muted ${isCurrentUser ? "border-green-500 border-2" : ""}`}>
-        {node.userId}
-        <div className="text-xs text-muted-foreground">{node.referralCode}</div>
-      </div>
-      {hasChildren && (
-        <>
-          {/* Vertical line with gradient and increased height */}
-          <div className="w-0.5 h-10 bg-gradient-to-b from-gray-300 to-gray-400" />
-          {/* Container for horizontal line and children */}
-          <div className="relative flex gap-12">
-            {/* Horizontal line with gradient */}
-            {node.children.length > 1 && (
-              <div
-                className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-gray-300 via-gray-400 to-gray-300"
-                style={{ transform: "translateY(-1px)" }}
-              />
-            )}
-            {node.children.map((child, index) => (
-              <TreeNode key={index} node={child} rootUserId={rootUserId} />
-            ))}
-          </div>
-        </>
-      )}
+    <div className={`p-2 border rounded-lg bg-muted ${data.isCurrentUser ? "border-green-500 border-2" : ""}`}>
+      <div>{data.userId}</div>
+      <div className="text-xs text-muted-foreground">{data.referralCode}</div>
     </div>
   );
 }
 
+// Node types definition
+const nodeTypes = {
+  custom: CustomNode,
+};
+
 export function ReferralTree({ isOpen, onClose, treeData, requestedUserId }) {
+  const [nodes, setNodes, onNodesChange] = useNodesState([]);
+  const [edges, setEdges, onEdgesChange] = useEdgesState([]);
+
+  const convertTreeToFlow = useCallback(
+    (tree, parentId = null, position = { x: 0, y: 0 }) => {
+      if (!tree) return { nodes: [], edges: [] };
+
+      const nodes = [];
+      const edges = [];
+
+      // Create node
+      const currentNode = {
+        id: tree.userId.toString(),
+        position,
+        type: "custom",
+        data: {
+          userId: tree.userId,
+          referralCode: tree.referralCode,
+          isCurrentUser: tree.userId === requestedUserId,
+        },
+      };
+      nodes.push(currentNode);
+
+      // Create edge if there's a parent
+      if (parentId) {
+        edges.push({
+          id: `${parentId}-${tree.userId}`,
+          source: parentId.toString(),
+          target: tree.userId.toString(),
+          type: "smoothstep",
+          style: {
+            stroke: "#FF0000", // Bright red color for testing
+            strokeWidth: 5, // Very thick line
+          },
+          animated: true,
+          markerEnd: {
+            type: "arrow", // Add arrow at the end
+            color: "#FF0000",
+          },
+        });
+      }
+
+      // Process children with adjusted spacing
+      if (tree.children) {
+        const spacing = 200; // Increased horizontal spacing
+        tree.children.forEach((child, index) => {
+          const childPosition = {
+            x: position.x + (index - (tree.children.length - 1) / 2) * spacing,
+            y: position.y + 100, // Reduced vertical spacing
+          };
+          const { nodes: childNodes, edges: childEdges } = convertTreeToFlow(child, tree.userId, childPosition);
+          nodes.push(...childNodes);
+          edges.push(...childEdges);
+        });
+      }
+
+      return { nodes, edges };
+    },
+    [requestedUserId]
+  );
+
+  useEffect(() => {
+    if (treeData) {
+      const { nodes: newNodes, edges: newEdges } = convertTreeToFlow(treeData);
+      setNodes(newNodes);
+      setEdges(newEdges);
+    }
+  }, [treeData, convertTreeToFlow, setNodes, setEdges]);
+
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-3xl">
+      <DialogContent className="max-w-5xl h-[600px]">
         <DialogHeader>
           <DialogTitle>Referral Tree</DialogTitle>
         </DialogHeader>
-        <div className="p-4 overflow-auto">
-          <TreeNode node={treeData} rootUserId={requestedUserId} />
+        <div style={{ width: "100%", height: "500px" }}>
+          <ReactFlow
+            nodes={nodes}
+            edges={edges}
+            onNodesChange={onNodesChange}
+            onEdgesChange={onEdgesChange}
+            nodeTypes={nodeTypes}
+            fitView
+            defaultEdgeOptions={{
+              style: {
+                strokeWidth: 5, // Make lines very thick
+                stroke: "#FF0000", // Bright red color
+              },
+              animated: true,
+              type: "smoothstep",
+            }}
+          >
+            <Background />
+            <Controls />
+            <MiniMap />
+          </ReactFlow>
         </div>
       </DialogContent>
     </Dialog>
