@@ -8,7 +8,7 @@ msgstr ""
 "Language: zh\n"
 "Project-Id-Version: degenmax-dashboard\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2024-12-14 04:22\n"
+"PO-Revision-Date: 2024-12-14 04:24\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -287,7 +287,7 @@ msgstr "定价"
 
 #: src/pages/ReferralCodesPage.jsx:88
 msgid "Referral Code"
-msgstr ""
+msgstr "推荐代码"
 
 #: src/pages/ReferralCodesPage.jsx:57
 #: src/pages/ReferralCodesPage.jsx:73
@@ -296,7 +296,7 @@ msgstr "推荐码"
 
 #: src/pages/ReferralCodesPage.jsx:91
 msgid "Referred By"
-msgstr ""
+msgstr "引用者"
 
 #: src/pages/BindPage.jsx:96
 #: src/pages/BindPage.jsx:191
@@ -398,3 +398,4 @@ msgstr "网址"
 #: src/pages/BindPage.jsx:115
 msgid "User ID"
 msgstr "用户 ID"
+
