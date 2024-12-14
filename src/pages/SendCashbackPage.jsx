@@ -35,7 +35,7 @@ export default function SendCashbackPage() {
       });
       const data = await res.json();
       if (data.message === "User not found") {
-        setError("User not found. Please check the user ID.");
+        setError("User not found. Please check the user platform UID.");
         toast({
           title: "Error",
           description: data.message,
@@ -50,10 +50,11 @@ export default function SendCashbackPage() {
           title: "Cashback sent successfully!",
           description: "The cashback has been sent to the user.",
         });
+        setShowConfirmation(false);
       }
     } catch (error) {
       if (error.response?.status === 404) {
-        setError("User not found. Please check the user ID.");
+        setError("User not found. Please check the user platform UID.");
       } else {
         setError(error.response?.data?.message || "An error occurred");
       }
@@ -78,7 +79,7 @@ export default function SendCashbackPage() {
               </h2>
               <p className="mb-4 text-gray-600">
                 <Trans>
-                  Are you sure you want to send ${amount} to user ID: {uid}?
+                  Are you sure you want to send ${amount} to user platform UID: {uid}?
                 </Trans>
               </p>
               <div className="flex gap-3">
@@ -104,14 +105,14 @@ export default function SendCashbackPage() {
             <div className="p-8">
               <div className="mb-6">
                 <label className="mb-2 block text-sm font-medium text-gray-700">
-                  <Trans>User ID</Trans>
+                  <Trans>User Platform UID</Trans>
                 </label>
                 <input
                   type="text"
                   value={uid}
                   onChange={(e) => setUid(e.target.value)}
                   className="w-full rounded-lg border border-gray-300 p-3 transition-colors focus:border-gray-700 focus:outline-none"
-                  placeholder="Enter user ID"
+                  placeholder="Enter user Platform UID"
                   required
                 />
               </div>
