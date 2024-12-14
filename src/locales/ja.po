@@ -8,7 +8,7 @@ msgstr ""
 "Language: ja\n"
 "Project-Id-Version: degenmax-dashboard\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2024-12-14 04:01\n"
+"PO-Revision-Date: 2024-12-14 04:06\n"
 "Last-Translator: \n"
 "Language-Team: Japanese\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -387,3 +387,4 @@ msgstr "URL"
 #: src/pages/BindPage.jsx:115
 msgid "User ID"
 msgstr "ユーザー ID"
+
