@@ -56,8 +56,8 @@ const items = [
     icon: History,
   },
   {
-    title: "User Platform Wallet",
-    url: "/user-platform-wallet",
+    title: "Platform Wallet",
+    url: "/platform-wallet",
     icon: Wallet,
   },
 ];
