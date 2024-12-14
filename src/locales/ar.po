@@ -8,7 +8,7 @@ msgstr ""
 "Language: ar\n"
 "Project-Id-Version: degenmax-dashboard\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2024-12-14 04:22\n"
+"PO-Revision-Date: 2024-12-14 04:24\n"
 "Last-Translator: \n"
 "Language-Team: Arabic\n"
 "Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
@@ -287,7 +287,7 @@ msgstr "التسعير"
 
 #: src/pages/ReferralCodesPage.jsx:88
 msgid "Referral Code"
-msgstr ""
+msgstr "رمز الإحالة"
 
 #: src/pages/ReferralCodesPage.jsx:57
 #: src/pages/ReferralCodesPage.jsx:73
@@ -296,7 +296,7 @@ msgstr "رموز الإحالة"
 
 #: src/pages/ReferralCodesPage.jsx:91
 msgid "Referred By"
-msgstr ""
+msgstr "مشار إليه بواسطة"
 
 #: src/pages/BindPage.jsx:96
 #: src/pages/BindPage.jsx:191
@@ -398,3 +398,4 @@ msgstr "الرابط"
 #: src/pages/BindPage.jsx:115
 msgid "User ID"
 msgstr "معرف المستخدم"
+
