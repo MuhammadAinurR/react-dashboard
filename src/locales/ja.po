@@ -129,4 +129,3 @@ msgstr "タイトル"
 #: src/pages/EventPage.jsx:545
 msgid "URL"
 msgstr "URL"
-

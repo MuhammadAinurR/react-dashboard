@@ -129,4 +129,3 @@ msgstr "标题"
 #: src/pages/EventPage.jsx:545
 msgid "URL"
 msgstr "网址"
-
