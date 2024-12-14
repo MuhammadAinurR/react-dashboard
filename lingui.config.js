@@ -1,9 +1,9 @@
 module.exports = {
-  locales: ["en", "ja", "ar", "zh"],
+  locales: ["en", "ar", "zh", "ja"],
   catalogs: [
     {
       path: "src/locales/{locale}",
-      include: ["src"], //includes all files in the src folder
+      include: ["src"],
     },
   ],
   format: "po",

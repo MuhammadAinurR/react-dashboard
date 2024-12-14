@@ -1,4 +1,4 @@
-import { StrictMode } from "react";
+import { StrictMode, useEffect } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
@@ -10,8 +10,14 @@ import { defaultLocale, dynamicActivate } from "./i18n";
 const I18nApp = () => {
   useEffect(() => {
     // with this method we dynamically laod the catalogs
-    dynamicActivate(defaultLocale);
-  }, []);
+    const currentLanguage = window.localStorage.getItem("language");
+    if (!currentLanguage) {
+      window.localStorage.setItem("language", defaultLocale);
+      dynamicActivate(defaultLocale);
+    } else {
+      dynamicActivate(currentLanguage);
+    }
+  });
   return (
     <StrictMode>
       <I18nProvider i18n={i18n}>
@@ -22,4 +28,5 @@ const I18nApp = () => {
   );
 };
 
-createRoot(document.getElementById("root").render(<I18nApp />));
+const root = createRoot(document.getElementById("root"));
+root.render(<I18nApp />);

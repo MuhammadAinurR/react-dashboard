@@ -15,6 +15,7 @@ import {
 import { Link, useLocation } from "react-router-dom";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "./ui/dropdown-menu";
 import { useAuth } from "@/context/AuthContext";
+import LanguageToggler from "./LanguageToggler";
 
 // Menu items.
 const items = [
@@ -87,6 +88,7 @@ export function AppSidebar() {
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
+      <LanguageToggler />
       <SidebarFooter>
         <SidebarMenu>
           <SidebarMenuItem>
