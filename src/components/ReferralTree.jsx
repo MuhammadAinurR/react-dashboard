@@ -13,6 +13,7 @@ import {
   useReactFlow,
 } from "@xyflow/react";
 import "@xyflow/react/dist/style.css";
+import { Button } from "./ui/button";
 
 function CustomNode({ data, isConnectable }) {
   return (
@@ -46,7 +47,15 @@ const edgeTypes = {
   custom: CustomEdge,
 };
 
-export function ReferralTree({ isOpen, onClose, treeData, requestedUserId }) {
+export function ReferralTree({
+  isOpen,
+  onClose,
+  treeData,
+  requestedUserId,
+  increaseTopLevelTree,
+  increaseBottomLevelTree,
+  treeLevel,
+}) {
   const [nodes, setNodes, onNodesChange] = useNodesState([]);
   const [edges, setEdges, onEdgesChange] = useEdgesState([]);
   const { fitView } = useReactFlow();
@@ -111,8 +120,7 @@ export function ReferralTree({ isOpen, onClose, treeData, requestedUserId }) {
       // Trigger fitView after the tree data is loaded
       fitView();
     }
-  }, [isOpen, nodes, fitView]);
-
+  }, [isOpen, nodes, fitView, treeData]);
   return (
     <Dialog
       open={isOpen}
@@ -123,7 +131,13 @@ export function ReferralTree({ isOpen, onClose, treeData, requestedUserId }) {
     >
       <DialogContent className="max-w-5xl h-[600px]">
         <DialogHeader>
-          <DialogTitle>Referral Tree</DialogTitle>
+          <div className="flex w-full justify-between pr-4">
+            <DialogTitle>Referral Tree</DialogTitle>
+            <div className="flex gap-2">
+              <Button onClick={increaseTopLevelTree}>Expand top level</Button>
+              <Button onClick={increaseBottomLevelTree}>Expand bottom level</Button>
+            </div>
+          </div>
         </DialogHeader>
         <div style={{ width: "100%", height: "500px" }}>
           {isOpen && (

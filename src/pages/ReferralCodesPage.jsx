@@ -18,6 +18,7 @@ export default function ReferralCodesPage() {
   const [selectedTree, setSelectedTree] = useState(null);
   const [treeModalOpen, setTreeModalOpen] = useState(false);
   const [requestedUserId, setRequestedUserId] = useState(null);
+  const [treeLevel, setTreeLevel] = useState([1, 1]);
 
   const fetchReferralCodes = async (page = 1) => {
     try {
@@ -34,16 +35,28 @@ export default function ReferralCodesPage() {
     }
   };
 
-  const fetchReferralTree = async (userId) => {
+  const fetchReferralTree = async (userId, treeLevel) => {
     try {
       setRequestedUserId(userId);
-      const res = await fetch(`/referral-codes/tree/${userId}`);
+      const res = await fetch(
+        `/referral-codes/tree/${userId}?ancestorLevels=${treeLevel[0]}&descendantLevels=${treeLevel[1]}`
+      );
       const data = await res.json();
       setSelectedTree(data);
       setTreeModalOpen(true);
     } catch (err) {
       console.error(err);
     }
+  };
+
+  const increaseTopLevelTree = () => {
+    setTreeLevel([treeLevel[0] + 1, treeLevel[1]]);
+    fetchReferralTree(requestedUserId, [treeLevel[0] + 1, treeLevel[1]]);
+  };
+
+  const increaseBottomLevelTree = () => {
+    setTreeLevel([treeLevel[0], treeLevel[1] + 1]);
+    fetchReferralTree(requestedUserId, [treeLevel[0], treeLevel[1] + 1]);
   };
 
   useEffect(() => {
@@ -66,7 +79,6 @@ export default function ReferralCodesPage() {
       </Card>
     );
   }
-
   return (
     <Card className="max-w-6xl mx-auto mt-8">
       <CardHeader>
@@ -110,7 +122,14 @@ export default function ReferralCodesPage() {
                       <TableCell className="font-mono text-sm">{referral.referralCode}</TableCell>
                       <TableCell className="font-mono text-sm">{referral.referredBy}</TableCell>
                       <TableCell>
-                        <Button variant="outline" size="sm" onClick={() => fetchReferralTree(referral.userId)}>
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          onClick={() => {
+                            fetchReferralTree(referral.userId, [1, 1]);
+                            setTreeLevel([1, 1]);
+                          }}
+                        >
                           View Tree
                         </Button>
                       </TableCell>
@@ -137,6 +156,9 @@ export default function ReferralCodesPage() {
           onClose={() => setTreeModalOpen(false)}
           treeData={selectedTree}
           requestedUserId={requestedUserId}
+          increaseTopLevelTree={increaseTopLevelTree}
+          increaseBottomLevelTree={increaseBottomLevelTree}
+          treeLevel={treeLevel}
         />
       </ReactFlowProvider>
     </Card>
