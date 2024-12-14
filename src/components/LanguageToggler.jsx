@@ -1,13 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectLabel,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { dynamicActivate } from "../i18n";
 
 export default function LanguageToggler() {
@@ -20,6 +12,8 @@ export default function LanguageToggler() {
   const languageOptions = [
     { value: "en", label: "English" },
     { value: "ar", label: "Arabic" },
+    { value: "ja", label: "Japanese" },
+    { value: "zh", label: "Chinese" },
   ];
 
   const changeLanguage = (value) => {
