@@ -7,7 +7,8 @@ export default defineConfig({
   plugins: [
     react({
       babel: {
-        plugins: ["@lingui/babel-plugin-lingui-macro"],
+        // Use .babelrc files, necessary to use LinguiJS CLI
+        babelrc: true,
       },
     }),
     lingui(),

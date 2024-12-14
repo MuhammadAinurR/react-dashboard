@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2024-12-13 11:02+0700\n"
+"POT-Creation-Date: 2024-12-14 10:25+0700\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,7 +13,17 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#. placeholder {0}: item.title
+#: src/components/AppSidebar.jsx:83
+msgid "{0}"
+msgstr ""
+
+#: src/components/AppSidebar.jsx:111
+msgid "Account"
+msgstr ""
+
 #: src/pages/EventPage.jsx:424
+#: src/pages/BindPage.jsx:124
 msgid "Actions"
 msgstr ""
 
@@ -21,14 +31,32 @@ msgstr ""
 msgid "Add Event"
 msgstr ""
 
+#: src/pages/BindPage.jsx:87
+msgid "All Status"
+msgstr ""
+
+#: src/pages/BindPage.jsx:90
+#: src/pages/BindPage.jsx:181
+msgid "Approved"
+msgstr ""
+
 #. placeholder {0}: event.title
 #: src/pages/EventPage.jsx:640
 msgid "Are you sure you want to delete {0}?"
 msgstr ""
 
+#: src/pages/BindPage.jsx:63
+#: src/pages/BindPage.jsx:79
+msgid "Bind Status"
+msgstr ""
+
 #: src/pages/EventPage.jsx:618
 #: src/pages/EventPage.jsx:648
 msgid "Cancel"
+msgstr ""
+
+#: src/pages/BindPage.jsx:162
+msgid "Change Status"
 msgstr ""
 
 #: src/pages/EventPage.jsx:386
@@ -54,6 +82,11 @@ msgstr ""
 msgid "End Date"
 msgstr ""
 
+#. placeholder {0}: error.message || error
+#: src/pages/BindPage.jsx:68
+msgid "Error: {0}"
+msgstr ""
+
 #: src/pages/EventPage.jsx:224
 #: src/pages/EventPage.jsx:238
 msgid "Events"
@@ -75,7 +108,12 @@ msgid "Language"
 msgstr ""
 
 #: src/pages/EventPage.jsx:398
+#: src/pages/BindPage.jsx:104
 msgid "Loading..."
+msgstr ""
+
+#: src/pages/BindPage.jsx:132
+msgid "No data"
 msgstr ""
 
 #: src/pages/EventPage.jsx:432
@@ -86,14 +124,40 @@ msgstr ""
 msgid "No image"
 msgstr ""
 
+#: src/pages/BindPage.jsx:93
+#: src/pages/BindPage.jsx:188
+msgid "Pending"
+msgstr ""
+
+#: src/pages/BindPage.jsx:112
+msgid "Platform"
+msgstr ""
+
+#: src/pages/BindPage.jsx:96
+#: src/pages/BindPage.jsx:191
+msgid "Rejected"
+msgstr ""
+
 #: src/pages/EventPage.jsx:621
 msgid "Save Changes"
+msgstr ""
+
+#: src/components/AppSidebar.jsx:114
+msgid "Settings"
+msgstr ""
+
+#: src/components/AppSidebar.jsx:117
+msgid "Sign out"
 msgstr ""
 
 #: src/pages/EventPage.jsx:341
 #: src/pages/EventPage.jsx:415
 #: src/pages/EventPage.jsx:576
 msgid "Start Date"
+msgstr ""
+
+#: src/pages/BindPage.jsx:121
+msgid "Status"
 msgstr ""
 
 #: src/pages/EventPage.jsx:280
@@ -120,7 +184,23 @@ msgstr ""
 msgid "Title"
 msgstr ""
 
+#: src/pages/BindPage.jsx:118
+msgid "UID"
+msgstr ""
+
+#: src/pages/BindPage.jsx:201
+msgid "Update"
+msgstr ""
+
+#: src/pages/BindPage.jsx:168
+msgid "Update Bind Status"
+msgstr ""
+
 #: src/pages/EventPage.jsx:310
 #: src/pages/EventPage.jsx:545
 msgid "URL"
+msgstr ""
+
+#: src/pages/BindPage.jsx:115
+msgid "User ID"
 msgstr ""

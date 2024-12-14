@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Pagination } from "@/components/ui/pagination";
+import { Trans } from "@lingui/react/macro";
 
 export default function BindStatus() {
   const fetch = privateFetch();
@@ -58,10 +59,14 @@ export default function BindStatus() {
     return (
       <Card className="max-w-4xl mx-auto mt-8">
         <CardHeader>
-          <CardTitle>Bind Status</CardTitle>
+          <CardTitle>
+            <Trans>Bind Status</Trans>
+          </CardTitle>
         </CardHeader>
         <CardContent>
-          <p className="text-destructive">Error: {error.message || error}</p>
+          <p className="text-destructive">
+            <Trans>Error: {error.message || error}</Trans>
+          </p>
         </CardContent>
       </Card>
     );
@@ -70,39 +75,61 @@ export default function BindStatus() {
   return (
     <Card className="max-w-6xl mx-auto mt-8">
       <CardHeader className="flex flex-row items-center justify-between">
-        <CardTitle>Bind Status</CardTitle>
+        <CardTitle>
+          <Trans>Bind Status</Trans>
+        </CardTitle>
         <Select value={filterStatus} onValueChange={(value) => setFilterStatus(value)}>
           <SelectTrigger className="w-[180px]">
             <SelectValue placeholder="Filter by status" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="all">All Status</SelectItem>
-            <SelectItem value="approved">Approved</SelectItem>
-            <SelectItem value="pending">Pending</SelectItem>
-            <SelectItem value="reject">Rejected</SelectItem>
+            <SelectItem value="all">
+              <Trans>All Status</Trans>
+            </SelectItem>
+            <SelectItem value="approved">
+              <Trans>Approved</Trans>
+            </SelectItem>
+            <SelectItem value="pending">
+              <Trans>Pending</Trans>
+            </SelectItem>
+            <SelectItem value="reject">
+              <Trans>Rejected</Trans>
+            </SelectItem>
           </SelectContent>
         </Select>
       </CardHeader>
       <CardContent>
         {isLoading ? (
-          <p>Loading...</p>
+          <p>
+            <Trans>Loading...</Trans>
+          </p>
         ) : (
           <>
             <Table>
               <TableHeader>
                 <TableRow className="bg-muted/50">
-                  <TableHead className="font-semibold">Platform</TableHead>
-                  <TableHead className="font-semibold">User ID</TableHead>
-                  <TableHead className="font-semibold">UID</TableHead>
-                  <TableHead className="font-semibold">Status</TableHead>
-                  <TableHead className="font-semibold text-right">Actions</TableHead>
+                  <TableHead className="font-semibold">
+                    <Trans>Platform</Trans>
+                  </TableHead>
+                  <TableHead className="font-semibold">
+                    <Trans>User ID</Trans>
+                  </TableHead>
+                  <TableHead className="font-semibold">
+                    <Trans>UID</Trans>
+                  </TableHead>
+                  <TableHead className="font-semibold">
+                    <Trans>Status</Trans>
+                  </TableHead>
+                  <TableHead className="font-semibold text-right">
+                    <Trans>Actions</Trans>
+                  </TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
                 {response.length === 0 ? (
                   <TableRow>
                     <TableCell colSpan={5} className="text-center h-24">
-                      No data
+                      <Trans>No data</Trans>
                     </TableCell>
                   </TableRow>
                 ) : (
@@ -132,12 +159,14 @@ export default function BindStatus() {
                         <Dialog>
                           <DialogTrigger asChild>
                             <Button variant="outline" size="sm">
-                              Change Status
+                              <Trans>Change Status</Trans>
                             </Button>
                           </DialogTrigger>
                           <DialogContent>
                             <DialogHeader>
-                              <DialogTitle>Update Bind Status</DialogTitle>
+                              <DialogTitle>
+                                <Trans>Update Bind Status</Trans>
+                              </DialogTitle>
                             </DialogHeader>
                             <div className="py-4">
                               <Select
@@ -148,15 +177,19 @@ export default function BindStatus() {
                                   <SelectValue placeholder="Select new status" />
                                 </SelectTrigger>
                                 <SelectContent>
-                                  <SelectItem value="approved">Approved</SelectItem>
+                                  <SelectItem value="approved">
+                                    <Trans>Approved</Trans>
+                                  </SelectItem>
                                   <SelectItem
                                     value="pending"
                                     disabled={binding.isBind === "pending"}
                                     className="hidden"
                                   >
-                                    Pending
+                                    <Trans>Pending</Trans>
                                   </SelectItem>
-                                  <SelectItem value="reject">Rejected</SelectItem>
+                                  <SelectItem value="reject">
+                                    <Trans>Rejected</Trans>
+                                  </SelectItem>
                                 </SelectContent>
                               </Select>
                             </div>
@@ -165,7 +198,7 @@ export default function BindStatus() {
                                 variant="outline"
                                 onClick={() => updateBindStatus(binding.id, tempStatus[binding.id] || binding.isBind)}
                               >
-                                Update
+                                <Trans>Update</Trans>
                               </Button>
                             </DialogTrigger>
                           </DialogContent>

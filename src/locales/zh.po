@@ -1,131 +1,206 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2024-12-13 11:02+0700\n"
+"POT-Creation-Date: 2024-12-14 10:25+0700\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: zh\n"
-"Project-Id-Version: degenmax-dashboard\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2024-12-13 14:49\n"
+"PO-Revision-Date: \n"
 "Last-Translator: \n"
-"Language-Team: Chinese Simplified\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Crowdin-Project: degenmax-dashboard\n"
-"X-Crowdin-Project-ID: 745703\n"
-"X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /development/src/locales/en.po\n"
-"X-Crowdin-File-ID: 10\n"
+"Language-Team: \n"
+"Plural-Forms: \n"
+
+#. placeholder {0}: item.title
+#: src/components/AppSidebar.jsx:83
+msgid "{0}"
+msgstr ""
+
+#: src/components/AppSidebar.jsx:111
+msgid "Account"
+msgstr ""
 
 #: src/pages/EventPage.jsx:424
+#: src/pages/BindPage.jsx:124
 msgid "Actions"
-msgstr "行动"
+msgstr ""
 
 #: src/pages/EventPage.jsx:250
 msgid "Add Event"
-msgstr "添加事件"
+msgstr ""
+
+#: src/pages/BindPage.jsx:87
+msgid "All Status"
+msgstr ""
+
+#: src/pages/BindPage.jsx:90
+#: src/pages/BindPage.jsx:181
+msgid "Approved"
+msgstr ""
 
 #. placeholder {0}: event.title
 #: src/pages/EventPage.jsx:640
 msgid "Are you sure you want to delete {0}?"
-msgstr "您确定要删除 {0} 吗？"
+msgstr ""
+
+#: src/pages/BindPage.jsx:63
+#: src/pages/BindPage.jsx:79
+msgid "Bind Status"
+msgstr ""
 
 #: src/pages/EventPage.jsx:618
 #: src/pages/EventPage.jsx:648
 msgid "Cancel"
-msgstr "取消"
+msgstr ""
+
+#: src/pages/BindPage.jsx:162
+msgid "Change Status"
+msgstr ""
 
 #: src/pages/EventPage.jsx:386
 msgid "Create Event"
-msgstr "创建事件"
+msgstr ""
 
 #: src/pages/EventPage.jsx:634
 #: src/pages/EventPage.jsx:651
 msgid "Delete"
-msgstr "删除"
+msgstr ""
 
 #: src/pages/EventPage.jsx:483
 msgid "Edit"
-msgstr "编辑"
+msgstr ""
 
 #: src/pages/EventPage.jsx:489
 msgid "Edit Event"
-msgstr "编辑事件"
+msgstr ""
 
 #: src/pages/EventPage.jsx:356
 #: src/pages/EventPage.jsx:418
 #: src/pages/EventPage.jsx:591
 msgid "End Date"
-msgstr "结束日期"
+msgstr ""
+
+#. placeholder {0}: error.message || error
+#: src/pages/BindPage.jsx:68
+msgid "Error: {0}"
+msgstr ""
 
 #: src/pages/EventPage.jsx:224
 #: src/pages/EventPage.jsx:238
 msgid "Events"
-msgstr "事件"
+msgstr ""
 
 #: src/pages/EventPage.jsx:406
 msgid "Image"
-msgstr "图片"
+msgstr ""
 
 #: src/pages/EventPage.jsx:295
 #: src/pages/EventPage.jsx:530
 msgid "Image URL"
-msgstr "图片URL"
+msgstr ""
 
 #: src/pages/EventPage.jsx:325
 #: src/pages/EventPage.jsx:412
 #: src/pages/EventPage.jsx:560
 msgid "Language"
-msgstr "语言"
+msgstr ""
 
 #: src/pages/EventPage.jsx:398
+#: src/pages/BindPage.jsx:104
 msgid "Loading..."
-msgstr "加载中..."
+msgstr ""
+
+#: src/pages/BindPage.jsx:132
+msgid "No data"
+msgstr ""
 
 #: src/pages/EventPage.jsx:432
 msgid "No events found"
-msgstr "未找到事件"
+msgstr ""
 
 #: src/pages/EventPage.jsx:460
 msgid "No image"
-msgstr "没有图像"
+msgstr ""
+
+#: src/pages/BindPage.jsx:93
+#: src/pages/BindPage.jsx:188
+msgid "Pending"
+msgstr ""
+
+#: src/pages/BindPage.jsx:112
+msgid "Platform"
+msgstr ""
+
+#: src/pages/BindPage.jsx:96
+#: src/pages/BindPage.jsx:191
+msgid "Rejected"
+msgstr ""
 
 #: src/pages/EventPage.jsx:621
 msgid "Save Changes"
-msgstr "保存更改"
+msgstr ""
+
+#: src/components/AppSidebar.jsx:114
+msgid "Settings"
+msgstr ""
+
+#: src/components/AppSidebar.jsx:117
+msgid "Sign out"
+msgstr ""
 
 #: src/pages/EventPage.jsx:341
 #: src/pages/EventPage.jsx:415
 #: src/pages/EventPage.jsx:576
 msgid "Start Date"
-msgstr "开始日期"
+msgstr ""
+
+#: src/pages/BindPage.jsx:121
+msgid "Status"
+msgstr ""
 
 #: src/pages/EventPage.jsx:280
 #: src/pages/EventPage.jsx:515
 msgid "Subtitle"
-msgstr "字幕"
+msgstr ""
 
 #: src/pages/EventPage.jsx:421
 msgid "Tags"
-msgstr "标签"
+msgstr ""
 
 #: src/pages/EventPage.jsx:372
 #: src/pages/EventPage.jsx:607
 msgid "Tags (comma-separated)"
-msgstr "标签(逗号分隔)"
+msgstr ""
 
 #: src/pages/EventPage.jsx:643
 msgid "This action cannot be undone. This will permanently delete the event."
-msgstr "此操作无法撤销。这将永久删除此事件。"
+msgstr ""
 
 #: src/pages/EventPage.jsx:265
 #: src/pages/EventPage.jsx:409
 #: src/pages/EventPage.jsx:500
 msgid "Title"
-msgstr "标题"
+msgstr ""
+
+#: src/pages/BindPage.jsx:118
+msgid "UID"
+msgstr ""
+
+#: src/pages/BindPage.jsx:201
+msgid "Update"
+msgstr ""
+
+#: src/pages/BindPage.jsx:168
+msgid "Update Bind Status"
+msgstr ""
 
 #: src/pages/EventPage.jsx:310
 #: src/pages/EventPage.jsx:545
 msgid "URL"
-msgstr "网址"
+msgstr ""
+
+#: src/pages/BindPage.jsx:115
+msgid "User ID"
+msgstr ""

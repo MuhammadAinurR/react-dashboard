@@ -1,131 +1,206 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2024-12-13 11:02+0700\n"
+"POT-Creation-Date: 2024-12-14 10:25+0700\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: ar\n"
-"Project-Id-Version: degenmax-dashboard\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2024-12-13 14:48\n"
+"PO-Revision-Date: \n"
 "Last-Translator: \n"
-"Language-Team: Arabic\n"
-"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
-"X-Crowdin-Project: degenmax-dashboard\n"
-"X-Crowdin-Project-ID: 745703\n"
-"X-Crowdin-Language: ar\n"
-"X-Crowdin-File: /development/src/locales/en.po\n"
-"X-Crowdin-File-ID: 10\n"
+"Language-Team: \n"
+"Plural-Forms: \n"
+
+#. placeholder {0}: item.title
+#: src/components/AppSidebar.jsx:83
+msgid "{0}"
+msgstr ""
+
+#: src/components/AppSidebar.jsx:111
+msgid "Account"
+msgstr ""
 
 #: src/pages/EventPage.jsx:424
+#: src/pages/BindPage.jsx:124
 msgid "Actions"
-msgstr "الإجراءات"
+msgstr ""
 
 #: src/pages/EventPage.jsx:250
 msgid "Add Event"
-msgstr "إضافة حدث"
+msgstr ""
+
+#: src/pages/BindPage.jsx:87
+msgid "All Status"
+msgstr ""
+
+#: src/pages/BindPage.jsx:90
+#: src/pages/BindPage.jsx:181
+msgid "Approved"
+msgstr ""
 
 #. placeholder {0}: event.title
 #: src/pages/EventPage.jsx:640
 msgid "Are you sure you want to delete {0}?"
-msgstr "هل أنت متأكد من أنك تريد حذف {0}؟"
+msgstr ""
+
+#: src/pages/BindPage.jsx:63
+#: src/pages/BindPage.jsx:79
+msgid "Bind Status"
+msgstr ""
 
 #: src/pages/EventPage.jsx:618
 #: src/pages/EventPage.jsx:648
 msgid "Cancel"
-msgstr "إلغاء"
+msgstr ""
+
+#: src/pages/BindPage.jsx:162
+msgid "Change Status"
+msgstr ""
 
 #: src/pages/EventPage.jsx:386
 msgid "Create Event"
-msgstr "إنشاء حدث"
+msgstr ""
 
 #: src/pages/EventPage.jsx:634
 #: src/pages/EventPage.jsx:651
 msgid "Delete"
-msgstr "حذف"
+msgstr ""
 
 #: src/pages/EventPage.jsx:483
 msgid "Edit"
-msgstr "تحرير"
+msgstr ""
 
 #: src/pages/EventPage.jsx:489
 msgid "Edit Event"
-msgstr "تعديل الحدث"
+msgstr ""
 
 #: src/pages/EventPage.jsx:356
 #: src/pages/EventPage.jsx:418
 #: src/pages/EventPage.jsx:591
 msgid "End Date"
-msgstr "تاريخ الانتهاء"
+msgstr ""
+
+#. placeholder {0}: error.message || error
+#: src/pages/BindPage.jsx:68
+msgid "Error: {0}"
+msgstr ""
 
 #: src/pages/EventPage.jsx:224
 #: src/pages/EventPage.jsx:238
 msgid "Events"
-msgstr "الأحداث"
+msgstr ""
 
 #: src/pages/EventPage.jsx:406
 msgid "Image"
-msgstr "صورة"
+msgstr ""
 
 #: src/pages/EventPage.jsx:295
 #: src/pages/EventPage.jsx:530
 msgid "Image URL"
-msgstr "رابط الصورة"
+msgstr ""
 
 #: src/pages/EventPage.jsx:325
 #: src/pages/EventPage.jsx:412
 #: src/pages/EventPage.jsx:560
 msgid "Language"
-msgstr "اللغة"
+msgstr ""
 
 #: src/pages/EventPage.jsx:398
+#: src/pages/BindPage.jsx:104
 msgid "Loading..."
-msgstr "تحميل..."
+msgstr ""
+
+#: src/pages/BindPage.jsx:132
+msgid "No data"
+msgstr ""
 
 #: src/pages/EventPage.jsx:432
 msgid "No events found"
-msgstr "لم يتم العثور على أحداث"
+msgstr ""
 
 #: src/pages/EventPage.jsx:460
 msgid "No image"
-msgstr "لا توجد صورة"
+msgstr ""
+
+#: src/pages/BindPage.jsx:93
+#: src/pages/BindPage.jsx:188
+msgid "Pending"
+msgstr ""
+
+#: src/pages/BindPage.jsx:112
+msgid "Platform"
+msgstr ""
+
+#: src/pages/BindPage.jsx:96
+#: src/pages/BindPage.jsx:191
+msgid "Rejected"
+msgstr ""
 
 #: src/pages/EventPage.jsx:621
 msgid "Save Changes"
-msgstr "حفظ التغييرات"
+msgstr ""
+
+#: src/components/AppSidebar.jsx:114
+msgid "Settings"
+msgstr ""
+
+#: src/components/AppSidebar.jsx:117
+msgid "Sign out"
+msgstr ""
 
 #: src/pages/EventPage.jsx:341
 #: src/pages/EventPage.jsx:415
 #: src/pages/EventPage.jsx:576
 msgid "Start Date"
-msgstr "تاريخ البدء"
+msgstr ""
+
+#: src/pages/BindPage.jsx:121
+msgid "Status"
+msgstr ""
 
 #: src/pages/EventPage.jsx:280
 #: src/pages/EventPage.jsx:515
 msgid "Subtitle"
-msgstr "الترجمة"
+msgstr ""
 
 #: src/pages/EventPage.jsx:421
 msgid "Tags"
-msgstr "الوسوم"
+msgstr ""
 
 #: src/pages/EventPage.jsx:372
 #: src/pages/EventPage.jsx:607
 msgid "Tags (comma-separated)"
-msgstr "علامات (مفصولة بفاصلة)"
+msgstr ""
 
 #: src/pages/EventPage.jsx:643
 msgid "This action cannot be undone. This will permanently delete the event."
-msgstr "لا يمكن التراجع عن هذا الإجراء. سيؤدي هذا إلى حذف الحدث بشكل دائم."
+msgstr ""
 
 #: src/pages/EventPage.jsx:265
 #: src/pages/EventPage.jsx:409
 #: src/pages/EventPage.jsx:500
 msgid "Title"
-msgstr "العنوان"
+msgstr ""
+
+#: src/pages/BindPage.jsx:118
+msgid "UID"
+msgstr ""
+
+#: src/pages/BindPage.jsx:201
+msgid "Update"
+msgstr ""
+
+#: src/pages/BindPage.jsx:168
+msgid "Update Bind Status"
+msgstr ""
 
 #: src/pages/EventPage.jsx:310
 #: src/pages/EventPage.jsx:545
 msgid "URL"
-msgstr "الرابط"
+msgstr ""
+
+#: src/pages/BindPage.jsx:115
+msgid "User ID"
+msgstr ""

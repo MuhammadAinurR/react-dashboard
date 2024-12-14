@@ -16,7 +16,7 @@ import { Link, useLocation } from "react-router-dom";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "./ui/dropdown-menu";
 import { useAuth } from "@/context/AuthContext";
 import LanguageToggler from "./LanguageToggler";
-import { Trans } from "@lingui/react";
+import { Trans } from "@lingui/react/macro";
 
 // Menu items.
 const items = [
