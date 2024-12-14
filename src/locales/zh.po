@@ -31,6 +31,7 @@ msgstr ""
 msgid "Account"
 msgstr "账户"
 
+#: src/pages/ReferralCodesPage.jsx:94
 #: src/pages/PlatformPage.jsx:570
 #: src/pages/EventPage.jsx:424
 #: src/pages/BindPage.jsx:124
@@ -203,6 +204,7 @@ msgstr "语言"
 msgid "Limit Price"
 msgstr "限制价格"
 
+#: src/pages/ReferralCodesPage.jsx:78
 #: src/pages/PlatformPage.jsx:541
 #: src/pages/EventPage.jsx:398
 #: src/pages/BindPage.jsx:104
@@ -283,10 +285,18 @@ msgstr "平台"
 msgid "Pricing"
 msgstr "定价"
 
+#: src/pages/ReferralCodesPage.jsx:88
+msgid "Referral Code"
+msgstr ""
+
 #: src/pages/ReferralCodesPage.jsx:57
 #: src/pages/ReferralCodesPage.jsx:73
 msgid "Referral Codes"
 msgstr "推荐码"
+
+#: src/pages/ReferralCodesPage.jsx:91
+msgid "Referred By"
+msgstr ""
 
 #: src/pages/BindPage.jsx:96
 #: src/pages/BindPage.jsx:191
@@ -384,7 +394,7 @@ msgid "URL"
 msgstr "网址"
 
 #: src/pages/SendCashbackPage.jsx:94
+#: src/pages/ReferralCodesPage.jsx:85
 #: src/pages/BindPage.jsx:115
 msgid "User ID"
 msgstr "用户 ID"
-
