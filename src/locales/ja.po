@@ -2,205 +2,211 @@ msgid ""
 msgstr ""
 "POT-Creation-Date: 2024-12-14 10:25+0700\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: ja\n"
-"Project-Id-Version: \n"
+"Project-Id-Version: degenmax-dashboard\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: \n"
+"PO-Revision-Date: 2024-12-14 03:38\n"
 "Last-Translator: \n"
-"Language-Team: \n"
-"Plural-Forms: \n"
+"Language-Team: Japanese\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: degenmax-dashboard\n"
+"X-Crowdin-Project-ID: 745703\n"
+"X-Crowdin-Language: ja\n"
+"X-Crowdin-File: /development/src/locales/en.po\n"
+"X-Crowdin-File-ID: 10\n"
 
 #. placeholder {0}: item.title
 #: src/components/AppSidebar.jsx:83
 msgid "{0}"
-msgstr ""
+msgstr "{0}"
 
 #: src/components/AppSidebar.jsx:111
 msgid "Account"
-msgstr ""
+msgstr "アカウント"
 
 #: src/pages/EventPage.jsx:424
 #: src/pages/BindPage.jsx:124
 msgid "Actions"
-msgstr ""
+msgstr "アクション"
 
 #: src/pages/EventPage.jsx:250
 msgid "Add Event"
-msgstr ""
+msgstr "イベントを追加"
 
 #: src/pages/BindPage.jsx:87
 msgid "All Status"
-msgstr ""
+msgstr "すべてのステータス"
 
 #: src/pages/BindPage.jsx:90
 #: src/pages/BindPage.jsx:181
 msgid "Approved"
-msgstr ""
+msgstr "承認済み"
 
 #. placeholder {0}: event.title
 #: src/pages/EventPage.jsx:640
 msgid "Are you sure you want to delete {0}?"
-msgstr ""
+msgstr "{0} を削除してもよろしいですか？"
 
 #: src/pages/BindPage.jsx:63
 #: src/pages/BindPage.jsx:79
 msgid "Bind Status"
-msgstr ""
+msgstr "Bind Status"
 
 #: src/pages/EventPage.jsx:618
 #: src/pages/EventPage.jsx:648
 msgid "Cancel"
-msgstr ""
+msgstr "キャンセル"
 
 #: src/pages/BindPage.jsx:162
 msgid "Change Status"
-msgstr ""
+msgstr "ステータスの変更"
 
 #: src/pages/EventPage.jsx:386
 msgid "Create Event"
-msgstr ""
+msgstr "イベントを作成"
 
 #: src/pages/EventPage.jsx:634
 #: src/pages/EventPage.jsx:651
 msgid "Delete"
-msgstr ""
+msgstr "削除"
 
 #: src/pages/EventPage.jsx:483
 msgid "Edit"
-msgstr ""
+msgstr "編集"
 
 #: src/pages/EventPage.jsx:489
 msgid "Edit Event"
-msgstr ""
+msgstr "予定を編集"
 
 #: src/pages/EventPage.jsx:356
 #: src/pages/EventPage.jsx:418
 #: src/pages/EventPage.jsx:591
 msgid "End Date"
-msgstr ""
+msgstr "終了日"
 
 #. placeholder {0}: error.message || error
 #: src/pages/BindPage.jsx:68
 msgid "Error: {0}"
-msgstr ""
+msgstr "エラー: {0}"
 
 #: src/pages/EventPage.jsx:224
 #: src/pages/EventPage.jsx:238
 msgid "Events"
-msgstr ""
+msgstr "イベント"
 
 #: src/pages/EventPage.jsx:406
 msgid "Image"
-msgstr ""
+msgstr "画像"
 
 #: src/pages/EventPage.jsx:295
 #: src/pages/EventPage.jsx:530
 msgid "Image URL"
-msgstr ""
+msgstr "画像URL"
 
 #: src/pages/EventPage.jsx:325
 #: src/pages/EventPage.jsx:412
 #: src/pages/EventPage.jsx:560
 msgid "Language"
-msgstr ""
+msgstr "言語"
 
 #: src/pages/EventPage.jsx:398
 #: src/pages/BindPage.jsx:104
 msgid "Loading..."
-msgstr ""
+msgstr "読み込み中..."
 
 #: src/pages/BindPage.jsx:132
 msgid "No data"
-msgstr ""
+msgstr "データがありません"
 
 #: src/pages/EventPage.jsx:432
 msgid "No events found"
-msgstr ""
+msgstr "予定が見つかりません"
 
 #: src/pages/EventPage.jsx:460
 msgid "No image"
-msgstr ""
+msgstr "画像がありません"
 
 #: src/pages/BindPage.jsx:93
 #: src/pages/BindPage.jsx:188
 msgid "Pending"
-msgstr ""
+msgstr "保留中"
 
 #: src/pages/BindPage.jsx:112
 msgid "Platform"
-msgstr ""
+msgstr "プラットフォーム"
 
 #: src/pages/BindPage.jsx:96
 #: src/pages/BindPage.jsx:191
 msgid "Rejected"
-msgstr ""
+msgstr "拒否"
 
 #: src/pages/EventPage.jsx:621
 msgid "Save Changes"
-msgstr ""
+msgstr "変更を保存"
 
 #: src/components/AppSidebar.jsx:114
 msgid "Settings"
-msgstr ""
+msgstr "設定"
 
 #: src/components/AppSidebar.jsx:117
 msgid "Sign out"
-msgstr ""
+msgstr "サインアウト"
 
 #: src/pages/EventPage.jsx:341
 #: src/pages/EventPage.jsx:415
 #: src/pages/EventPage.jsx:576
 msgid "Start Date"
-msgstr ""
+msgstr "開始日"
 
 #: src/pages/BindPage.jsx:121
 msgid "Status"
-msgstr ""
+msgstr "ステータス"
 
 #: src/pages/EventPage.jsx:280
 #: src/pages/EventPage.jsx:515
 msgid "Subtitle"
-msgstr ""
+msgstr "サブタイトル"
 
 #: src/pages/EventPage.jsx:421
 msgid "Tags"
-msgstr ""
+msgstr "タグ"
 
 #: src/pages/EventPage.jsx:372
 #: src/pages/EventPage.jsx:607
 msgid "Tags (comma-separated)"
-msgstr ""
+msgstr "タグ (カンマ区切り)"
 
 #: src/pages/EventPage.jsx:643
 msgid "This action cannot be undone. This will permanently delete the event."
-msgstr ""
+msgstr "この操作は元に戻せません。この操作はイベントを永久に削除します。"
 
 #: src/pages/EventPage.jsx:265
 #: src/pages/EventPage.jsx:409
 #: src/pages/EventPage.jsx:500
 msgid "Title"
-msgstr ""
+msgstr "タイトル"
 
 #: src/pages/BindPage.jsx:118
 msgid "UID"
-msgstr ""
+msgstr "UID"
 
 #: src/pages/BindPage.jsx:201
 msgid "Update"
-msgstr ""
+msgstr "更新"
 
 #: src/pages/BindPage.jsx:168
 msgid "Update Bind Status"
-msgstr ""
+msgstr "Update Bind Status"
 
 #: src/pages/EventPage.jsx:310
 #: src/pages/EventPage.jsx:545
 msgid "URL"
-msgstr ""
+msgstr "URL"
 
 #: src/pages/BindPage.jsx:115
 msgid "User ID"
-msgstr ""
+msgstr "ユーザー ID"
+
