@@ -1,3 +1,4 @@
+import { useState, useEffect, useRef, useCallback } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import {
   ReactFlow,
@@ -9,11 +10,10 @@ import {
   getBezierPath,
   Handle,
   Position,
+  useReactFlow,
 } from "@xyflow/react";
 import "@xyflow/react/dist/style.css";
-import { useCallback, useEffect } from "react";
 
-// Custom Node Component
 function CustomNode({ data, isConnectable }) {
   return (
     <>
@@ -28,23 +28,20 @@ function CustomNode({ data, isConnectable }) {
         <div className="text-xs text-muted-foreground">{data.referralCode}</div>
       </div>
       <Handle type="source" position={Position.Bottom} id="a" isConnectable={isConnectable} />
-      <Handle type="source" position={Position.Bottom} id="b" isConnectable={isConnectable} />
+      <Handle type="source" position={Position.Bottomt} id="b" isConnectable={isConnectable} />
     </>
   );
 }
 
-// Custom Edge Component
 function CustomEdge({ id, sourceX, sourceY, targetX, targetY }) {
   const [path] = getBezierPath({ sourceX, sourceY, targetX, targetY });
   return <path id={id} d={path} style={{ stroke: "black", strokeWidth: 2 }} />;
 }
 
-// Node types definition
 const nodeTypes = {
   custom: CustomNode,
 };
 
-// Edge types definition
 const edgeTypes = {
   custom: CustomEdge,
 };
@@ -52,6 +49,8 @@ const edgeTypes = {
 export function ReferralTree({ isOpen, onClose, treeData, requestedUserId }) {
   const [nodes, setNodes, onNodesChange] = useNodesState([]);
   const [edges, setEdges, onEdgesChange] = useEdgesState([]);
+  const { fitView } = useReactFlow();
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   const convertTreeToFlow = useCallback(
     (tree, parentId = null, position = { x: 0, y: 0 }) => {
@@ -60,7 +59,6 @@ export function ReferralTree({ isOpen, onClose, treeData, requestedUserId }) {
       const nodes = [];
       const edges = [];
 
-      // Create node
       const currentNode = {
         id: tree.userId.toString(),
         position: { x: position.x, y: position.y },
@@ -74,7 +72,6 @@ export function ReferralTree({ isOpen, onClose, treeData, requestedUserId }) {
       };
       nodes.push(currentNode);
 
-      // Create edge if there's a parent
       if (parentId) {
         edges.push({
           id: `${parentId}-${tree.userId}`,
@@ -83,13 +80,12 @@ export function ReferralTree({ isOpen, onClose, treeData, requestedUserId }) {
         });
       }
 
-      // Process children with adjusted spacing
       if (tree.children) {
-        const spacing = 200; // Increased horizontal spacing
+        const spacing = 200;
         tree.children.forEach((child, index) => {
           const childPosition = {
             x: position.x + (index - (tree.children.length - 1) / 2) * spacing,
-            y: position.y + 100, // Reduced vertical spacing
+            y: position.y + 100,
           };
           const { nodes: childNodes, edges: childEdges } = convertTreeToFlow(child, tree.userId, childPosition);
           nodes.push(...childNodes);
@@ -103,37 +99,52 @@ export function ReferralTree({ isOpen, onClose, treeData, requestedUserId }) {
   );
 
   useEffect(() => {
-    if (treeData) {
+    if (isOpen && treeData) {
       const { nodes: newNodes, edges: newEdges } = convertTreeToFlow(treeData);
       setNodes(newNodes);
       setEdges(newEdges);
     }
-  }, [treeData, convertTreeToFlow, setNodes, setEdges]);
-  console.log("nodes", nodes);
+  }, [isOpen, treeData, convertTreeToFlow]);
+
+  useEffect(() => {
+    if (isOpen && nodes.length > 0) {
+      // Trigger fitView after the tree data is loaded
+      fitView();
+    }
+  }, [isOpen, nodes, fitView]);
+
   return (
-    <Dialog open={isOpen} onOpenChange={onClose}>
+    <Dialog
+      open={isOpen}
+      onOpenChange={(open) => {
+        setIsDialogOpen(open);
+        if (!open) onClose();
+      }}
+    >
       <DialogContent className="max-w-5xl h-[600px]">
         <DialogHeader>
           <DialogTitle>Referral Tree</DialogTitle>
         </DialogHeader>
         <div style={{ width: "100%", height: "500px" }}>
-          <ReactFlow
-            nodes={nodes}
-            edges={edges}
-            onNodesChange={onNodesChange}
-            onEdgesChange={onEdgesChange}
-            nodeTypes={nodeTypes}
-            edgeTypes={edgeTypes}
-            fitView
-            defaultEdgeOptions={{
-              animated: true,
-              type: "straight",
-            }}
-          >
-            <Background />
-            <Controls />
-            <MiniMap />
-          </ReactFlow>
+          {isOpen && (
+            <ReactFlow
+              nodes={nodes}
+              edges={edges}
+              onNodesChange={onNodesChange}
+              onEdgesChange={onEdgesChange}
+              nodeTypes={nodeTypes}
+              edgeTypes={edgeTypes}
+              fitView={false} // Disable automatic fitView to manage it manually
+              defaultEdgeOptions={{
+                animated: true,
+                type: "straight",
+              }}
+            >
+              <Background />
+              <Controls />
+              <MiniMap />
+            </ReactFlow>
+          )}
         </div>
       </DialogContent>
     </Dialog>

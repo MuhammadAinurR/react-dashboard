@@ -6,6 +6,7 @@ import { Pagination } from "@/components/ui/pagination";
 import { Button } from "@/components/ui/button";
 import { ReferralTree } from "@/components/ReferralTree";
 import { Trans } from "@lingui/react/macro";
+import { ReactFlowProvider } from "@xyflow/react";
 
 export default function ReferralCodesPage() {
   const fetch = privateFetch();
@@ -130,12 +131,14 @@ export default function ReferralCodesPage() {
           </>
         )}
       </CardContent>
-      <ReferralTree
-        isOpen={treeModalOpen}
-        onClose={() => setTreeModalOpen(false)}
-        treeData={selectedTree}
-        requestedUserId={requestedUserId}
-      />
+      <ReactFlowProvider>
+        <ReferralTree
+          isOpen={treeModalOpen}
+          onClose={() => setTreeModalOpen(false)}
+          treeData={selectedTree}
+          requestedUserId={requestedUserId}
+        />
+      </ReactFlowProvider>
     </Card>
   );
 }
