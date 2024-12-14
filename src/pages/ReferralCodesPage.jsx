@@ -75,16 +75,24 @@ export default function ReferralCodesPage() {
       </CardHeader>
       <CardContent>
         {isLoading ? (
-          <p>Loading...</p>
+          <Trans>Loading...</Trans>
         ) : (
           <>
             <Table>
               <TableHeader>
                 <TableRow className="bg-muted/50">
-                  <TableHead className="font-semibold">User ID</TableHead>
-                  <TableHead className="font-semibold">Referral Code</TableHead>
-                  <TableHead className="font-semibold">Referred By</TableHead>
-                  <TableHead className="font-semibold">Actions</TableHead>
+                  <TableHead className="font-semibold">
+                    <Trans>User ID</Trans>
+                  </TableHead>
+                  <TableHead className="font-semibold">
+                    <Trans>Referral Code</Trans>
+                  </TableHead>
+                  <TableHead className="font-semibold">
+                    <Trans>Referred By</Trans>
+                  </TableHead>
+                  <TableHead className="font-semibold">
+                    <Trans>Actions</Trans>
+                  </TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
