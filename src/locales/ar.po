@@ -8,7 +8,7 @@ msgstr ""
 "Language: ar\n"
 "Project-Id-Version: degenmax-dashboard\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2024-12-14 03:58\n"
+"PO-Revision-Date: 2024-12-14 04:01\n"
 "Last-Translator: \n"
 "Language-Team: Arabic\n"
 "Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
@@ -39,11 +39,11 @@ msgstr "إضافة حدث"
 
 #: src/pages/PlatformPage.jsx:255
 msgid "Add New Platform"
-msgstr ""
+msgstr "إضافة منصة جديدة"
 
 #: src/pages/PlatformPage.jsx:249
 msgid "Add Platform"
-msgstr ""
+msgstr "إضافة منصة"
 
 #: src/pages/BindPage.jsx:87
 msgid "All Status"
@@ -64,19 +64,19 @@ msgstr "هل أنت متأكد من أنك تريد حذف {0}؟"
 #: src/pages/PlatformPage.jsx:429
 #: src/pages/PlatformPage.jsx:739
 msgid "Average Rebate"
-msgstr ""
+msgstr "متوسط الخصم"
 
 #: src/pages/PlatformPage.jsx:564
 msgid "Avg. Rebate"
-msgstr ""
+msgstr "متوسط الخصم"
 
 #: src/pages/PlatformPage.jsx:266
 msgid "Basic Info"
-msgstr ""
+msgstr "معلومات أساسية"
 
 #: src/pages/PlatformPage.jsx:644
 msgid "Basic Information"
-msgstr ""
+msgstr "معلومات أساسية"
 
 #: src/pages/BindPage.jsx:63
 #: src/pages/BindPage.jsx:79
@@ -94,7 +94,7 @@ msgstr "إلغاء"
 #: src/pages/PlatformPage.jsx:558
 #: src/pages/PlatformPage.jsx:709
 msgid "Cashback (%)"
-msgstr ""
+msgstr "Cashback (%)"
 
 #: src/pages/BindPage.jsx:162
 msgid "Change Status"
@@ -106,7 +106,7 @@ msgstr "إنشاء حدث"
 
 #: src/pages/PlatformPage.jsx:528
 msgid "Create Platform"
-msgstr ""
+msgstr "إنشاء منصة"
 
 #: src/pages/PlatformPage.jsx:869
 #: src/pages/PlatformPage.jsx:888
@@ -119,12 +119,12 @@ msgstr "حذف"
 #: src/pages/PlatformPage.jsx:561
 #: src/pages/PlatformPage.jsx:724
 msgid "Discount (%)"
-msgstr ""
+msgstr "الخصم (%)"
 
 #: src/pages/PlatformPage.jsx:321
 #: src/pages/PlatformPage.jsx:666
 msgid "Display Label*"
-msgstr ""
+msgstr "عرض التسمية*"
 
 #: src/pages/PlatformPage.jsx:629
 #: src/pages/EventPage.jsx:483
@@ -138,7 +138,7 @@ msgstr "تعديل الحدث"
 #. placeholder {0}: platformToEdit?.name
 #: src/pages/PlatformPage.jsx:635
 msgid "Edit Platform: {0}"
-msgstr ""
+msgstr "تعديل المنصة: {0}"
 
 #: src/pages/EventPage.jsx:356
 #: src/pages/EventPage.jsx:418
@@ -169,7 +169,7 @@ msgstr "رابط الصورة"
 
 #: src/pages/PlatformPage.jsx:555
 msgid "Label"
-msgstr ""
+msgstr "تسمية"
 
 #: src/pages/EventPage.jsx:325
 #: src/pages/EventPage.jsx:412
@@ -180,7 +180,7 @@ msgstr "اللغة"
 #: src/pages/PlatformPage.jsx:412
 #: src/pages/PlatformPage.jsx:774
 msgid "Limit Price"
-msgstr ""
+msgstr "الحد الأقصى للسعر"
 
 #: src/pages/PlatformPage.jsx:541
 #: src/pages/EventPage.jsx:398
@@ -191,26 +191,26 @@ msgstr "تحميل..."
 #: src/pages/PlatformPage.jsx:453
 #: src/pages/PlatformPage.jsx:799
 msgid "Logo Image URL"
-msgstr ""
+msgstr "رابط صورة الشعار"
 
 #: src/pages/PlatformPage.jsx:397
 #: src/pages/PlatformPage.jsx:567
 #: src/pages/PlatformPage.jsx:759
 msgid "Market Price"
-msgstr ""
+msgstr "سعر السوق"
 
 #: src/pages/PlatformPage.jsx:290
 #: src/pages/PlatformPage.jsx:790
 msgid "Media"
-msgstr ""
+msgstr "الوسائط"
 
 #: src/pages/PlatformPage.jsx:552
 msgid "Name"
-msgstr ""
+msgstr "الاسم"
 
 #: src/pages/PlatformPage.jsx:522
 msgid "Next Step"
-msgstr ""
+msgstr "الخطوة التالية"
 
 #: src/pages/BindPage.jsx:132
 msgid "No data"
@@ -227,7 +227,7 @@ msgstr "لا توجد صورة"
 
 #: src/pages/PlatformPage.jsx:578
 msgid "No platforms found"
-msgstr ""
+msgstr "لم يتم العثور على منصات"
 
 #: src/pages/BindPage.jsx:93
 #: src/pages/BindPage.jsx:188
@@ -240,27 +240,27 @@ msgstr "المنصة"
 
 #: src/pages/PlatformPage.jsx:445
 msgid "Platform Images"
-msgstr ""
+msgstr "صور المنصة"
 
 #: src/pages/PlatformPage.jsx:306
 msgid "Platform Name*"
-msgstr ""
+msgstr "اسم المنصة*"
 
 #: src/pages/PlatformPage.jsx:337
 #: src/pages/PlatformPage.jsx:682
 msgid "Platform URL"
-msgstr ""
+msgstr "رابط المنصة"
 
 #: src/pages/PlatformPage.jsx:221
 #: src/pages/PlatformPage.jsx:237
 msgid "Platforms"
-msgstr ""
+msgstr "المنصات"
 
 #: src/pages/PlatformPage.jsx:278
 #: src/pages/PlatformPage.jsx:389
 #: src/pages/PlatformPage.jsx:751
 msgid "Pricing"
-msgstr ""
+msgstr "التسعير"
 
 #: src/pages/BindPage.jsx:96
 #: src/pages/BindPage.jsx:191
@@ -270,11 +270,11 @@ msgstr "مرفوض"
 #: src/pages/PlatformPage.jsx:354
 #: src/pages/PlatformPage.jsx:701
 msgid "Rewards"
-msgstr ""
+msgstr "مكافآت"
 
 #: src/pages/PlatformPage.jsx:696
 msgid "Rewards & Pricing"
-msgstr ""
+msgstr "المكافآت و التسعير"
 
 #: src/pages/PlatformPage.jsx:856
 #: src/pages/EventPage.jsx:621
@@ -319,7 +319,7 @@ msgstr "لا يمكن التراجع عن هذا الإجراء. سيؤدي هذ
 
 #: src/pages/PlatformPage.jsx:878
 msgid "This action cannot be undone. This will permanently delete the platform."
-msgstr ""
+msgstr "لا يمكن التراجع عن هذا الإجراء. سيؤدي هذا إلى حذف المنصة بشكل دائم."
 
 #: src/pages/EventPage.jsx:265
 #: src/pages/EventPage.jsx:409
@@ -330,7 +330,7 @@ msgstr "العنوان"
 #: src/pages/PlatformPage.jsx:480
 #: src/pages/PlatformPage.jsx:826
 msgid "Title Image URL"
-msgstr ""
+msgstr "رابط صورة العنوان"
 
 #: src/pages/BindPage.jsx:118
 msgid "UID"
