@@ -23,6 +23,10 @@ msgstr ""
 msgid "{0}"
 msgstr "{0}"
 
+#: src/pages/SendCashbackPage.jsx:127
+msgid "{error}"
+msgstr ""
+
 #: src/components/AppSidebar.jsx:111
 msgid "Account"
 msgstr "账户"
@@ -61,6 +65,10 @@ msgstr "已批准"
 msgid "Are you sure you want to delete {0}?"
 msgstr "您确定要删除 {0} 吗？"
 
+#: src/pages/SendCashbackPage.jsx:67
+msgid "Are you sure you want to send ${amount} to user ID: {uid}?"
+msgstr ""
+
 #: src/pages/PlatformPage.jsx:429
 #: src/pages/PlatformPage.jsx:739
 msgid "Average Rebate"
@@ -96,9 +104,21 @@ msgstr "取消"
 msgid "Cashback (%)"
 msgstr "Cashback (%)"
 
+#: src/pages/SendCashbackPage.jsx:108
+msgid "Cashback Amount"
+msgstr ""
+
+#: src/pages/SendCashbackPage.jsx:133
+msgid "Cashback sent successfully!"
+msgstr ""
+
 #: src/pages/BindPage.jsx:162
 msgid "Change Status"
 msgstr "更改状态"
+
+#: src/pages/SendCashbackPage.jsx:64
+msgid "Confirm Cashback"
+msgstr ""
 
 #: src/pages/EventPage.jsx:386
 msgid "Create Event"
@@ -147,6 +167,7 @@ msgid "End Date"
 msgstr "结束日期"
 
 #. placeholder {0}: error.message || error
+#: src/pages/ReferralCodesPage.jsx:62
 #: src/pages/PlatformPage.jsx:226
 #: src/pages/BindPage.jsx:68
 msgid "Error: {0}"
@@ -262,6 +283,11 @@ msgstr "平台"
 msgid "Pricing"
 msgstr "定价"
 
+#: src/pages/ReferralCodesPage.jsx:57
+#: src/pages/ReferralCodesPage.jsx:73
+msgid "Referral Codes"
+msgstr ""
+
 #: src/pages/BindPage.jsx:96
 #: src/pages/BindPage.jsx:191
 msgid "Rejected"
@@ -280,6 +306,14 @@ msgstr "奖励与价格"
 #: src/pages/EventPage.jsx:621
 msgid "Save Changes"
 msgstr "保存更改"
+
+#: src/pages/SendCashbackPage.jsx:142
+msgid "Send Cashback"
+msgstr ""
+
+#: src/pages/SendCashbackPage.jsx:142
+msgid "Sending..."
+msgstr ""
 
 #: src/components/AppSidebar.jsx:114
 msgid "Settings"
@@ -349,7 +383,7 @@ msgstr "Update Bind Status"
 msgid "URL"
 msgstr "网址"
 
+#: src/pages/SendCashbackPage.jsx:94
 #: src/pages/BindPage.jsx:115
 msgid "User ID"
 msgstr "用户 ID"
-

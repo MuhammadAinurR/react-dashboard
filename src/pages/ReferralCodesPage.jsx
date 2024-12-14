@@ -5,6 +5,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Pagination } from "@/components/ui/pagination";
 import { Button } from "@/components/ui/button";
 import { ReferralTree } from "@/components/ReferralTree";
+import { Trans } from "@lingui/react/macro";
 
 export default function ReferralCodesPage() {
   const fetch = privateFetch();
@@ -52,10 +53,14 @@ export default function ReferralCodesPage() {
     return (
       <Card className="max-w-4xl mx-auto mt-8">
         <CardHeader>
-          <CardTitle>Referral Codes</CardTitle>
+          <CardTitle>
+            <Trans>Referral Codes</Trans>
+          </CardTitle>
         </CardHeader>
         <CardContent>
-          <p className="text-destructive">Error: {error.message || error}</p>
+          <p className="text-destructive">
+            <Trans>Error: {error.message || error}</Trans>
+          </p>
         </CardContent>
       </Card>
     );
@@ -64,7 +69,9 @@ export default function ReferralCodesPage() {
   return (
     <Card className="max-w-6xl mx-auto mt-8">
       <CardHeader>
-        <CardTitle>Referral Codes</CardTitle>
+        <CardTitle>
+          <Trans>Referral Codes</Trans>
+        </CardTitle>
       </CardHeader>
       <CardContent>
         {isLoading ? (

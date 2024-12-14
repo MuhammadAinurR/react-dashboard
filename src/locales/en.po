@@ -18,6 +18,10 @@ msgstr ""
 msgid "{0}"
 msgstr ""
 
+#: src/pages/SendCashbackPage.jsx:127
+msgid "{error}"
+msgstr ""
+
 #: src/components/AppSidebar.jsx:111
 msgid "Account"
 msgstr ""
@@ -56,6 +60,10 @@ msgstr ""
 msgid "Are you sure you want to delete {0}?"
 msgstr ""
 
+#: src/pages/SendCashbackPage.jsx:67
+msgid "Are you sure you want to send ${amount} to user ID: {uid}?"
+msgstr ""
+
 #: src/pages/PlatformPage.jsx:429
 #: src/pages/PlatformPage.jsx:739
 msgid "Average Rebate"
@@ -91,8 +99,20 @@ msgstr ""
 msgid "Cashback (%)"
 msgstr ""
 
+#: src/pages/SendCashbackPage.jsx:108
+msgid "Cashback Amount"
+msgstr ""
+
+#: src/pages/SendCashbackPage.jsx:133
+msgid "Cashback sent successfully!"
+msgstr ""
+
 #: src/pages/BindPage.jsx:162
 msgid "Change Status"
+msgstr ""
+
+#: src/pages/SendCashbackPage.jsx:64
+msgid "Confirm Cashback"
 msgstr ""
 
 #: src/pages/EventPage.jsx:386
@@ -142,6 +162,7 @@ msgid "End Date"
 msgstr ""
 
 #. placeholder {0}: error.message || error
+#: src/pages/ReferralCodesPage.jsx:62
 #: src/pages/PlatformPage.jsx:226
 #: src/pages/BindPage.jsx:68
 msgid "Error: {0}"
@@ -257,6 +278,11 @@ msgstr ""
 msgid "Pricing"
 msgstr ""
 
+#: src/pages/ReferralCodesPage.jsx:57
+#: src/pages/ReferralCodesPage.jsx:73
+msgid "Referral Codes"
+msgstr ""
+
 #: src/pages/BindPage.jsx:96
 #: src/pages/BindPage.jsx:191
 msgid "Rejected"
@@ -274,6 +300,14 @@ msgstr ""
 #: src/pages/PlatformPage.jsx:856
 #: src/pages/EventPage.jsx:621
 msgid "Save Changes"
+msgstr ""
+
+#: src/pages/SendCashbackPage.jsx:142
+msgid "Send Cashback"
+msgstr ""
+
+#: src/pages/SendCashbackPage.jsx:142
+msgid "Sending..."
 msgstr ""
 
 #: src/components/AppSidebar.jsx:114
@@ -344,6 +378,7 @@ msgstr ""
 msgid "URL"
 msgstr ""
 
+#: src/pages/SendCashbackPage.jsx:94
 #: src/pages/BindPage.jsx:115
 msgid "User ID"
 msgstr ""

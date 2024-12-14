@@ -1,6 +1,7 @@
 import { useToast } from "@/hooks/use-toast";
 import { privateFetch } from "@/hooks/useFetch";
 import React, { useState } from "react";
+import { Trans } from "@lingui/react/macro";
 
 export default function SendCashbackPage() {
   const fetch = privateFetch();
@@ -59,9 +60,13 @@ export default function SendCashbackPage() {
         {showConfirmation ? (
           <div className="overflow-hidden rounded-xl bg-white shadow-lg">
             <div className="p-8">
-              <h2 className="mb-4 text-lg font-semibold">Confirm Cashback</h2>
+              <h2 className="mb-4 text-lg font-semibold">
+                <Trans>Confirm Cashback</Trans>
+              </h2>
               <p className="mb-4 text-gray-600">
-                Are you sure you want to send ${amount} to user ID: {uid}?
+                <Trans>
+                  Are you sure you want to send ${amount} to user ID: {uid}?
+                </Trans>
               </p>
               <div className="flex gap-3">
                 <button
@@ -85,7 +90,9 @@ export default function SendCashbackPage() {
           <form onSubmit={handleSubmit} className="overflow-hidden rounded-xl bg-white shadow-lg">
             <div className="p-8">
               <div className="mb-6">
-                <label className="mb-2 block text-sm font-medium text-gray-700">User ID</label>
+                <label className="mb-2 block text-sm font-medium text-gray-700">
+                  <Trans>User ID</Trans>
+                </label>
                 <input
                   type="text"
                   value={uid}
@@ -97,7 +104,9 @@ export default function SendCashbackPage() {
               </div>
 
               <div className="mb-6">
-                <label className="mb-2 block text-sm font-medium text-gray-700">Cashback Amount</label>
+                <label className="mb-2 block text-sm font-medium text-gray-700">
+                  <Trans>Cashback Amount</Trans>
+                </label>
                 <div className="relative">
                   <span className="absolute left-3 top-3 text-gray-500">$</span>
                   <input
@@ -113,11 +122,15 @@ export default function SendCashbackPage() {
                 </div>
               </div>
 
-              {error && <div className="mb-4 rounded-lg bg-red-50 p-3 text-sm text-red-500">{error}</div>}
+              {error && (
+                <div className="mb-4 rounded-lg bg-red-50 p-3 text-sm text-red-500">
+                  <Trans>{error}</Trans>
+                </div>
+              )}
 
               {success && (
                 <div className="mb-4 rounded-lg bg-green-50 p-3 text-sm text-green-500">
-                  Cashback sent successfully!
+                  <Trans>Cashback sent successfully!</Trans>
                 </div>
               )}
 
@@ -126,7 +139,7 @@ export default function SendCashbackPage() {
                 disabled={loading}
                 className="w-full rounded-lg bg-gray-900 py-3 text-white transition-colors hover:bg-black focus:outline-none focus:ring-2 focus:ring-gray-700 focus:ring-offset-2 disabled:bg-gray-400"
               >
-                {loading ? "Sending..." : "Send Cashback"}
+                {loading ? <Trans>Sending...</Trans> : <Trans>Send Cashback</Trans>}
               </button>
             </div>
           </form>
