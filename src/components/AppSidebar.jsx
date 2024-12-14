@@ -16,6 +16,7 @@ import { Link, useLocation } from "react-router-dom";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "./ui/dropdown-menu";
 import { useAuth } from "@/context/AuthContext";
 import LanguageToggler from "./LanguageToggler";
+import { Trans } from "@lingui/react";
 
 // Menu items.
 const items = [
@@ -79,7 +80,7 @@ export function AppSidebar() {
                   <SidebarMenuButton asChild isActive={location.pathname === item.url}>
                     <Link to={item.url}>
                       <item.icon />
-                      <span>{item.title}</span>
+                      <Trans>{item.title}</Trans>
                     </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
@@ -107,13 +108,13 @@ export function AppSidebar() {
               </DropdownMenuTrigger>
               <DropdownMenuContent side="top" className="w-[--radix-popper-anchor-width]">
                 <DropdownMenuItem>
-                  <span>Account</span>
+                  <Trans>Account</Trans>
                 </DropdownMenuItem>
                 <DropdownMenuItem>
-                  <span>Settings</span>
+                  <Trans>Settings</Trans>
                 </DropdownMenuItem>
                 <DropdownMenuItem onClick={handleLogout}>
-                  <span>Sign out</span>
+                  <Trans>Sign out</Trans>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
