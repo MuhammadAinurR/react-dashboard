@@ -22,6 +22,7 @@ msgstr ""
 msgid "Account"
 msgstr ""
 
+#: src/pages/PlatformPage.jsx:570
 #: src/pages/EventPage.jsx:424
 #: src/pages/BindPage.jsx:124
 msgid "Actions"
@@ -29,6 +30,14 @@ msgstr ""
 
 #: src/pages/EventPage.jsx:250
 msgid "Add Event"
+msgstr ""
+
+#: src/pages/PlatformPage.jsx:255
+msgid "Add New Platform"
+msgstr ""
+
+#: src/pages/PlatformPage.jsx:249
+msgid "Add Platform"
 msgstr ""
 
 #: src/pages/BindPage.jsx:87
@@ -40,9 +49,28 @@ msgstr ""
 msgid "Approved"
 msgstr ""
 
+#. placeholder {0}: platform.name
 #. placeholder {0}: event.title
+#: src/pages/PlatformPage.jsx:875
 #: src/pages/EventPage.jsx:640
 msgid "Are you sure you want to delete {0}?"
+msgstr ""
+
+#: src/pages/PlatformPage.jsx:429
+#: src/pages/PlatformPage.jsx:739
+msgid "Average Rebate"
+msgstr ""
+
+#: src/pages/PlatformPage.jsx:564
+msgid "Avg. Rebate"
+msgstr ""
+
+#: src/pages/PlatformPage.jsx:266
+msgid "Basic Info"
+msgstr ""
+
+#: src/pages/PlatformPage.jsx:644
+msgid "Basic Information"
 msgstr ""
 
 #: src/pages/BindPage.jsx:63
@@ -50,9 +78,17 @@ msgstr ""
 msgid "Bind Status"
 msgstr ""
 
+#: src/pages/PlatformPage.jsx:853
+#: src/pages/PlatformPage.jsx:885
 #: src/pages/EventPage.jsx:618
 #: src/pages/EventPage.jsx:648
 msgid "Cancel"
+msgstr ""
+
+#: src/pages/PlatformPage.jsx:362
+#: src/pages/PlatformPage.jsx:558
+#: src/pages/PlatformPage.jsx:709
+msgid "Cashback (%)"
 msgstr ""
 
 #: src/pages/BindPage.jsx:162
@@ -63,17 +99,40 @@ msgstr ""
 msgid "Create Event"
 msgstr ""
 
+#: src/pages/PlatformPage.jsx:528
+msgid "Create Platform"
+msgstr ""
+
+#: src/pages/PlatformPage.jsx:869
+#: src/pages/PlatformPage.jsx:888
 #: src/pages/EventPage.jsx:634
 #: src/pages/EventPage.jsx:651
 msgid "Delete"
 msgstr ""
 
+#: src/pages/PlatformPage.jsx:377
+#: src/pages/PlatformPage.jsx:561
+#: src/pages/PlatformPage.jsx:724
+msgid "Discount (%)"
+msgstr ""
+
+#: src/pages/PlatformPage.jsx:321
+#: src/pages/PlatformPage.jsx:666
+msgid "Display Label*"
+msgstr ""
+
+#: src/pages/PlatformPage.jsx:629
 #: src/pages/EventPage.jsx:483
 msgid "Edit"
 msgstr ""
 
 #: src/pages/EventPage.jsx:489
 msgid "Edit Event"
+msgstr ""
+
+#. placeholder {0}: platformToEdit?.name
+#: src/pages/PlatformPage.jsx:635
+msgid "Edit Platform: {0}"
 msgstr ""
 
 #: src/pages/EventPage.jsx:356
@@ -83,6 +142,7 @@ msgid "End Date"
 msgstr ""
 
 #. placeholder {0}: error.message || error
+#: src/pages/PlatformPage.jsx:226
 #: src/pages/BindPage.jsx:68
 msgid "Error: {0}"
 msgstr ""
@@ -92,6 +152,7 @@ msgstr ""
 msgid "Events"
 msgstr ""
 
+#: src/pages/PlatformPage.jsx:549
 #: src/pages/EventPage.jsx:406
 msgid "Image"
 msgstr ""
@@ -101,15 +162,49 @@ msgstr ""
 msgid "Image URL"
 msgstr ""
 
+#: src/pages/PlatformPage.jsx:555
+msgid "Label"
+msgstr ""
+
 #: src/pages/EventPage.jsx:325
 #: src/pages/EventPage.jsx:412
 #: src/pages/EventPage.jsx:560
 msgid "Language"
 msgstr ""
 
+#: src/pages/PlatformPage.jsx:412
+#: src/pages/PlatformPage.jsx:774
+msgid "Limit Price"
+msgstr ""
+
+#: src/pages/PlatformPage.jsx:541
 #: src/pages/EventPage.jsx:398
 #: src/pages/BindPage.jsx:104
 msgid "Loading..."
+msgstr ""
+
+#: src/pages/PlatformPage.jsx:453
+#: src/pages/PlatformPage.jsx:799
+msgid "Logo Image URL"
+msgstr ""
+
+#: src/pages/PlatformPage.jsx:397
+#: src/pages/PlatformPage.jsx:567
+#: src/pages/PlatformPage.jsx:759
+msgid "Market Price"
+msgstr ""
+
+#: src/pages/PlatformPage.jsx:290
+#: src/pages/PlatformPage.jsx:790
+msgid "Media"
+msgstr ""
+
+#: src/pages/PlatformPage.jsx:552
+msgid "Name"
+msgstr ""
+
+#: src/pages/PlatformPage.jsx:522
+msgid "Next Step"
 msgstr ""
 
 #: src/pages/BindPage.jsx:132
@@ -120,8 +215,13 @@ msgstr ""
 msgid "No events found"
 msgstr ""
 
+#: src/pages/PlatformPage.jsx:613
 #: src/pages/EventPage.jsx:460
 msgid "No image"
+msgstr ""
+
+#: src/pages/PlatformPage.jsx:578
+msgid "No platforms found"
 msgstr ""
 
 #: src/pages/BindPage.jsx:93
@@ -133,11 +233,45 @@ msgstr ""
 msgid "Platform"
 msgstr ""
 
+#: src/pages/PlatformPage.jsx:445
+msgid "Platform Images"
+msgstr ""
+
+#: src/pages/PlatformPage.jsx:306
+msgid "Platform Name*"
+msgstr ""
+
+#: src/pages/PlatformPage.jsx:337
+#: src/pages/PlatformPage.jsx:682
+msgid "Platform URL"
+msgstr ""
+
+#: src/pages/PlatformPage.jsx:221
+#: src/pages/PlatformPage.jsx:237
+msgid "Platforms"
+msgstr ""
+
+#: src/pages/PlatformPage.jsx:278
+#: src/pages/PlatformPage.jsx:389
+#: src/pages/PlatformPage.jsx:751
+msgid "Pricing"
+msgstr ""
+
 #: src/pages/BindPage.jsx:96
 #: src/pages/BindPage.jsx:191
 msgid "Rejected"
 msgstr ""
 
+#: src/pages/PlatformPage.jsx:354
+#: src/pages/PlatformPage.jsx:701
+msgid "Rewards"
+msgstr ""
+
+#: src/pages/PlatformPage.jsx:696
+msgid "Rewards & Pricing"
+msgstr ""
+
+#: src/pages/PlatformPage.jsx:856
 #: src/pages/EventPage.jsx:621
 msgid "Save Changes"
 msgstr ""
@@ -178,10 +312,19 @@ msgstr ""
 msgid "This action cannot be undone. This will permanently delete the event."
 msgstr ""
 
+#: src/pages/PlatformPage.jsx:878
+msgid "This action cannot be undone. This will permanently delete the platform."
+msgstr ""
+
 #: src/pages/EventPage.jsx:265
 #: src/pages/EventPage.jsx:409
 #: src/pages/EventPage.jsx:500
 msgid "Title"
+msgstr ""
+
+#: src/pages/PlatformPage.jsx:480
+#: src/pages/PlatformPage.jsx:826
+msgid "Title Image URL"
 msgstr ""
 
 #: src/pages/BindPage.jsx:118

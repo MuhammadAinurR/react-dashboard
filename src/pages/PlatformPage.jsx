@@ -22,6 +22,7 @@ import { useForm } from "react-hook-form";
 import * as z from "zod";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
+import { Trans } from "@lingui/react/macro";
 
 const platformFormSchema = z.object({
   name: z.string().min(1, "Name is required"),
@@ -216,10 +217,14 @@ export default function PlatformPage() {
     return (
       <Card className="max-w-4xl mx-auto mt-8">
         <CardHeader>
-          <CardTitle>Platforms</CardTitle>
+          <CardTitle>
+            <Trans>Platforms</Trans>
+          </CardTitle>
         </CardHeader>
         <CardContent>
-          <p className="text-destructive">Error: {error.message || error}</p>
+          <p className="text-destructive">
+            <Trans>Error: {error.message || error}</Trans>
+          </p>
         </CardContent>
       </Card>
     );
@@ -228,7 +233,9 @@ export default function PlatformPage() {
   return (
     <Card className="max-w-6xl mx-auto mt-8">
       <CardHeader className="flex flex-row items-center justify-between">
-        <CardTitle>Platforms</CardTitle>
+        <CardTitle>
+          <Trans>Platforms</Trans>
+        </CardTitle>
         <div className="flex gap-4">
           <Input
             placeholder="Search platforms..."
@@ -238,11 +245,15 @@ export default function PlatformPage() {
           />
           <Dialog open={isAddDialogOpen} onOpenChange={setIsAddDialogOpen}>
             <DialogTrigger asChild>
-              <Button>Add Platform</Button>
+              <Button>
+                <Trans>Add Platform</Trans>
+              </Button>
             </DialogTrigger>
             <DialogContent className="max-w-[800px] max-h-[90vh] overflow-y-auto">
               <DialogHeader className="sticky top-0 bg-background z-10 pb-4 border-b">
-                <DialogTitle>Add New Platform</DialogTitle>
+                <DialogTitle>
+                  <Trans>Add New Platform</Trans>
+                </DialogTitle>
                 <div className="flex flex-wrap items-center justify-center gap-4 mt-4">
                   <div className={`flex items-center ${formStep === 1 ? "text-primary" : "text-muted-foreground"}`}>
                     <div
@@ -251,7 +262,9 @@ export default function PlatformPage() {
                     >
                       1
                     </div>
-                    <span className="text-sm">Basic Info</span>
+                    <span className="text-sm">
+                      <Trans>Basic Info</Trans>
+                    </span>
                   </div>
                   <div className="hidden sm:block h-[2px] w-12 bg-muted" />
                   <div className={`flex items-center ${formStep === 2 ? "text-primary" : "text-muted-foreground"}`}>
@@ -261,7 +274,9 @@ export default function PlatformPage() {
                     >
                       2
                     </div>
-                    <span className="text-sm">Pricing</span>
+                    <span className="text-sm">
+                      <Trans>Pricing</Trans>
+                    </span>
                   </div>
                   <div className="hidden sm:block h-[2px] w-12 bg-muted" />
                   <div className={`flex items-center ${formStep === 3 ? "text-primary" : "text-muted-foreground"}`}>
@@ -271,7 +286,9 @@ export default function PlatformPage() {
                     >
                       3
                     </div>
-                    <span className="text-sm">Media</span>
+                    <span className="text-sm">
+                      <Trans>Media</Trans>
+                    </span>
                   </div>
                 </div>
               </DialogHeader>
@@ -285,7 +302,9 @@ export default function PlatformPage() {
                           name="name"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Platform Name*</FormLabel>
+                              <FormLabel>
+                                <Trans>Platform Name*</Trans>
+                              </FormLabel>
                               <FormControl>
                                 <Input placeholder="Enter platform name" {...field} />
                               </FormControl>
@@ -298,7 +317,9 @@ export default function PlatformPage() {
                           name="label"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Display Label*</FormLabel>
+                              <FormLabel>
+                                <Trans>Display Label*</Trans>
+                              </FormLabel>
                               <FormControl>
                                 <Input placeholder="Enter display label" {...field} />
                               </FormControl>
@@ -312,7 +333,9 @@ export default function PlatformPage() {
                         name="url"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel>Platform URL</FormLabel>
+                            <FormLabel>
+                              <Trans>Platform URL</Trans>
+                            </FormLabel>
                             <FormControl>
                               <Input placeholder="https://example.com" {...field} />
                             </FormControl>
@@ -327,13 +350,17 @@ export default function PlatformPage() {
                     <div className="space-y-6">
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <div className="space-y-4">
-                          <h3 className="text-sm font-medium">Rewards</h3>
+                          <h3 className="text-sm font-medium">
+                            <Trans>Rewards</Trans>
+                          </h3>
                           <FormField
                             control={addForm.control}
                             name="cashback"
                             render={({ field }) => (
                               <FormItem>
-                                <FormLabel>Cashback (%)</FormLabel>
+                                <FormLabel>
+                                  <Trans>Cashback (%)</Trans>
+                                </FormLabel>
                                 <FormControl>
                                   <Input type="number" step="0.01" {...field} />
                                 </FormControl>
@@ -346,7 +373,9 @@ export default function PlatformPage() {
                             name="discount"
                             render={({ field }) => (
                               <FormItem>
-                                <FormLabel>Discount (%)</FormLabel>
+                                <FormLabel>
+                                  <Trans>Discount (%)</Trans>
+                                </FormLabel>
                                 <FormControl>
                                   <Input type="number" step="0.01" {...field} />
                                 </FormControl>
@@ -356,13 +385,17 @@ export default function PlatformPage() {
                           />
                         </div>
                         <div className="space-y-4">
-                          <h3 className="text-sm font-medium">Pricing</h3>
+                          <h3 className="text-sm font-medium">
+                            <Trans>Pricing</Trans>
+                          </h3>
                           <FormField
                             control={addForm.control}
                             name="marketPrice"
                             render={({ field }) => (
                               <FormItem>
-                                <FormLabel>Market Price</FormLabel>
+                                <FormLabel>
+                                  <Trans>Market Price</Trans>
+                                </FormLabel>
                                 <FormControl>
                                   <Input type="number" step="0.01" {...field} />
                                 </FormControl>
@@ -375,7 +408,9 @@ export default function PlatformPage() {
                             name="limitPrice"
                             render={({ field }) => (
                               <FormItem>
-                                <FormLabel>Limit Price</FormLabel>
+                                <FormLabel>
+                                  <Trans>Limit Price</Trans>
+                                </FormLabel>
                                 <FormControl>
                                   <Input type="number" step="0.01" {...field} />
                                 </FormControl>
@@ -390,7 +425,9 @@ export default function PlatformPage() {
                         name="averageRebate"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel>Average Rebate</FormLabel>
+                            <FormLabel>
+                              <Trans>Average Rebate</Trans>
+                            </FormLabel>
                             <FormControl>
                               <Input type="number" step="0.01" {...field} />
                             </FormControl>
@@ -404,13 +441,17 @@ export default function PlatformPage() {
                   {formStep === 3 && (
                     <div className="space-y-6">
                       <div className="space-y-4">
-                        <h3 className="text-sm font-medium">Platform Images</h3>
+                        <h3 className="text-sm font-medium">
+                          <Trans>Platform Images</Trans>
+                        </h3>
                         <FormField
                           control={addForm.control}
                           name="imageUrl"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Logo Image URL</FormLabel>
+                              <FormLabel>
+                                <Trans>Logo Image URL</Trans>
+                              </FormLabel>
                               <FormControl>
                                 <div className="space-y-2">
                                   <Input placeholder="https://example.com/logo.png" {...field} />
@@ -435,7 +476,9 @@ export default function PlatformPage() {
                           name="titleImageUrl"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Title Image URL</FormLabel>
+                              <FormLabel>
+                                <Trans>Title Image URL</Trans>
+                              </FormLabel>
                               <FormControl>
                                 <div className="space-y-2">
                                   <Input placeholder="https://example.com/title.png" {...field} />
@@ -476,10 +519,14 @@ export default function PlatformPage() {
                     </Button>
                     {formStep < 3 ? (
                       <Button type="button" onClick={nextStep}>
-                        Next Step
+                        <Trans>
+                          <Trans>Next Step</Trans>
+                        </Trans>
                       </Button>
                     ) : (
-                      <Button type="submit">Create Platform</Button>
+                      <Button type="submit">
+                        <Trans>Create Platform</Trans>
+                      </Button>
                     )}
                   </div>
                 </form>
@@ -490,27 +537,45 @@ export default function PlatformPage() {
       </CardHeader>
       <CardContent>
         {isLoading ? (
-          <p>Loading...</p>
+          <p>
+            <Trans>Loading...</Trans>
+          </p>
         ) : (
           <>
             <Table>
               <TableHeader>
                 <TableRow className="bg-muted/50">
-                  <TableHead className="font-semibold">Image</TableHead>
-                  <TableHead className="font-semibold">Name</TableHead>
-                  <TableHead className="font-semibold">Label</TableHead>
-                  <TableHead className="font-semibold">Cashback (%)</TableHead>
-                  <TableHead className="font-semibold">Discount (%)</TableHead>
-                  <TableHead className="font-semibold">Avg. Rebate</TableHead>
-                  <TableHead className="font-semibold">Market Price</TableHead>
-                  <TableHead className="font-semibold text-right">Actions</TableHead>
+                  <TableHead className="font-semibold">
+                    <Trans>Image</Trans>
+                  </TableHead>
+                  <TableHead className="font-semibold">
+                    <Trans>Name</Trans>
+                  </TableHead>
+                  <TableHead className="font-semibold">
+                    <Trans>Label</Trans>
+                  </TableHead>
+                  <TableHead className="font-semibold">
+                    <Trans>Cashback (%)</Trans>
+                  </TableHead>
+                  <TableHead className="font-semibold">
+                    <Trans>Discount (%)</Trans>
+                  </TableHead>
+                  <TableHead className="font-semibold">
+                    <Trans>Avg. Rebate</Trans>
+                  </TableHead>
+                  <TableHead className="font-semibold">
+                    <Trans>Market Price</Trans>
+                  </TableHead>
+                  <TableHead className="font-semibold text-right">
+                    <Trans>Actions</Trans>
+                  </TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
                 {platforms.length === 0 ? (
                   <TableRow>
                     <TableCell colSpan={7} className="text-center h-24">
-                      No platforms found
+                      <Trans>No platforms found</Trans>
                     </TableCell>
                   </TableRow>
                 ) : (
@@ -544,7 +609,9 @@ export default function PlatformPage() {
                           </>
                         ) : (
                           <div className="w-16 h-12 bg-muted rounded-lg flex items-center justify-center">
-                            <span className="text-xs text-muted-foreground">No image</span>
+                            <span className="text-xs text-muted-foreground">
+                              <Trans>No image</Trans>
+                            </span>
                           </div>
                         )}
                       </TableCell>
@@ -559,12 +626,14 @@ export default function PlatformPage() {
                           <Dialog open={isEditDialogOpen} onOpenChange={setIsEditDialogOpen}>
                             <DialogTrigger asChild>
                               <Button variant="outline" size="sm" onClick={() => handleEditClick(platform)}>
-                                Edit
+                                <Trans>Edit</Trans>
                               </Button>
                             </DialogTrigger>
                             <DialogContent className="max-w-[800px] max-h-[90vh] overflow-y-auto">
                               <DialogHeader className="sticky top-0 bg-background z-10 pb-4 border-b">
-                                <DialogTitle>Edit Platform: {platformToEdit?.name}</DialogTitle>
+                                <DialogTitle>
+                                  <Trans>Edit Platform: {platformToEdit?.name}</Trans>
+                                </DialogTitle>
                               </DialogHeader>
                               <Form {...editForm}>
                                 <form onSubmit={editForm.handleSubmit(handleEdit)} className="space-y-6">
@@ -572,7 +641,7 @@ export default function PlatformPage() {
                                     {/* Basic Information */}
                                     <div className="space-y-4">
                                       <h3 className="text-sm font-medium border-b pb-2 sticky top-0 bg-background">
-                                        Basic Information
+                                        <Trans>Basic Information</Trans>
                                       </h3>
                                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                         <FormField
@@ -593,7 +662,9 @@ export default function PlatformPage() {
                                           name="label"
                                           render={({ field }) => (
                                             <FormItem>
-                                              <FormLabel>Display Label*</FormLabel>
+                                              <FormLabel>
+                                                <Trans>Display Label*</Trans>
+                                              </FormLabel>
                                               <FormControl>
                                                 <Input placeholder="Enter display label" {...field} />
                                               </FormControl>
@@ -607,7 +678,9 @@ export default function PlatformPage() {
                                         name="url"
                                         render={({ field }) => (
                                           <FormItem>
-                                            <FormLabel>Platform URL</FormLabel>
+                                            <FormLabel>
+                                              <Trans>Platform URL</Trans>
+                                            </FormLabel>
                                             <FormControl>
                                               <Input placeholder="https://example.com" {...field} />
                                             </FormControl>
@@ -620,17 +693,21 @@ export default function PlatformPage() {
                                     {/* Rewards and Pricing */}
                                     <div className="space-y-4">
                                       <h3 className="text-sm font-medium border-b pb-2 sticky top-0 bg-background">
-                                        Rewards & Pricing
+                                        <Trans>Rewards & Pricing</Trans>
                                       </h3>
                                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                         <div className="space-y-4">
-                                          <h4 className="text-sm font-medium text-muted-foreground">Rewards</h4>
+                                          <h4 className="text-sm font-medium text-muted-foreground">
+                                            <Trans>Rewards</Trans>
+                                          </h4>
                                           <FormField
                                             control={editForm.control}
                                             name="cashback"
                                             render={({ field }) => (
                                               <FormItem>
-                                                <FormLabel>Cashback (%)</FormLabel>
+                                                <FormLabel>
+                                                  <Trans>Cashback (%)</Trans>
+                                                </FormLabel>
                                                 <FormControl>
                                                   <Input type="number" step="0.01" {...field} />
                                                 </FormControl>
@@ -643,7 +720,9 @@ export default function PlatformPage() {
                                             name="discount"
                                             render={({ field }) => (
                                               <FormItem>
-                                                <FormLabel>Discount (%)</FormLabel>
+                                                <FormLabel>
+                                                  <Trans>Discount (%)</Trans>
+                                                </FormLabel>
                                                 <FormControl>
                                                   <Input type="number" step="0.01" {...field} />
                                                 </FormControl>
@@ -656,7 +735,9 @@ export default function PlatformPage() {
                                             name="averageRebate"
                                             render={({ field }) => (
                                               <FormItem>
-                                                <FormLabel>Average Rebate</FormLabel>
+                                                <FormLabel>
+                                                  <Trans>Average Rebate</Trans>
+                                                </FormLabel>
                                                 <FormControl>
                                                   <Input type="number" step="0.01" {...field} />
                                                 </FormControl>
@@ -666,13 +747,17 @@ export default function PlatformPage() {
                                           />
                                         </div>
                                         <div className="space-y-4">
-                                          <h4 className="text-sm font-medium text-muted-foreground">Pricing</h4>
+                                          <h4 className="text-sm font-medium text-muted-foreground">
+                                            <Trans>Pricing</Trans>
+                                          </h4>
                                           <FormField
                                             control={editForm.control}
                                             name="marketPrice"
                                             render={({ field }) => (
                                               <FormItem>
-                                                <FormLabel>Market Price</FormLabel>
+                                                <FormLabel>
+                                                  <Trans>Market Price</Trans>
+                                                </FormLabel>
                                                 <FormControl>
                                                   <Input type="number" step="0.01" {...field} />
                                                 </FormControl>
@@ -685,7 +770,9 @@ export default function PlatformPage() {
                                             name="limitPrice"
                                             render={({ field }) => (
                                               <FormItem>
-                                                <FormLabel>Limit Price</FormLabel>
+                                                <FormLabel>
+                                                  <Trans>Limit Price</Trans>
+                                                </FormLabel>
                                                 <FormControl>
                                                   <Input type="number" step="0.01" {...field} />
                                                 </FormControl>
@@ -700,7 +787,7 @@ export default function PlatformPage() {
                                     {/* Media */}
                                     <div className="space-y-4">
                                       <h3 className="text-sm font-medium border-b pb-2 sticky top-0 bg-background">
-                                        Media
+                                        <Trans>Media</Trans>
                                       </h3>
                                       <div className="grid grid-cols-1 gap-4">
                                         <FormField
@@ -708,7 +795,9 @@ export default function PlatformPage() {
                                           name="imageUrl"
                                           render={({ field }) => (
                                             <FormItem>
-                                              <FormLabel>Logo Image URL</FormLabel>
+                                              <FormLabel>
+                                                <Trans>Logo Image URL</Trans>
+                                              </FormLabel>
                                               <FormControl>
                                                 <div className="space-y-2">
                                                   <Input placeholder="https://example.com/logo.png" {...field} />
@@ -733,7 +822,9 @@ export default function PlatformPage() {
                                           name="titleImageUrl"
                                           render={({ field }) => (
                                             <FormItem>
-                                              <FormLabel>Title Image URL</FormLabel>
+                                              <FormLabel>
+                                                <Trans>Title Image URL</Trans>
+                                              </FormLabel>
                                               <FormControl>
                                                 <div className="space-y-2">
                                                   <Input placeholder="https://example.com/title.png" {...field} />
@@ -759,9 +850,11 @@ export default function PlatformPage() {
 
                                   <div className="flex justify-end gap-2 pt-4 border-t sticky bottom-0 bg-background">
                                     <Button type="button" variant="outline" onClick={() => setIsEditDialogOpen(false)}>
-                                      Cancel
+                                      <Trans>Cancel</Trans>
                                     </Button>
-                                    <Button type="submit">Save Changes</Button>
+                                    <Button type="submit">
+                                      <Trans>Save Changes</Trans>
+                                    </Button>
                                   </div>
                                 </form>
                               </Form>
@@ -773,19 +866,27 @@ export default function PlatformPage() {
                           >
                             <AlertDialogTrigger asChild>
                               <Button variant="destructive" size="sm" onClick={() => setPlatformToDelete(platform.id)}>
-                                Delete
+                                <Trans>Delete</Trans>
                               </Button>
                             </AlertDialogTrigger>
                             <AlertDialogContent>
                               <AlertDialogHeader>
-                                <AlertDialogTitle>Are you sure you want to delete {platform.name}?</AlertDialogTitle>
+                                <AlertDialogTitle>
+                                  <Trans>Are you sure you want to delete {platform.name}?</Trans>
+                                </AlertDialogTitle>
                                 <AlertDialogDescription>
-                                  This action cannot be undone. This will permanently delete the platform.
+                                  <Trans>
+                                    This action cannot be undone. This will permanently delete the platform.
+                                  </Trans>
                                 </AlertDialogDescription>
                               </AlertDialogHeader>
                               <AlertDialogFooter>
-                                <AlertDialogCancel>Cancel</AlertDialogCancel>
-                                <AlertDialogAction onClick={handleDelete}>Delete</AlertDialogAction>
+                                <AlertDialogCancel>
+                                  <Trans>Cancel</Trans>
+                                </AlertDialogCancel>
+                                <AlertDialogAction onClick={handleDelete}>
+                                  <Trans>Delete</Trans>
+                                </AlertDialogAction>
                               </AlertDialogFooter>
                             </AlertDialogContent>
                           </AlertDialog>
