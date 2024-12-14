@@ -8,7 +8,7 @@ msgstr ""
 "Language: ar\n"
 "Project-Id-Version: degenmax-dashboard\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2024-12-14 04:13\n"
+"PO-Revision-Date: 2024-12-14 04:22\n"
 "Last-Translator: \n"
 "Language-Team: Arabic\n"
 "Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
@@ -31,6 +31,7 @@ msgstr ""
 msgid "Account"
 msgstr "حساب"
 
+#: src/pages/ReferralCodesPage.jsx:94
 #: src/pages/PlatformPage.jsx:570
 #: src/pages/EventPage.jsx:424
 #: src/pages/BindPage.jsx:124
@@ -203,6 +204,7 @@ msgstr "اللغة"
 msgid "Limit Price"
 msgstr "الحد الأقصى للسعر"
 
+#: src/pages/ReferralCodesPage.jsx:78
 #: src/pages/PlatformPage.jsx:541
 #: src/pages/EventPage.jsx:398
 #: src/pages/BindPage.jsx:104
@@ -283,10 +285,18 @@ msgstr "المنصات"
 msgid "Pricing"
 msgstr "التسعير"
 
+#: src/pages/ReferralCodesPage.jsx:88
+msgid "Referral Code"
+msgstr ""
+
 #: src/pages/ReferralCodesPage.jsx:57
 #: src/pages/ReferralCodesPage.jsx:73
 msgid "Referral Codes"
 msgstr "رموز الإحالة"
+
+#: src/pages/ReferralCodesPage.jsx:91
+msgid "Referred By"
+msgstr ""
 
 #: src/pages/BindPage.jsx:96
 #: src/pages/BindPage.jsx:191
@@ -384,6 +394,7 @@ msgid "URL"
 msgstr "الرابط"
 
 #: src/pages/SendCashbackPage.jsx:94
+#: src/pages/ReferralCodesPage.jsx:85
 #: src/pages/BindPage.jsx:115
 msgid "User ID"
 msgstr "معرف المستخدم"
