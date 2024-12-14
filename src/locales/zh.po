@@ -8,7 +8,7 @@ msgstr ""
 "Language: zh\n"
 "Project-Id-Version: degenmax-dashboard\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2024-12-14 04:06\n"
+"PO-Revision-Date: 2024-12-14 04:11\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -106,11 +106,11 @@ msgstr "Cashback (%)"
 
 #: src/pages/SendCashbackPage.jsx:108
 msgid "Cashback Amount"
-msgstr ""
+msgstr "返现金额"
 
 #: src/pages/SendCashbackPage.jsx:133
 msgid "Cashback sent successfully!"
-msgstr ""
+msgstr "返现成功发送！"
 
 #: src/pages/BindPage.jsx:162
 msgid "Change Status"
@@ -118,7 +118,7 @@ msgstr "更改状态"
 
 #: src/pages/SendCashbackPage.jsx:64
 msgid "Confirm Cashback"
-msgstr ""
+msgstr "确认返金"
 
 #: src/pages/EventPage.jsx:386
 msgid "Create Event"
@@ -286,7 +286,7 @@ msgstr "定价"
 #: src/pages/ReferralCodesPage.jsx:57
 #: src/pages/ReferralCodesPage.jsx:73
 msgid "Referral Codes"
-msgstr ""
+msgstr "推荐码"
 
 #: src/pages/BindPage.jsx:96
 #: src/pages/BindPage.jsx:191
@@ -309,11 +309,11 @@ msgstr "保存更改"
 
 #: src/pages/SendCashbackPage.jsx:142
 msgid "Send Cashback"
-msgstr ""
+msgstr "发送返金"
 
 #: src/pages/SendCashbackPage.jsx:142
 msgid "Sending..."
-msgstr ""
+msgstr "正在发送..."
 
 #: src/components/AppSidebar.jsx:114
 msgid "Settings"
