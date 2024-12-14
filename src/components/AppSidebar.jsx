@@ -88,7 +88,9 @@ export function AppSidebar() {
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
-      <LanguageToggler />
+      <div className="p-1">
+        <LanguageToggler />
+      </div>
       <SidebarFooter>
         <SidebarMenu>
           <SidebarMenuItem>
