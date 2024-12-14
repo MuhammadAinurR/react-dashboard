@@ -41,14 +41,14 @@ const items = [
     icon: Server,
   },
   {
-    title: "Send Cashback",
-    url: "/send-cashback",
-    icon: Send,
-  },
-  {
     title: "Referral Codes",
     url: "/referral-codes",
     icon: Code,
+  },
+  {
+    title: "Send Cashback",
+    url: "/send-cashback",
+    icon: Send,
   },
   {
     title: "Withdraw History",
