@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2024-12-13 11:02+0700\n"
+"POT-Creation-Date: 2024-12-14 10:25+0700\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -8,7 +8,7 @@ msgstr ""
 "Language: ar\n"
 "Project-Id-Version: degenmax-dashboard\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2024-12-13 14:48\n"
+"PO-Revision-Date: 2024-12-14 03:38\n"
 "Last-Translator: \n"
 "Language-Team: Arabic\n"
 "Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
@@ -18,7 +18,17 @@ msgstr ""
 "X-Crowdin-File: /development/src/locales/en.po\n"
 "X-Crowdin-File-ID: 10\n"
 
+#. placeholder {0}: item.title
+#: src/components/AppSidebar.jsx:83
+msgid "{0}"
+msgstr "{0}"
+
+#: src/components/AppSidebar.jsx:111
+msgid "Account"
+msgstr "حساب"
+
 #: src/pages/EventPage.jsx:424
+#: src/pages/BindPage.jsx:124
 msgid "Actions"
 msgstr "الإجراءات"
 
@@ -26,15 +36,33 @@ msgstr "الإجراءات"
 msgid "Add Event"
 msgstr "إضافة حدث"
 
+#: src/pages/BindPage.jsx:87
+msgid "All Status"
+msgstr "جميع الحالات"
+
+#: src/pages/BindPage.jsx:90
+#: src/pages/BindPage.jsx:181
+msgid "Approved"
+msgstr "معتمد"
+
 #. placeholder {0}: event.title
 #: src/pages/EventPage.jsx:640
 msgid "Are you sure you want to delete {0}?"
 msgstr "هل أنت متأكد من أنك تريد حذف {0}؟"
 
+#: src/pages/BindPage.jsx:63
+#: src/pages/BindPage.jsx:79
+msgid "Bind Status"
+msgstr "Bind Status"
+
 #: src/pages/EventPage.jsx:618
 #: src/pages/EventPage.jsx:648
 msgid "Cancel"
 msgstr "إلغاء"
+
+#: src/pages/BindPage.jsx:162
+msgid "Change Status"
+msgstr "تغيير الحالة"
 
 #: src/pages/EventPage.jsx:386
 msgid "Create Event"
@@ -59,6 +87,11 @@ msgstr "تعديل الحدث"
 msgid "End Date"
 msgstr "تاريخ الانتهاء"
 
+#. placeholder {0}: error.message || error
+#: src/pages/BindPage.jsx:68
+msgid "Error: {0}"
+msgstr "خطأ: {0}"
+
 #: src/pages/EventPage.jsx:224
 #: src/pages/EventPage.jsx:238
 msgid "Events"
@@ -80,8 +113,13 @@ msgid "Language"
 msgstr "اللغة"
 
 #: src/pages/EventPage.jsx:398
+#: src/pages/BindPage.jsx:104
 msgid "Loading..."
 msgstr "تحميل..."
+
+#: src/pages/BindPage.jsx:132
+msgid "No data"
+msgstr "لا توجد بيانات"
 
 #: src/pages/EventPage.jsx:432
 msgid "No events found"
@@ -91,15 +129,41 @@ msgstr "لم يتم العثور على أحداث"
 msgid "No image"
 msgstr "لا توجد صورة"
 
+#: src/pages/BindPage.jsx:93
+#: src/pages/BindPage.jsx:188
+msgid "Pending"
+msgstr "معلق"
+
+#: src/pages/BindPage.jsx:112
+msgid "Platform"
+msgstr "المنصة"
+
+#: src/pages/BindPage.jsx:96
+#: src/pages/BindPage.jsx:191
+msgid "Rejected"
+msgstr "مرفوض"
+
 #: src/pages/EventPage.jsx:621
 msgid "Save Changes"
 msgstr "حفظ التغييرات"
+
+#: src/components/AppSidebar.jsx:114
+msgid "Settings"
+msgstr "الإعدادات"
+
+#: src/components/AppSidebar.jsx:117
+msgid "Sign out"
+msgstr "تسجيل الخروج"
 
 #: src/pages/EventPage.jsx:341
 #: src/pages/EventPage.jsx:415
 #: src/pages/EventPage.jsx:576
 msgid "Start Date"
 msgstr "تاريخ البدء"
+
+#: src/pages/BindPage.jsx:121
+msgid "Status"
+msgstr "الحالة"
 
 #: src/pages/EventPage.jsx:280
 #: src/pages/EventPage.jsx:515
@@ -125,8 +189,24 @@ msgstr "لا يمكن التراجع عن هذا الإجراء. سيؤدي هذ
 msgid "Title"
 msgstr "العنوان"
 
+#: src/pages/BindPage.jsx:118
+msgid "UID"
+msgstr "UID"
+
+#: src/pages/BindPage.jsx:201
+msgid "Update"
+msgstr "تحديث"
+
+#: src/pages/BindPage.jsx:168
+msgid "Update Bind Status"
+msgstr "Update Bind Status"
+
 #: src/pages/EventPage.jsx:310
 #: src/pages/EventPage.jsx:545
 msgid "URL"
 msgstr "الرابط"
+
+#: src/pages/BindPage.jsx:115
+msgid "User ID"
+msgstr "معرف المستخدم"
 
