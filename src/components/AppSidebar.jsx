@@ -51,14 +51,14 @@ const items = [
     icon: Send,
   },
   {
-    title: "Withdraw History",
-    url: "/withdraw-history",
-    icon: History,
-  },
-  {
     title: "Platform Wallet",
     url: "/platform-wallet",
     icon: Wallet,
+  },
+  {
+    title: "Withdraw History",
+    url: "/withdraw-history",
+    icon: History,
   },
 ];
 
