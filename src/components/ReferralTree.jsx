@@ -1,21 +1,52 @@
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import ReactFlow, { Background, Controls, MiniMap, useNodesState, useEdgesState } from "reactflow";
-import "reactflow/dist/style.css";
+import {
+  ReactFlow,
+  Background,
+  Controls,
+  MiniMap,
+  useNodesState,
+  useEdgesState,
+  getBezierPath,
+  Handle,
+  Position,
+} from "@xyflow/react";
+import "@xyflow/react/dist/style.css";
 import { useCallback, useEffect } from "react";
 
 // Custom Node Component
-function CustomNode({ data }) {
+function CustomNode({ data, isConnectable }) {
   return (
-    <div className={`p-2 border rounded-lg bg-muted ${data.isCurrentUser ? "border-green-500 border-2" : ""}`}>
-      <div>{data.userId}</div>
-      <div className="text-xs text-muted-foreground">{data.referralCode}</div>
-    </div>
+    <>
+      <Handle
+        type="target"
+        position={Position.Top}
+        onConnect={(params) => console.log("handle onConnect", params)}
+        isConnectable={isConnectable}
+      />
+      <div className={`p-2 border rounded-lg bg-muted ${data.isCurrentUser ? "border-green-500 border-2" : ""}`}>
+        <div>{data.userId}</div>
+        <div className="text-xs text-muted-foreground">{data.referralCode}</div>
+      </div>
+      <Handle type="source" position={Position.Bottom} id="a" isConnectable={isConnectable} />
+      <Handle type="source" position={Position.Bottom} id="b" isConnectable={isConnectable} />
+    </>
   );
+}
+
+// Custom Edge Component
+function CustomEdge({ id, sourceX, sourceY, targetX, targetY }) {
+  const [path] = getBezierPath({ sourceX, sourceY, targetX, targetY });
+  return <path id={id} d={path} style={{ stroke: "black", strokeWidth: 2 }} />;
 }
 
 // Node types definition
 const nodeTypes = {
   custom: CustomNode,
+};
+
+// Edge types definition
+const edgeTypes = {
+  custom: CustomEdge,
 };
 
 export function ReferralTree({ isOpen, onClose, treeData, requestedUserId }) {
@@ -32,12 +63,13 @@ export function ReferralTree({ isOpen, onClose, treeData, requestedUserId }) {
       // Create node
       const currentNode = {
         id: tree.userId.toString(),
-        position,
+        position: { x: position.x, y: position.y },
         type: "custom",
         data: {
           userId: tree.userId,
           referralCode: tree.referralCode,
           isCurrentUser: tree.userId === requestedUserId,
+          label: tree.userId,
         },
       };
       nodes.push(currentNode);
@@ -48,16 +80,6 @@ export function ReferralTree({ isOpen, onClose, treeData, requestedUserId }) {
           id: `${parentId}-${tree.userId}`,
           source: parentId.toString(),
           target: tree.userId.toString(),
-          type: "smoothstep",
-          style: {
-            stroke: "#FF0000", // Bright red color for testing
-            strokeWidth: 5, // Very thick line
-          },
-          animated: true,
-          markerEnd: {
-            type: "arrow", // Add arrow at the end
-            color: "#FF0000",
-          },
         });
       }
 
@@ -87,7 +109,7 @@ export function ReferralTree({ isOpen, onClose, treeData, requestedUserId }) {
       setEdges(newEdges);
     }
   }, [treeData, convertTreeToFlow, setNodes, setEdges]);
-
+  console.log("nodes", nodes);
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-5xl h-[600px]">
@@ -101,14 +123,11 @@ export function ReferralTree({ isOpen, onClose, treeData, requestedUserId }) {
             onNodesChange={onNodesChange}
             onEdgesChange={onEdgesChange}
             nodeTypes={nodeTypes}
+            edgeTypes={edgeTypes}
             fitView
             defaultEdgeOptions={{
-              style: {
-                strokeWidth: 5, // Make lines very thick
-                stroke: "#FF0000", // Bright red color
-              },
               animated: true,
-              type: "smoothstep",
+              type: "straight",
             }}
           >
             <Background />
