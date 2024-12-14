@@ -24,7 +24,7 @@ export default function SendCashbackPage() {
     setSuccess(false);
 
     try {
-      await fetch(`/cashback/${uid}/send`, {
+      const res = await fetch(`/cashback/${uid}/send`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -33,17 +33,30 @@ export default function SendCashbackPage() {
           amount: Number(amount),
         }),
       });
-      setSuccess(true);
-      setUid("");
-      setAmount("");
-      setShowConfirmation(false);
-      toast({
-        title: "Cashback sent successfully!",
-        description: "The cashback has been sent to the user.",
-      });
+      const data = await res.json();
+      if (data.message === "User not found") {
+        setError("User not found. Please check the user ID.");
+        toast({
+          title: "Error",
+          description: data.message,
+          variant: "destructive",
+        });
+        setShowConfirmation(false);
+      } else {
+        setSuccess(true);
+        setUid("");
+        setAmount("");
+        toast({
+          title: "Cashback sent successfully!",
+          description: "The cashback has been sent to the user.",
+        });
+      }
     } catch (error) {
-      console.log(error);
-      setError(error.response?.data?.message || "An error occurred");
+      if (error.response?.status === 404) {
+        setError("User not found. Please check the user ID.");
+      } else {
+        setError(error.response?.data?.message || "An error occurred");
+      }
       toast({
         title: "Error",
         description: error.response?.data?.message || "An error occurred",
