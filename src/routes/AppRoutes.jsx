@@ -14,6 +14,7 @@ import SendCashbackPage from "@/pages/SendCashbackPage";
 import ReferralCodesPage from "@/pages/ReferralCodesPage";
 import PlatformPage from "@/pages/PlatformPage";
 import UserPlatformWalletPage from "@/pages/UserPlatformWalletPage";
+import WithdrawHistoryPage from "@/pages/WithdrawHistoryPage";
 
 export default function AppRoutes() {
   return (
@@ -105,6 +106,14 @@ function AppLayout() {
             element={
               <ProtectedRoute>
                 <UserPlatformWalletPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/withdraw-history"
+            element={
+              <ProtectedRoute>
+                <WithdrawHistoryPage />
               </ProtectedRoute>
             }
           />

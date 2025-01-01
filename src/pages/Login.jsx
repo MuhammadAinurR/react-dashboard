@@ -43,6 +43,7 @@ export default function LoginPage() {
       const from = searchParams.get("from") || "/dashboard";
       navigate(from);
     } catch (error) {
+      console.log(error);
       console.error("Login failed:", error);
       toast({
         title: "Login Failed",
