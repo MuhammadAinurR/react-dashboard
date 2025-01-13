@@ -23,10 +23,11 @@ import * as z from "zod";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
 import { Trans } from "@lingui/react/macro";
+import { t } from "@lingui/core/macro";
 
 const platformFormSchema = z.object({
-  name: z.string().min(1, "Name is required"),
-  label: z.string().min(1, "Label is required"),
+  name: z.string().min(1, t`Name is required`),
+  label: z.string().min(1, t`Label is required`),
   cashback: z.coerce.number().min(0).optional(),
   discount: z.coerce.number().min(0).optional(),
   averageRebate: z.coerce.number().min(0).optional(),
@@ -144,14 +145,14 @@ export default function PlatformPage() {
       await fetchPlatforms(currentPage, searchQuery);
       setIsEditDialogOpen(false);
       toast({
-        title: "Success",
-        description: "Platform updated successfully",
+        title: t`Success`,
+        description: t`Platform updated successfully`,
         variant: "success",
       });
     } catch (err) {
       toast({
-        title: "Error",
-        description: "Failed to update platform",
+        title: t`Error`,
+        description: t`Failed to update platform`,
         variant: "destructive",
       });
       setError(err);
@@ -198,16 +199,16 @@ export default function PlatformPage() {
       setIsAddDialogOpen(false);
       addForm.reset();
       toast({
-        title: "Success",
-        description: "Platform created successfully",
+        title: t`Success`,
+        description: t`Platform created successfully`,
         variant: "success",
       });
       setFormStep(1);
     } catch (err) {
       console.error("Creation error:", err);
       toast({
-        title: "Error",
-        description: err.message || "Failed to create platform",
+        title: t`Error`,
+        description: err.message || t`Failed to create platform`,
         variant: "destructive",
       });
     }
@@ -238,7 +239,7 @@ export default function PlatformPage() {
         </CardTitle>
         <div className="flex gap-4">
           <Input
-            placeholder="Search platforms..."
+            placeholder={t`Search platforms...`}
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className="w-[250px]"
@@ -306,7 +307,7 @@ export default function PlatformPage() {
                                 <Trans>Platform Name*</Trans>
                               </FormLabel>
                               <FormControl>
-                                <Input placeholder="Enter platform name" {...field} />
+                                <Input placeholder={t`Enter platform name`} {...field} />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -321,7 +322,7 @@ export default function PlatformPage() {
                                 <Trans>Display Label*</Trans>
                               </FormLabel>
                               <FormControl>
-                                <Input placeholder="Enter display label" {...field} />
+                                <Input placeholder={t`Enter display label`} {...field} />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -337,7 +338,7 @@ export default function PlatformPage() {
                               <Trans>Platform URL</Trans>
                             </FormLabel>
                             <FormControl>
-                              <Input placeholder="https://example.com" {...field} />
+                              <Input placeholder={t`https://example.com`} {...field} />
                             </FormControl>
                             <FormMessage />
                           </FormItem>
@@ -454,12 +455,12 @@ export default function PlatformPage() {
                               </FormLabel>
                               <FormControl>
                                 <div className="space-y-2">
-                                  <Input placeholder="https://example.com/logo.png" {...field} />
+                                  <Input placeholder={t`https://example.com/logo.png`} {...field} />
                                   {field.value && (
                                     <div className="w-20 h-20 rounded-lg overflow-hidden border">
                                       <img
                                         src={field.value}
-                                        alt="Logo preview"
+                                        alt={t`Logo preview`}
                                         className="w-full h-full object-cover"
                                         onError={(e) => (e.target.style.display = "none")}
                                       />
@@ -481,12 +482,12 @@ export default function PlatformPage() {
                               </FormLabel>
                               <FormControl>
                                 <div className="space-y-2">
-                                  <Input placeholder="https://example.com/title.png" {...field} />
+                                  <Input placeholder={t`https://example.com/title.png`} {...field} />
                                   {field.value && (
                                     <div className="w-40 h-20 rounded-lg overflow-hidden border">
                                       <img
                                         src={field.value}
-                                        alt="Title preview"
+                                        alt={t`Title preview`}
                                         className="w-full h-full object-cover"
                                         onError={(e) => (e.target.style.display = "none")}
                                       />
@@ -630,7 +631,7 @@ export default function PlatformPage() {
                               </Button>
                             </DialogTrigger>
                             <DialogContent className="max-w-[800px] max-h-[90vh] overflow-y-auto">
-                              <DialogHeader className="sticky top-0 bg-background z-10 pb-4 border-b">
+                              <DialogHeader className="bg-background z-50 pb-4 border-b">
                                 <DialogTitle>
                                   <Trans>Edit Platform: {platformToEdit?.name}</Trans>
                                 </DialogTitle>
@@ -640,7 +641,7 @@ export default function PlatformPage() {
                                   <div className="space-y-6">
                                     {/* Basic Information */}
                                     <div className="space-y-4">
-                                      <h3 className="text-sm font-medium border-b pb-2 sticky top-0 bg-background">
+                                      <h3 className="text-sm font-medium border-b pb-2">
                                         <Trans>Basic Information</Trans>
                                       </h3>
                                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -692,7 +693,7 @@ export default function PlatformPage() {
 
                                     {/* Rewards and Pricing */}
                                     <div className="space-y-4">
-                                      <h3 className="text-sm font-medium border-b pb-2 sticky top-0 bg-background">
+                                      <h3 className="text-sm font-medium border-b pb-2">
                                         <Trans>Rewards & Pricing</Trans>
                                       </h3>
                                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -786,7 +787,7 @@ export default function PlatformPage() {
 
                                     {/* Media */}
                                     <div className="space-y-4">
-                                      <h3 className="text-sm font-medium border-b pb-2 sticky top-0 bg-background">
+                                      <h3 className="text-sm font-medium border-b pb-2">
                                         <Trans>Media</Trans>
                                       </h3>
                                       <div className="grid grid-cols-1 gap-4">
@@ -805,7 +806,7 @@ export default function PlatformPage() {
                                                     <div className="w-20 h-20 rounded-lg overflow-hidden border">
                                                       <img
                                                         src={field.value}
-                                                        alt="Logo preview"
+                                                        alt={t`Logo preview`}
                                                         className="w-full h-full object-cover"
                                                         onError={(e) => (e.target.style.display = "none")}
                                                       />
@@ -832,7 +833,7 @@ export default function PlatformPage() {
                                                     <div className="w-40 h-20 rounded-lg overflow-hidden border">
                                                       <img
                                                         src={field.value}
-                                                        alt="Title preview"
+                                                        alt={t`Title preview`}
                                                         className="w-full h-full object-cover"
                                                         onError={(e) => (e.target.style.display = "none")}
                                                       />
@@ -848,7 +849,7 @@ export default function PlatformPage() {
                                     </div>
                                   </div>
 
-                                  <div className="flex justify-end gap-2 pt-4 border-t sticky bottom-0 bg-background">
+                                  <div className="flex justify-end gap-2 pt-4 sticky bottom-0 bg-background z-50">
                                     <Button type="button" variant="outline" onClick={() => setIsEditDialogOpen(false)}>
                                       <Trans>Cancel</Trans>
                                     </Button>

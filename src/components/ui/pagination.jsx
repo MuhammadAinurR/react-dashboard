@@ -1,5 +1,6 @@
 import * as React from "react";
 import { ChevronLeft, ChevronRight, MoreHorizontal } from "lucide-react";
+import { Trans } from "@lingui/react/macro";
 
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
@@ -19,7 +20,9 @@ const Pagination = ({ currentPage, totalPages, onPageChange, className }) => {
     >
       <PaginationPrevious onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1} />
       <span className="text-sm font-medium">
-        Page {currentPage} of {totalPages}
+        <Trans>
+          Page {currentPage} of {totalPages}
+        </Trans>
       </span>
       <PaginationNext onClick={() => handlePageChange(currentPage + 1)} disabled={currentPage === totalPages} />
     </nav>
@@ -62,7 +65,7 @@ const PaginationPrevious = ({ className, ...props }) => (
     {...props}
   >
     <ChevronLeft className="h-4 w-4" />
-    <span>Previous</span>
+    <span><Trans>Previous</Trans></span>
   </PaginationLink>
 );
 PaginationPrevious.displayName = "PaginationPrevious";
@@ -74,7 +77,7 @@ const PaginationNext = ({ className, ...props }) => (
     className={cn("gap-2 pr-2.5 select-none", className)}
     {...props}
   >
-    <span>Next</span>
+    <span><Trans>Next</Trans></span>
     <ChevronRight className="h-4 w-4" />
   </PaginationLink>
 );
@@ -83,7 +86,7 @@ PaginationNext.displayName = "PaginationNext";
 const PaginationEllipsis = ({ className, ...props }) => (
   <span aria-hidden className={cn("flex h-9 w-9 items-center justify-center", className)} {...props}>
     <MoreHorizontal className="h-4 w-4" />
-    <span className="sr-only">More pages</span>
+    <span className="sr-only"><Trans>More pages</Trans></span>
   </span>
 );
 PaginationEllipsis.displayName = "PaginationEllipsis";

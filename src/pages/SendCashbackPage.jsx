@@ -2,6 +2,7 @@ import { useToast } from "@/hooks/use-toast";
 import { privateFetch } from "@/hooks/useFetch";
 import React, { useState } from "react";
 import { Trans } from "@lingui/react/macro";
+import { t } from "@lingui/core/macro";
 
 export default function SendCashbackPage() {
   const fetch = privateFetch();
@@ -112,7 +113,10 @@ export default function SendCashbackPage() {
                   value={uid}
                   onChange={(e) => setUid(e.target.value)}
                   className="w-full rounded-lg border border-gray-300 p-3 transition-colors focus:border-gray-700 focus:outline-none"
-                  placeholder="Enter user Platform UID"
+                  placeholder={t({
+                    id: "Enter user Platform UID",
+                    message: "Enter user Platform UID"
+                  })}
                   required
                 />
               </div>

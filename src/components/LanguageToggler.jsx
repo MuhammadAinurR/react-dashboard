@@ -10,10 +10,12 @@ export default function LanguageToggler() {
   }, [locale]);
 
   const languageOptions = [
-    { value: "en", label: "English" },
-    { value: "ar", label: "Arabic" },
-    { value: "ja", label: "Japanese" },
     { value: "zh", label: "Chinese" },
+    { value: "en", label: "English" },
+    { value: "id", label: "Indonesian" },
+    { value: "ja", label: "Japanese" },
+    { value: "ko", label: "Korean" },
+    { value: "vi", label: "Vietnamese" },
   ];
 
   const changeLanguage = (value) => {

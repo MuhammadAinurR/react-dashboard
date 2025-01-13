@@ -5,54 +5,54 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
-"Language: ja\n"
+"Language: ko\n"
 "Project-Id-Version: degenmax-dashboard\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2024-12-14 04:24\n"
 "Last-Translator: \n"
-"Language-Team: Japanese\n"
+"Language-Team: Korean\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Crowdin-Project: degenmax-dashboard\n"
 "X-Crowdin-Project-ID: 745703\n"
-"X-Crowdin-Language: ja\n"
+"X-Crowdin-Language: ko\n"
 "X-Crowdin-File: /development/src/locales/en.po\n"
 "X-Crowdin-File-ID: 10\n"
 
 #. js-lingui-explicit-id
 #: src/pages/PlatformPage.jsx:331
 #~ msgid "Enter display label"
-#~ msgstr "表示ラベルを入力"
+#~ msgstr "표시 라벨 입력"
 
 #. js-lingui-explicit-id
 #: src/pages/PlatformPage.jsx:313
 #~ msgid "Enter platform name"
-#~ msgstr "プラットフォーム名を入力"
+#~ msgstr "플랫폼 이름 입력"
 
 #. js-lingui-explicit-id
 #: src/pages/PlatformPage.jsx:350
 #~ msgid "Platform URL"
-#~ msgstr "プラットフォームURL"
+#~ msgstr "플랫폼 URL"
 
 #. js-lingui-explicit-id
 #: src/pages/PlatformPage.jsx:470
 #~ msgid "Logo URL"
-#~ msgstr "ロゴURL"
+#~ msgstr "로고 URL"
 
 #. js-lingui-explicit-id
 #: src/pages/PlatformPage.jsx:500
 #~ msgid "Title URL"
-#~ msgstr "タイトルURL"
+#~ msgstr "제목 URL"
 
 #. js-lingui-explicit-id
 #: src/pages/PlatformPage.jsx:242
 #~ msgid "Search platforms"
-#~ msgstr "プラットフォームを検索"
+#~ msgstr "플랫폼 검색"
 
 #. js-lingui-explicit-id
 #: src/pages/EventPage.jsx:412
 #: src/pages/EventPage.jsx:671
 #~ msgid "Enter language"
-#~ msgstr "言語を入力"
+#~ msgstr "언어 입력"
 
 #. placeholder {0}: data.type === 'EARN' ? 'Platform' : 'Wallet'
 #. placeholder {0}: data.type === 'EARN' ? 'Wallet' : 'Cash'
@@ -71,96 +71,100 @@ msgstr "{error}"
 
 #: src/components/Navbar.jsx:122
 msgid "Account"
-msgstr "アカウント"
+msgstr "계정"
 
 #: src/components/Navbar.jsx:180
 msgid "Account Management"
-msgstr "アカウント管理"
+msgstr "계정 관리"
 
 #: src/components/Navbar.jsx:152
 msgid "Account Settings"
-msgstr "アカウント設定"
+msgstr "계정 설정"
 
 #: src/pages/ReferralCodesPage.jsx:107
 #: src/pages/PlatformPage.jsx:571
 #: src/pages/EventPage.jsx:535
 #: src/pages/BindPage.jsx:124
 msgid "Actions"
-msgstr "アクション"
+msgstr "작업"
 
 #: src/pages/EventPage.jsx:332
 msgid "Add Event"
-msgstr "イベントを追加"
+msgstr "이벤트 추가"
 
 #: src/pages/PlatformPage.jsx:256
 msgid "Add New Platform"
-msgstr "新しいプラットフォームを追加"
+msgstr "새 플랫폼 추가"
 
 #: src/pages/PlatformPage.jsx:250
 msgid "Add Platform"
-msgstr "プラットフォームを追加"
+msgstr "플랫폼 추가"
 
 #: src/pages/BindPage.jsx:87
 msgid "All Status"
-msgstr "すべてのステータス"
+msgstr "모든 상태"
 
 #: src/pages/WithdrawHistoryPage.jsx:91
 msgid "Amount"
-msgstr "金額"
+msgstr "금액"
 
 #: src/pages/BindPage.jsx:90
 #: src/pages/BindPage.jsx:181
 msgid "Approved"
-msgstr "承認済み"
+msgstr "승인됨"
 
 #. placeholder {0}: platform.name
 #: src/pages/PlatformPage.jsx:876
 msgid "Are you sure you want to delete {0}?"
-msgstr "{0} を削除してもよろしいですか？"
+msgstr "{0}을(를) 삭제하시겠습니까?"
 
 #. js-lingui-explicit-id
 #: src/pages/EventPage.jsx:783
 msgid "Delete event confirmation"
-msgstr "イベント削除の確認"
+msgstr "이벤트 삭제 확인"
 
 #: src/pages/SendCashbackPage.jsx:67
 #~ msgid "Are you sure you want to send ${amount} to user Email: {uid}?"
-#~ msgstr "${amount} をユーザーIDに送信してもよろしいですか？ {uid}"
+#~ msgstr "사용자 ID: {uid}에게 ${amount}을(를) 보내시겠습니까?"
 
 #: src/pages/SendCashbackPage.jsx:82
 msgid "Are you sure you want to send ${amount} to user platform UID: {uid}?"
-msgstr "${amount} をユーザープラットフォームUID: {uid} に送信してもよろしいですか？"
+msgstr "사용자 플랫폼 UID: {uid}에게 ${amount}을(를) 보내시겠습니까?"
 
 #: src/pages/PlatformPage.jsx:430
 #: src/pages/PlatformPage.jsx:740
 msgid "Average Rebate"
-msgstr "平均<unk>"
+msgstr "평균 리베이트"
 
 #: src/pages/PlatformPage.jsx:565
 msgid "Avg. Rebate"
-msgstr "平均リベート（平均）"
+msgstr "평균 리베이트"
+
+#: src/pages/PlatformPage.jsx:
+#~ msgid "Back"
+#~ msgstr "뒤로"
 
 #: src/pages/UserPlatformWalletPage.jsx:74
 msgid "Balance"
-msgstr "残高"
+msgstr "잔액"
 
 #: src/pages/PlatformPage.jsx:267
 msgid "Basic Info"
-msgstr "基本情報"
+msgstr "기본 정보"
 
 #: src/pages/PlatformPage.jsx:645
 msgid "Basic Information"
-msgstr "基本情報"
+msgstr "기본 정보"
 
 #: src/components/AppSidebar.jsx:63
 msgid "Bind Request"
-msgstr "バインドリクエスト"
+msgstr "연동 요청"
 
 #: src/pages/UserPlatformWalletPage.jsx:40
 #: src/pages/BindPage.jsx:63
 #: src/pages/BindPage.jsx:79
 msgid "Bind Status"
-msgstr "Bind Status"
+msgstr "연동 상태"
 
 #: src/pages/PlatformPage.jsx:854
 #: src/pages/PlatformPage.jsx:886
@@ -168,141 +172,141 @@ msgstr "Bind Status"
 #: src/pages/EventPage.jsx:798
 #: src/components/Navbar.jsx:283
 msgid "Cancel"
-msgstr "キャンセル"
+msgstr "취소"
 
 #: src/pages/PlatformPage.jsx:363
 #: src/pages/PlatformPage.jsx:559
 #: src/pages/PlatformPage.jsx:710
 msgid "Cashback (%)"
-msgstr "Cashback (%)"
+msgstr "캐시백 (%)"
 
 #: src/pages/SendCashbackPage.jsx:126
 msgid "Cashback Amount"
-msgstr "キャッシュバックの金額"
+msgstr "캐시백 금액"
 
 #: src/pages/SendCashbackPage.jsx:151
 msgid "Cashback sent successfully!"
-msgstr "キャッシュバックが正常に送信されました！"
+msgstr "캐시백이 성공적으로 전송되었습니다!"
 
 #: src/components/Navbar.jsx:175
 #: src/components/Navbar.jsx:196
 msgid "Change Password"
-msgstr "パスワードの変更"
+msgstr "비밀번호 변경"
 
 #: src/pages/BindPage.jsx:162
 msgid "Change Status"
-msgstr "ステータスの変更"
+msgstr "상태 변경"
 
 #: src/pages/SendCashbackPage.jsx:79
 msgid "Confirm Cashback"
-msgstr "キャッシュバックの確認"
+msgstr "캐시백 확인"
 
 #: src/components/Navbar.jsx:254
 msgid "Confirm New Password"
-msgstr "新しいパスワードの確認"
+msgstr "새 비밀번호 확인"
 
 #: src/pages/EventPage.jsx:494
 msgid "Create Event"
-msgstr "イベントを作成"
+msgstr "이벤트 생성"
 
 #: src/pages/PlatformPage.jsx:529
 msgid "Create Platform"
-msgstr "プラットフォームを作成"
+msgstr "플랫폼 생성"
 
 #: src/components/Navbar.jsx:206
 msgid "Current Password"
-msgstr "現在のパスワード"
+msgstr "현재 비밀번호"
 
 #: src/pages/WithdrawHistoryPage.jsx:106
 msgid "Date"
-msgstr "日付"
+msgstr "날짜"
 
 #: src/pages/PlatformPage.jsx:870
 #: src/pages/PlatformPage.jsx:889
 #: src/pages/EventPage.jsx:777
 #: src/pages/EventPage.jsx:801
 msgid "Delete"
-msgstr "削除"
+msgstr "삭제"
 
 #: src/components/Navbar.jsx:185
 msgid "Delete Account"
-msgstr "アカウントを削除"
+msgstr "계정 삭제"
 
 #: src/pages/PlatformPage.jsx:378
 #: src/pages/PlatformPage.jsx:562
 #: src/pages/PlatformPage.jsx:725
 msgid "Discount (%)"
-msgstr "割引 (%)"
+msgstr "할인 (%)"
 
 #: src/pages/PlatformPage.jsx:322
 #: src/pages/PlatformPage.jsx:667
 msgid "Display Label*"
-msgstr "表示ラベル*"
+msgstr "표시 라벨*"
 
 #: src/pages/PlatformPage.jsx:630
 #: src/pages/EventPage.jsx:600
 msgid "Edit"
-msgstr "編集"
+msgstr "수정"
 
 #: src/pages/EventPage.jsx:606
 msgid "Edit Event"
-msgstr "予定を編集"
+msgstr "이벤트 수정"
 
 #. placeholder {0}: platformToEdit?.name
 #: src/pages/PlatformPage.jsx:636
 msgid "Edit Platform: {0}"
-msgstr "プラットフォームを編集: {0}"
+msgstr "플랫폼 수정: {0}"
 
 #: src/pages/EventPage.jsx:464
 #: src/pages/EventPage.jsx:529
 #: src/pages/EventPage.jsx:734
 msgid "End Date"
-msgstr "終了日"
+msgstr "종료일"
 
 #. js-lingui-explicit-id
 #: src/pages/EventPage.jsx:154
 msgid "End date is required"
-msgstr "終了日は必須です"
+msgstr "종료일이 필요합니다"
 
 #: src/pages/PlatformPage.jsx:325
 msgid "Enter display label"
-msgstr "表示ラベルを入力"
+msgstr "표시 라벨을 입력하세요"
 
 #: src/pages/PlatformPage.jsx:310
 msgid "Enter platform name"
-msgstr "プラットフォーム名を入力"
+msgstr "플랫폼 이름을 입력하세요"
 
 #. js-lingui-explicit-id
 #: src/pages/EventPage.jsx:368
 #: src/pages/EventPage.jsx:638
 msgid "Enter subtitle"
-msgstr "サブタイトルを入力"
+msgstr "부제목 입력"
 
 #. js-lingui-explicit-id
 #: src/pages/EventPage.jsx:350
 #: src/pages/EventPage.jsx:620
 msgid "Enter title"
-msgstr "タイトルを入力"
+msgstr "제목 입력"
 
 #. js-lingui-explicit-id
 #: src/pages/SendCashbackPage.jsx:116
 msgid "Enter user Platform UID"
-msgstr "ユーザープラットフォームUIDを入力してください"
+msgstr "사용자 플랫폼 UID를 입력하세요"
 
 #: src/pages/PlatformPage.jsx:154
 #: src/pages/PlatformPage.jsx:210
 msgid "Error"
-msgstr "エラー"
+msgstr "오류"
 
 #. js-lingui-explicit-id
 #: src/pages/EventPage.jsx:48
 #: src/pages/EventPage.jsx:213
 msgid "Error"
-msgstr "エラー"
+msgstr "오류"
 
 #: src/pages/WithdrawHistoryPage.jsx:60
 msgid "Error Status"
-msgstr "エラーステータス"
+msgstr "오류 상태"
 
 #. placeholder {0}: error.message || error
 #: src/pages/WithdrawHistoryPage.jsx:65
@@ -311,82 +315,99 @@ msgstr "エラーステータス"
 #: src/pages/PlatformPage.jsx:227
 #: src/pages/BindPage.jsx:68
 msgid "Error: {0}"
-msgstr "エラー: {0}"
+msgstr "오류: {0}"
 
 #. js-lingui-explicit-id
 #: src/pages/EventPage.jsx:302
 msgid "Error: {error}"
-msgstr "エラー: {error}"
+msgstr "오류: {error}"
+
+#: src/pages/EventPage.jsx:292
+#~ msgid "Error: {error}"
+#~ msgstr "오류: {error}"
 
 #. js-lingui-explicit-id
 #: src/pages/EventPage.jsx:115
 #: src/pages/EventPage.jsx:281
 msgid "Event created successfully"
-msgstr "イベントが正常に作成されました"
+msgstr "이벤트가 성공적으로 생성되었습니다"
+
+#: src/pages/EventPage.jsx:105
+#: src/pages/EventPage.jsx:271
+#~ msgid "Event created successfully"
+#~ msgstr "이벤트가 성공적으로 생성되었습니다"
 
 #. js-lingui-explicit-id
 #: src/pages/EventPage.jsx:85
 msgid "Event deleted successfully"
-msgstr "イベントが正常に削除されました"
+msgstr "이벤트가 성공적으로 삭제되었습니다"
+
+#: src/pages/EventPage.jsx:75
+#~ msgid "Event deleted successfully"
+#~ msgstr "이벤트가 성공적으로 삭제되었습니다"
 
 #. js-lingui-explicit-id
 #: src/pages/EventPage.jsx:100
 msgid "Event updated successfully"
-msgstr "イベントが正常に更新されました"
+msgstr "이벤트가 성공적으로 업데이트되었습니다"
+
+#: src/pages/EventPage.jsx:90
+#~ msgid "Event updated successfully"
+#~ msgstr "이벤트가 성공적으로 업데이트되었습니다"
 
 #: src/pages/EventPage.jsx:297
 #: src/pages/EventPage.jsx:317
 #: src/components/AppSidebar.jsx:37
 msgid "Events"
-msgstr "イベント"
+msgstr "이벤트"
 
 #: src/components/ReferralTree.jsx:144
 #~ msgid "Expand bottom level"
-#~ msgstr "下位レベルを展開"
+#~ msgstr "하위 레벨 확장"
 
 #: src/components/ReferralTree.jsx:141
 #~ msgid "Expand top level"
-#~ msgstr "上位レベルを展開"
+#~ msgstr "상위 레벨 확장"
 
 #. js-lingui-explicit-id
 #: src/pages/EventPage.jsx:120
 msgid "Failed to create event"
-msgstr "イベントの作成に失敗しました"
+msgstr "이벤트 생성에 실패했습니다"
 
 #: src/pages/PlatformPage.jsx:211
 msgid "Failed to create platform"
-msgstr "プラットフォームの作成に失敗しました"
+msgstr "플랫폼 생성에 실패했습니다"
 
 #. js-lingui-explicit-id
 #: src/pages/EventPage.jsx:90
 msgid "Failed to delete event"
-msgstr "イベントの削除に失敗しました"
+msgstr "이벤트 삭제에 실패했습니다"
 
 #. js-lingui-explicit-id
 #: src/pages/EventPage.jsx:217
 msgid "Failed to fetch events"
-msgstr "イベントの取得に失敗しました"
+msgstr "이벤트를 가져오는데 실패했습니다"
 
 #. js-lingui-explicit-id
 #: src/pages/EventPage.jsx:105
 msgid "Failed to update event"
-msgstr "イベントの更新に失敗しました"
+msgstr "이벤트 업데이트에 실패했습니다"
 
 #: src/pages/PlatformPage.jsx:155
 msgid "Failed to update platform"
-msgstr "プラットフォームの更新に失敗しました"
+msgstr "플랫폼 업데이트에 실패했습니다"
 
 #: src/pages/WithdrawHistoryPage.jsx:100
 msgid "From"
-msgstr "送信元"
+msgstr "출금원"
 
 #: src/components/Navbar.jsx:92
 msgid "Get started by exploring our features"
-msgstr "機能を探索して始めましょう"
+msgstr "기능을 탐색하여 시작하세요"
 
 #: src/pages/WithdrawHistoryPage.jsx:97
 msgid "Hash Link"
-msgstr "ハッシュリンク"
+msgstr "해시 링크"
 
 #: src/pages/PlatformPage.jsx:341
 msgid "https://example.com"
@@ -396,13 +417,13 @@ msgstr "https://example.com"
 #: src/pages/EventPage.jsx:404
 #: src/pages/EventPage.jsx:674
 msgid "Event URL"
-msgstr "イベントURL"
+msgstr "이벤트 URL"
 
 #. js-lingui-explicit-id
 #: src/pages/EventPage.jsx:386
 #: src/pages/EventPage.jsx:656
 msgid "Image URL"
-msgstr "画像URL"
+msgstr "이미지 URL"
 
 #: src/pages/PlatformPage.jsx:458
 msgid "https://example.com/logo.png"
@@ -415,42 +436,42 @@ msgstr "https://example.com/title.png"
 #: src/pages/PlatformPage.jsx:550
 #: src/pages/EventPage.jsx:517
 msgid "Image"
-msgstr "画像"
+msgstr "이미지"
 
 #: src/pages/EventPage.jsx:383
 #: src/pages/EventPage.jsx:653
 msgid "Image URL"
-msgstr "画像URL"
+msgstr "이미지 URL"
 
 #. js-lingui-explicit-id
 #: src/pages/EventPage.jsx:138
 msgid "Image URL is required"
-msgstr "画像URLは必須です"
+msgstr "이미지 URL이 필요합니다"
 
 #: src/pages/PlatformPage.jsx:556
 msgid "Label"
-msgstr "ラベル"
+msgstr "라벨"
 
 #: src/pages/PlatformPage.jsx:30
 msgid "Label is required"
-msgstr "ラベルは必須です"
+msgstr "라벨이 필요합니다"
 
 #: src/pages/EventPage.jsx:419
 #: src/pages/EventPage.jsx:523
 #: src/pages/EventPage.jsx:689
 #: src/components/Navbar.jsx:142
 msgid "Language"
-msgstr "言語"
+msgstr "언어"
 
 #. js-lingui-explicit-id
 #: src/pages/EventPage.jsx:146
 msgid "Language is required"
-msgstr "言語は必須です"
+msgstr "언어가 필요합니다"
 
 #: src/pages/PlatformPage.jsx:413
 #: src/pages/PlatformPage.jsx:775
 msgid "Limit Price"
-msgstr "リミット価格"
+msgstr "제한 가격"
 
 #: src/pages/WithdrawHistoryPage.jsx:81
 #: src/pages/UserPlatformWalletPage.jsx:61
@@ -458,336 +479,336 @@ msgstr "リミット価格"
 #: src/pages/PlatformPage.jsx:542
 #: src/pages/BindPage.jsx:104
 msgid "Loading..."
-msgstr "読み込み中..."
+msgstr "로딩 중..."
 
 #. js-lingui-explicit-id
 #: src/pages/EventPage.jsx:506
 msgid "Loading"
-msgstr "読み込み中"
+msgstr "로딩 중"
 
 #: src/pages/PlatformPage.jsx:454
 #: src/pages/PlatformPage.jsx:800
 msgid "Logo Image URL"
-msgstr "ロゴ画像URL"
+msgstr "로고 이미지 URL"
 
 #: src/pages/PlatformPage.jsx:463
 #: src/pages/PlatformPage.jsx:809
 msgid "Logo preview"
-msgstr "ロゴのプレビュー"
+msgstr "로고 미리보기"
 
 #: src/pages/PlatformPage.jsx:398
 #: src/pages/PlatformPage.jsx:568
 #: src/pages/PlatformPage.jsx:760
 msgid "Market Price"
-msgstr "市場価格"
+msgstr "시장 가격"
 
 #: src/components/AppSidebar.jsx:28
 msgid "Master Data"
-msgstr "マスターデータ"
+msgstr "기준 정보"
 
 #: src/pages/PlatformPage.jsx:291
 #: src/pages/PlatformPage.jsx:791
 msgid "Media"
-msgstr "メディア"
+msgstr "미디어"
 
 #: src/components/ui/pagination.jsx:89
 msgid "More pages"
-msgstr "その他のページ"
+msgstr "더 많은 페이지"
 
 #: src/pages/PlatformPage.jsx:553
 msgid "Name"
-msgstr "名前"
+msgstr "이름"
 
 #: src/pages/PlatformPage.jsx:29
 msgid "Name is required"
-msgstr "名前は必須です"
+msgstr "이름이 필요합니다"
 
 #: src/pages/WithdrawHistoryPage.jsx:94
 msgid "Network"
-msgstr "ネットワーク"
+msgstr "네트워크"
 
 #: src/components/Navbar.jsx:230
 msgid "New Password"
-msgstr "新しいパスワード"
+msgstr "새 비밀번호"
 
 #: src/components/ui/pagination.jsx:80
 msgid "Next"
-msgstr "次へ"
+msgstr "다음"
 
 #: src/pages/PlatformPage.jsx:523
 msgid "Next Step"
-msgstr "次のステップ"
+msgstr "다음 단계"
 
 #: src/pages/WithdrawHistoryPage.jsx:117
 #: src/pages/UserPlatformWalletPage.jsx:82
 #: src/pages/ReferralCodesPage.jsx:115
 #: src/pages/BindPage.jsx:132
 msgid "No data"
-msgstr "データがありません"
+msgstr "데이터 없음"
 
 #. js-lingui-explicit-id
 #: src/pages/EventPage.jsx:543
 msgid "No events found"
-msgstr "イベントが見つかりません"
+msgstr "이벤트를 찾을 수 없습니다"
 
 #: src/pages/EventPage.jsx:448
 #~ msgid "No events found"
-#~ msgstr "予定が見つかりません"
+#~ msgstr "이벤트를 찾을 수 없음"
 
 #: src/pages/PlatformPage.jsx:614
 msgid "No image"
-msgstr "画像がありません"
+msgstr "이미지 없음"
 
 #. js-lingui-explicit-id
 #: src/pages/EventPage.jsx:574
 msgid "No image"
-msgstr "画像がありません"
+msgstr "이미지 없음"
 
 #: src/pages/PlatformPage.jsx:579
 msgid "No platforms found"
-msgstr "プラットフォームが見つかりません"
+msgstr "플랫폼을 찾을 수 없음"
 
 #: src/components/Navbar.jsx:44
 msgid "Notifications"
-msgstr "通知"
+msgstr "알림"
 
 #: src/components/ui/pagination.jsx:23
 msgid "Page {currentPage} of {totalPages}"
-msgstr "ページ {currentPage} / {totalPages}"
+msgstr "페이지 {currentPage}/{totalPages}"
 
 #: src/pages/BindPage.jsx:93
 #: src/pages/BindPage.jsx:188
 msgid "Pending"
-msgstr "保留中"
+msgstr "대기 중"
 
 #: src/components/Navbar.jsx:55
 msgid "Pending Bind Requests"
-msgstr "保留中のバインドリクエスト"
+msgstr "대기 중인 연동 요청"
 
 #: src/components/Navbar.jsx:72
 msgid "Pending Withdraw Requests"
-msgstr "保留中の出金リクエスト"
+msgstr "대기 중인 출금 요청"
 
 #: src/pages/UserPlatformWalletPage.jsx:71
 #: src/pages/BindPage.jsx:112
 msgid "Platform"
-msgstr "プラットフォーム"
+msgstr "플랫폼"
 
 #: src/pages/PlatformPage.jsx:203
 msgid "Platform created successfully"
-msgstr "プラットフォームが正常に作成されました"
+msgstr "플랫폼이 성공적으로 생성되었습니다"
 
 #: src/pages/PlatformPage.jsx:446
 msgid "Platform Images"
-msgstr "プラットフォーム画像"
+msgstr "플랫폼 이미지"
 
 #: src/pages/PlatformPage.jsx:307
 msgid "Platform Name*"
-msgstr "プラットフォーム名*"
+msgstr "플랫폼 이름*"
 
 #: src/pages/PlatformPage.jsx:149
 msgid "Platform updated successfully"
-msgstr "プラットフォームが正常に更新されました"
+msgstr "플랫폼이 성공적으로 업데이트되었습니다"
 
 #: src/pages/PlatformPage.jsx:338
 #: src/pages/PlatformPage.jsx:683
 msgid "Platform URL"
-msgstr "プラットフォームURL"
+msgstr "플랫폼 URL"
 
 #: src/components/AppSidebar.jsx:47
 msgid "Platform Wallet"
-msgstr "プラットフォームウォレット"
+msgstr "플랫폼 지갑"
 
 #: src/pages/PlatformPage.jsx:222
 #: src/pages/PlatformPage.jsx:238
 #: src/components/AppSidebar.jsx:32
 msgid "Platforms"
-msgstr "プラットフォーム"
+msgstr "플랫폼"
 
 #: src/components/ui/pagination.jsx:68
 msgid "Previous"
-msgstr "前へ"
+msgstr "이전"
 
 #: src/pages/PlatformPage.jsx:279
 #: src/pages/PlatformPage.jsx:390
 #: src/pages/PlatformPage.jsx:752
 msgid "Pricing"
-msgstr "価格"
+msgstr "가격"
 
 #: src/components/Navbar.jsx:156
 msgid "Profile"
-msgstr "プロフィール"
+msgstr "프로필"
 
 #: src/pages/ReferralCodesPage.jsx:101
 msgid "Referral Code"
-msgstr "紹介コード"
+msgstr "추천 코드"
 
 #: src/pages/ReferralCodesPage.jsx:71
 #: src/pages/ReferralCodesPage.jsx:86
 #: src/components/AppSidebar.jsx:42
 msgid "Referral Codes"
-msgstr "紹介コード"
+msgstr "추천 코드"
 
 #: src/components/ReferralTree.jsx:150
 msgid "Referral Tree"
-msgstr "紹介ツリー"
+msgstr "추천인 트리"
 
 #: src/pages/ReferralCodesPage.jsx:104
 msgid "Referred By"
-msgstr "参照元"
+msgstr "추천인"
 
 #: src/pages/BindPage.jsx:96
 #: src/pages/BindPage.jsx:191
 msgid "Rejected"
-msgstr "拒否"
+msgstr "거부됨"
 
 #: src/components/AppSidebar.jsx:54
 msgid "Request"
-msgstr "リクエスト"
+msgstr "요청 관리"
 
 #: src/pages/PlatformPage.jsx:355
 #: src/pages/PlatformPage.jsx:702
 msgid "Rewards"
-msgstr "Recompensas"
+msgstr "리워드"
 
 #: src/pages/PlatformPage.jsx:697
 msgid "Rewards & Pricing"
-msgstr "報酬と価格"
+msgstr "리워드 & 가격"
 
 #: src/pages/PlatformPage.jsx:857
 #: src/pages/EventPage.jsx:764
 #: src/components/Navbar.jsx:289
 msgid "Save Changes"
-msgstr "変更を保存"
+msgstr "변경사항 저장"
 
 #. js-lingui-explicit-id
 #: src/pages/EventPage.jsx:321
 msgid "Search events"
-msgstr "イベントを検索"
+msgstr "이벤트 검색"
 
 #: src/pages/PlatformPage.jsx:242
 msgid "Search platforms..."
-msgstr "プラットフォームを検索..."
+msgstr "플랫폼 검색..."
 
 #: src/components/Navbar.jsx:170
 msgid "Security"
-msgstr "セキュリティ"
+msgstr "보안"
 
 #: src/components/Navbar.jsx:101
 msgid "See all notifications"
-msgstr "すべての通知を見る"
+msgstr "모든 알림 보기"
 
 #. js-lingui-explicit-id
 #: src/pages/EventPage.jsx:424
 #: src/pages/EventPage.jsx:694
 msgid "Select language"
-msgstr "言語を選択"
+msgstr "언어 선택"
 
 #: src/pages/SendCashbackPage.jsx:160
 #: src/components/AppSidebar.jsx:58
 msgid "Send Cashback"
-msgstr "キャッシュバックを送信"
+msgstr "캐시백 전송"
 
 #: src/pages/SendCashbackPage.jsx:160
 msgid "Sending..."
-msgstr "送信中..."
+msgstr "전송 중..."
 
 #: src/components/Navbar.jsx:125
 #: src/components/Navbar.jsx:139
 msgid "Settings"
-msgstr "設定"
+msgstr "설정"
 
 #: src/components/Navbar.jsx:128
 msgid "Sign out"
-msgstr "サインアウト"
+msgstr "로그아웃"
 
 #: src/pages/EventPage.jsx:449
 #: src/pages/EventPage.jsx:526
 #: src/pages/EventPage.jsx:719
 msgid "Start Date"
-msgstr "開始日"
+msgstr "시작일"
 
 #. js-lingui-explicit-id
 #: src/pages/EventPage.jsx:150
 msgid "Start date is required"
-msgstr "開始日は必須です"
+msgstr "시작일이 필요합니다"
 
 #: src/pages/WithdrawHistoryPage.jsx:109
 #: src/pages/BindPage.jsx:121
 msgid "Status"
-msgstr "ステータス"
+msgstr "상태"
 
 #: src/pages/EventPage.jsx:365
 #: src/pages/EventPage.jsx:635
 msgid "Subtitle"
-msgstr "サブタイトル"
+msgstr "부제목"
 
 #. js-lingui-explicit-id
 #: src/pages/EventPage.jsx:134
 msgid "Subtitle is required"
-msgstr "サブタイトルは必須です"
+msgstr "부제목이 필요합니다"
 
 #: src/pages/PlatformPage.jsx:148
 #: src/pages/PlatformPage.jsx:202
 msgid "Success"
-msgstr "成功"
+msgstr "성공"
 
 #. js-lingui-explicit-id
 #: src/pages/EventPage.jsx:60
 #: src/pages/EventPage.jsx:277
 msgid "Success"
-msgstr "成功"
+msgstr "성공"
 
 #: src/pages/EventPage.jsx:532
 msgid "Tags"
-msgstr "タグ"
+msgstr "태그"
 
 #: src/pages/EventPage.jsx:480
 #: src/pages/EventPage.jsx:750
 msgid "Tags (comma-separated)"
-msgstr "タグ (カンマ区切り)"
+msgstr "태그 (쉼표로 구분)"
 
 #. js-lingui-explicit-id
 #: src/pages/EventPage.jsx:790
 msgid "Delete event warning"
-msgstr "イベント削除の警告"
-
-#: src/pages/EventPage.jsx:674
-#~ msgid "This action cannot be undone. This will permanently delete the event."
-#~ msgstr "この操作は元に戻せません。この操作はイベントを永久に削除します。"
+msgstr "이벤트 삭제 경고"
 
 #: src/pages/PlatformPage.jsx:879
 msgid "This action cannot be undone. This will permanently delete the platform."
-msgstr "この操作は元に戻せません。これはプラットフォームを完全に削除します。"
+msgstr "이 작업은 취소할 수 없습니다. 플랫폼이 영구적으로 삭제됩니다."
+
+#: src/pages/PlatformPage.jsx:
+#~ msgid "This will permanently delete the platform."
+#~ msgstr "이 작업은 플랫폼을 영구적으로 삭제합니다."
 
 #: src/pages/EventPage.jsx:347
 #: src/pages/EventPage.jsx:520
 #: src/pages/EventPage.jsx:617
 msgid "Title"
-msgstr "タイトル"
+msgstr "제목"
 
 #: src/pages/PlatformPage.jsx:481
 #: src/pages/PlatformPage.jsx:827
 msgid "Title Image URL"
-msgstr "タイトルイメージURL"
+msgstr "제목 이미지 URL"
 
 #. js-lingui-explicit-id
 #: src/pages/EventPage.jsx:130
 msgid "Title is required"
-msgstr "タイトルは必須です"
+msgstr "제목이 필요합니다"
 
 #: src/pages/PlatformPage.jsx:490
 #: src/pages/PlatformPage.jsx:836
 msgid "Title preview"
-msgstr "タイトルのプレビュー"
+msgstr "제목 미리보기"
 
 #: src/pages/WithdrawHistoryPage.jsx:103
 msgid "To"
-msgstr "宛先"
+msgstr "출금처"
 
 #: src/pages/WithdrawHistoryPage.jsx:97
 #~ msgid "Type"
-#~ msgstr "種類"
+#~ msgstr "유형"
 
 #: src/pages/BindPage.jsx:118
 msgid "UID"
@@ -795,11 +816,11 @@ msgstr "UID"
 
 #: src/pages/BindPage.jsx:201
 msgid "Update"
-msgstr "更新"
+msgstr "업데이트"
 
 #: src/pages/BindPage.jsx:168
 msgid "Update Bind Status"
-msgstr "Update Bind Status"
+msgstr "연동 상태 업데이트"
 
 #: src/pages/EventPage.jsx:401
 #: src/pages/EventPage.jsx:671
@@ -809,50 +830,50 @@ msgstr "URL"
 #. js-lingui-explicit-id
 #: src/pages/EventPage.jsx:142
 msgid "URL is required"
-msgstr "URLは必須です"
+msgstr "URL이 필요합니다"
 
 #: src/pages/WithdrawHistoryPage.jsx:88
 #: src/pages/UserPlatformWalletPage.jsx:72
 #: src/pages/ReferralCodesPage.jsx:98
 #: src/pages/BindPage.jsx:115
 #~ msgid "user Email"
-#~ msgstr "ユーザー ID"
+#~ msgstr "사용자 ID"
 
 #: src/pages/WithdrawHistoryPage.jsx:88
 #: src/pages/UserPlatformWalletPage.jsx:68
 #: src/pages/ReferralCodesPage.jsx:98
 #: src/pages/BindPage.jsx:115
 msgid "User Email"
-msgstr "ユーザーID"
+msgstr "사용자 이메일"
 
 #: src/pages/SendCashbackPage.jsx:109
 msgid "User Platform UID"
-msgstr "ユーザープラットフォームUID"
+msgstr "사용자 플랫폼 UID"
 
 #: src/pages/UserPlatformWalletPage.jsx:56
 msgid "User Platform Wallet"
-msgstr "ユーザープラットフォーム財布"
+msgstr "사용자 플랫폼 지갑"
 
 #: src/pages/ReferralCodesPage.jsx:133
 msgid "View Tree"
-msgstr "ツリーを表示"
+msgstr "트리 보기"
 
 #: src/components/Navbar.jsx:89
 msgid "Welcome to the platform"
-msgstr "プラットフォームへようこそ"
+msgstr "플랫폼에 오신 것을 환영합니다"
 
 #: src/pages/WithdrawHistoryPage.jsx:76
 msgid "Withdraw History"
-msgstr "出金履歴"
+msgstr "출금 내역"
 
 #: src/components/AppSidebar.jsx:68
 msgid "Withdraw Request"
-msgstr "出金リクエスト"
+msgstr "출금 요청"
 
 #: src/components/Navbar.jsx:58
 msgid "You have 3 pending bind requests to review"
-msgstr "確認が必要な保留中のバインドリクエストが3件あります"
+msgstr "검토할 대기 중인 연동 요청이 3개 있습니다"
 
 #: src/components/Navbar.jsx:75
 msgid "You have 4 pending withdraw requests to review"
-msgstr "確認が必要な保留中の出金リクエストが4件あります"
+msgstr "검토할 대기 중인 출금 요청이 4개 있습니다"

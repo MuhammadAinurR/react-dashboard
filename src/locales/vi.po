@@ -1,58 +1,17 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2024-12-14 10:25+0700\n"
+"POT-Creation-Date: 2025-01-04 10:06+0700\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
-"Language: ja\n"
-"Project-Id-Version: degenmax-dashboard\n"
+"Language: vi\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2024-12-14 04:24\n"
+"PO-Revision-Date: \n"
 "Last-Translator: \n"
-"Language-Team: Japanese\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Crowdin-Project: degenmax-dashboard\n"
-"X-Crowdin-Project-ID: 745703\n"
-"X-Crowdin-Language: ja\n"
-"X-Crowdin-File: /development/src/locales/en.po\n"
-"X-Crowdin-File-ID: 10\n"
-
-#. js-lingui-explicit-id
-#: src/pages/PlatformPage.jsx:331
-#~ msgid "Enter display label"
-#~ msgstr "表示ラベルを入力"
-
-#. js-lingui-explicit-id
-#: src/pages/PlatformPage.jsx:313
-#~ msgid "Enter platform name"
-#~ msgstr "プラットフォーム名を入力"
-
-#. js-lingui-explicit-id
-#: src/pages/PlatformPage.jsx:350
-#~ msgid "Platform URL"
-#~ msgstr "プラットフォームURL"
-
-#. js-lingui-explicit-id
-#: src/pages/PlatformPage.jsx:470
-#~ msgid "Logo URL"
-#~ msgstr "ロゴURL"
-
-#. js-lingui-explicit-id
-#: src/pages/PlatformPage.jsx:500
-#~ msgid "Title URL"
-#~ msgstr "タイトルURL"
-
-#. js-lingui-explicit-id
-#: src/pages/PlatformPage.jsx:242
-#~ msgid "Search platforms"
-#~ msgstr "プラットフォームを検索"
-
-#. js-lingui-explicit-id
-#: src/pages/EventPage.jsx:412
-#: src/pages/EventPage.jsx:671
-#~ msgid "Enter language"
-#~ msgstr "言語を入力"
+"Language-Team: \n"
+"Plural-Forms: \n"
 
 #. placeholder {0}: data.type === 'EARN' ? 'Platform' : 'Wallet'
 #. placeholder {0}: data.type === 'EARN' ? 'Wallet' : 'Cash'
@@ -71,96 +30,92 @@ msgstr "{error}"
 
 #: src/components/Navbar.jsx:122
 msgid "Account"
-msgstr "アカウント"
+msgstr "Tài khoản"
 
 #: src/components/Navbar.jsx:180
 msgid "Account Management"
-msgstr "アカウント管理"
+msgstr "Quản lý tài khoản"
 
 #: src/components/Navbar.jsx:152
 msgid "Account Settings"
-msgstr "アカウント設定"
+msgstr "Cài đặt tài khoản"
 
 #: src/pages/ReferralCodesPage.jsx:107
 #: src/pages/PlatformPage.jsx:571
 #: src/pages/EventPage.jsx:535
 #: src/pages/BindPage.jsx:124
 msgid "Actions"
-msgstr "アクション"
+msgstr "Hành động"
 
 #: src/pages/EventPage.jsx:332
 msgid "Add Event"
-msgstr "イベントを追加"
+msgstr "Thêm sự kiện"
 
 #: src/pages/PlatformPage.jsx:256
 msgid "Add New Platform"
-msgstr "新しいプラットフォームを追加"
+msgstr "Thêm nền tảng mới"
 
 #: src/pages/PlatformPage.jsx:250
 msgid "Add Platform"
-msgstr "プラットフォームを追加"
+msgstr "Thêm nền tảng"
 
 #: src/pages/BindPage.jsx:87
 msgid "All Status"
-msgstr "すべてのステータス"
+msgstr "Tất cả trạng thái"
 
 #: src/pages/WithdrawHistoryPage.jsx:91
 msgid "Amount"
-msgstr "金額"
+msgstr "Số tiền"
 
 #: src/pages/BindPage.jsx:90
 #: src/pages/BindPage.jsx:181
 msgid "Approved"
-msgstr "承認済み"
+msgstr "Đã duyệt"
 
 #. placeholder {0}: platform.name
 #: src/pages/PlatformPage.jsx:876
 msgid "Are you sure you want to delete {0}?"
-msgstr "{0} を削除してもよろしいですか？"
+msgstr "Bạn có chắc chắn muốn xóa {0}?"
 
 #. js-lingui-explicit-id
 #: src/pages/EventPage.jsx:783
 msgid "Delete event confirmation"
-msgstr "イベント削除の確認"
-
-#: src/pages/SendCashbackPage.jsx:67
-#~ msgid "Are you sure you want to send ${amount} to user Email: {uid}?"
-#~ msgstr "${amount} をユーザーIDに送信してもよろしいですか？ {uid}"
+msgstr "Xác nhận xóa sự kiện"
 
 #: src/pages/SendCashbackPage.jsx:82
 msgid "Are you sure you want to send ${amount} to user platform UID: {uid}?"
-msgstr "${amount} をユーザープラットフォームUID: {uid} に送信してもよろしいですか？"
+msgstr "Bạn có chắc chắn muốn gửi ${amount} đến người dùng có UID: {uid}?"
 
 #: src/pages/PlatformPage.jsx:430
 #: src/pages/PlatformPage.jsx:740
 msgid "Average Rebate"
-msgstr "平均<unk>"
+msgstr "Hoàn tiền trung bình"
 
 #: src/pages/PlatformPage.jsx:565
 msgid "Avg. Rebate"
-msgstr "平均リベート（平均）"
+msgstr "Hoàn tiền trung bình"
 
 #: src/pages/UserPlatformWalletPage.jsx:74
 msgid "Balance"
-msgstr "残高"
+msgstr "Số dư"
 
 #: src/pages/PlatformPage.jsx:267
 msgid "Basic Info"
-msgstr "基本情報"
+msgstr "Thông tin cơ bản"
 
 #: src/pages/PlatformPage.jsx:645
 msgid "Basic Information"
-msgstr "基本情報"
+msgstr "Thông tin cơ bản"
 
 #: src/components/AppSidebar.jsx:63
 msgid "Bind Request"
-msgstr "バインドリクエスト"
+msgstr "Yêu cầu liên kết"
 
 #: src/pages/UserPlatformWalletPage.jsx:40
 #: src/pages/BindPage.jsx:63
 #: src/pages/BindPage.jsx:79
 msgid "Bind Status"
-msgstr "Bind Status"
+msgstr "Trạng thái liên kết"
 
 #: src/pages/PlatformPage.jsx:854
 #: src/pages/PlatformPage.jsx:886
@@ -168,141 +123,145 @@ msgstr "Bind Status"
 #: src/pages/EventPage.jsx:798
 #: src/components/Navbar.jsx:283
 msgid "Cancel"
-msgstr "キャンセル"
+msgstr "Hủy"
 
 #: src/pages/PlatformPage.jsx:363
 #: src/pages/PlatformPage.jsx:559
 #: src/pages/PlatformPage.jsx:710
 msgid "Cashback (%)"
-msgstr "Cashback (%)"
+msgstr "Hoàn tiền (%)"
 
 #: src/pages/SendCashbackPage.jsx:126
 msgid "Cashback Amount"
-msgstr "キャッシュバックの金額"
+msgstr "Số tiền hoàn"
 
 #: src/pages/SendCashbackPage.jsx:151
 msgid "Cashback sent successfully!"
-msgstr "キャッシュバックが正常に送信されました！"
+msgstr "Gửi hoàn tiền thành công!"
 
 #: src/components/Navbar.jsx:175
 #: src/components/Navbar.jsx:196
 msgid "Change Password"
-msgstr "パスワードの変更"
+msgstr "Đổi mật khẩu"
 
 #: src/pages/BindPage.jsx:162
 msgid "Change Status"
-msgstr "ステータスの変更"
+msgstr "Thay đổi trạng thái"
 
 #: src/pages/SendCashbackPage.jsx:79
 msgid "Confirm Cashback"
-msgstr "キャッシュバックの確認"
+msgstr "Xác nhận hoàn tiền"
 
 #: src/components/Navbar.jsx:254
 msgid "Confirm New Password"
-msgstr "新しいパスワードの確認"
+msgstr "Xác nhận mật khẩu mới"
 
 #: src/pages/EventPage.jsx:494
 msgid "Create Event"
-msgstr "イベントを作成"
+msgstr "Tạo sự kiện"
 
 #: src/pages/PlatformPage.jsx:529
 msgid "Create Platform"
-msgstr "プラットフォームを作成"
+msgstr "Tạo nền tảng"
 
 #: src/components/Navbar.jsx:206
 msgid "Current Password"
-msgstr "現在のパスワード"
+msgstr "Mật khẩu hiện tại"
 
 #: src/pages/WithdrawHistoryPage.jsx:106
 msgid "Date"
-msgstr "日付"
+msgstr "Ngày"
 
 #: src/pages/PlatformPage.jsx:870
 #: src/pages/PlatformPage.jsx:889
 #: src/pages/EventPage.jsx:777
 #: src/pages/EventPage.jsx:801
 msgid "Delete"
-msgstr "削除"
+msgstr "Xóa"
 
 #: src/components/Navbar.jsx:185
 msgid "Delete Account"
-msgstr "アカウントを削除"
+msgstr "Xóa tài khoản"
+
+#: src/pages/EventPage.jsx:790
+#~ msgid "Delete event warning"
+#~ msgstr "Cảnh báo xóa sự kiện"
 
 #: src/pages/PlatformPage.jsx:378
 #: src/pages/PlatformPage.jsx:562
 #: src/pages/PlatformPage.jsx:725
 msgid "Discount (%)"
-msgstr "割引 (%)"
+msgstr "Giảm giá (%)"
 
 #: src/pages/PlatformPage.jsx:322
 #: src/pages/PlatformPage.jsx:667
 msgid "Display Label*"
-msgstr "表示ラベル*"
+msgstr "Nhãn hiển thị*"
 
 #: src/pages/PlatformPage.jsx:630
 #: src/pages/EventPage.jsx:600
 msgid "Edit"
-msgstr "編集"
+msgstr "Chỉnh sửa"
 
 #: src/pages/EventPage.jsx:606
 msgid "Edit Event"
-msgstr "予定を編集"
+msgstr "Chỉnh sửa sự kiện"
 
 #. placeholder {0}: platformToEdit?.name
 #: src/pages/PlatformPage.jsx:636
 msgid "Edit Platform: {0}"
-msgstr "プラットフォームを編集: {0}"
+msgstr "Chỉnh sửa nền tảng: {0}"
 
 #: src/pages/EventPage.jsx:464
 #: src/pages/EventPage.jsx:529
 #: src/pages/EventPage.jsx:734
 msgid "End Date"
-msgstr "終了日"
+msgstr "Ngày kết thúc"
 
 #. js-lingui-explicit-id
 #: src/pages/EventPage.jsx:154
 msgid "End date is required"
-msgstr "終了日は必須です"
+msgstr "Yêu cầu ngày kết thúc"
 
 #: src/pages/PlatformPage.jsx:325
 msgid "Enter display label"
-msgstr "表示ラベルを入力"
+msgstr "Nhập nhãn hiển thị"
 
 #: src/pages/PlatformPage.jsx:310
 msgid "Enter platform name"
-msgstr "プラットフォーム名を入力"
+msgstr "Nhập tên nền tảng"
 
 #. js-lingui-explicit-id
 #: src/pages/EventPage.jsx:368
 #: src/pages/EventPage.jsx:638
 msgid "Enter subtitle"
-msgstr "サブタイトルを入力"
+msgstr "Nhập phụ đề"
 
 #. js-lingui-explicit-id
 #: src/pages/EventPage.jsx:350
 #: src/pages/EventPage.jsx:620
 msgid "Enter title"
-msgstr "タイトルを入力"
+msgstr "Nhập tiêu đề"
 
 #. js-lingui-explicit-id
 #: src/pages/SendCashbackPage.jsx:116
 msgid "Enter user Platform UID"
-msgstr "ユーザープラットフォームUIDを入力してください"
+msgstr "Nhập UID nền tảng người dùng"
 
 #: src/pages/PlatformPage.jsx:154
 #: src/pages/PlatformPage.jsx:210
 msgid "Error"
-msgstr "エラー"
+msgstr "Lỗi"
 
 #. js-lingui-explicit-id
 #: src/pages/EventPage.jsx:48
 #: src/pages/EventPage.jsx:213
 msgid "Error"
-msgstr "エラー"
+msgstr "Lỗi"
 
 #: src/pages/WithdrawHistoryPage.jsx:60
 msgid "Error Status"
-msgstr "エラーステータス"
+msgstr "Trạng thái lỗi"
 
 #. placeholder {0}: error.message || error
 #: src/pages/WithdrawHistoryPage.jsx:65
@@ -311,82 +270,120 @@ msgstr "エラーステータス"
 #: src/pages/PlatformPage.jsx:227
 #: src/pages/BindPage.jsx:68
 msgid "Error: {0}"
-msgstr "エラー: {0}"
+msgstr "Lỗi: {0}"
 
 #. js-lingui-explicit-id
 #: src/pages/EventPage.jsx:302
 msgid "Error: {error}"
-msgstr "エラー: {error}"
+msgstr "Lỗi: {error}"
+
+#: src/pages/EventPage.jsx:302
+#~ msgid "Error: {error}"
+#~ msgstr "Lỗi: {error}"
 
 #. js-lingui-explicit-id
 #: src/pages/EventPage.jsx:115
 #: src/pages/EventPage.jsx:281
 msgid "Event created successfully"
-msgstr "イベントが正常に作成されました"
+msgstr "Tạo sự kiện thành công"
+
+#: src/pages/EventPage.jsx:115
+#: src/pages/EventPage.jsx:281
+#~ msgid "Event created successfully"
+#~ msgstr "Tạo sự kiện thành công"
 
 #. js-lingui-explicit-id
 #: src/pages/EventPage.jsx:85
 msgid "Event deleted successfully"
-msgstr "イベントが正常に削除されました"
+msgstr "Xóa sự kiện thành công"
+
+#: src/pages/EventPage.jsx:85
+#~ msgid "Event deleted successfully"
+#~ msgstr "Xóa sự kiện thành công"
 
 #. js-lingui-explicit-id
 #: src/pages/EventPage.jsx:100
 msgid "Event updated successfully"
-msgstr "イベントが正常に更新されました"
+msgstr "Cập nhật sự kiện thành công"
+
+#: src/pages/EventPage.jsx:100
+#~ msgid "Event updated successfully"
+#~ msgstr "Cập nhật sự kiện thành công"
+
+#: src/pages/EventPage.jsx:404
+#: src/pages/EventPage.jsx:674
+#~ msgid "Event URL"
+#~ msgstr "URL sự kiện"
 
 #: src/pages/EventPage.jsx:297
 #: src/pages/EventPage.jsx:317
 #: src/components/AppSidebar.jsx:37
 msgid "Events"
-msgstr "イベント"
+msgstr "Sự kiện"
 
 #: src/components/ReferralTree.jsx:144
 #~ msgid "Expand bottom level"
-#~ msgstr "下位レベルを展開"
+#~ msgstr "Mở rộng cấp dưới"
 
 #: src/components/ReferralTree.jsx:141
 #~ msgid "Expand top level"
-#~ msgstr "上位レベルを展開"
+#~ msgstr "Mở rộng cấp trên"
 
 #. js-lingui-explicit-id
 #: src/pages/EventPage.jsx:120
 msgid "Failed to create event"
-msgstr "イベントの作成に失敗しました"
+msgstr "Không thể tạo sự kiện"
+
+#: src/pages/EventPage.jsx:120
+#~ msgid "Failed to create event"
+#~ msgstr "Không thể tạo sự kiện"
 
 #: src/pages/PlatformPage.jsx:211
 msgid "Failed to create platform"
-msgstr "プラットフォームの作成に失敗しました"
+msgstr "Không thể tạo nền tảng"
 
 #. js-lingui-explicit-id
 #: src/pages/EventPage.jsx:90
 msgid "Failed to delete event"
-msgstr "イベントの削除に失敗しました"
+msgstr "Không thể xóa sự kiện"
+
+#: src/pages/EventPage.jsx:90
+#~ msgid "Failed to delete event"
+#~ msgstr "Không thể xóa sự kiện"
 
 #. js-lingui-explicit-id
 #: src/pages/EventPage.jsx:217
 msgid "Failed to fetch events"
-msgstr "イベントの取得に失敗しました"
+msgstr "Không thể tải sự kiện"
+
+#: src/pages/EventPage.jsx:217
+#~ msgid "Failed to fetch events"
+#~ msgstr "Không thể tải sự kiện"
 
 #. js-lingui-explicit-id
 #: src/pages/EventPage.jsx:105
 msgid "Failed to update event"
-msgstr "イベントの更新に失敗しました"
+msgstr "Không thể cập nhật sự kiện"
+
+#: src/pages/EventPage.jsx:105
+#~ msgid "Failed to update event"
+#~ msgstr "Không thể cập nhật sự kiện"
 
 #: src/pages/PlatformPage.jsx:155
 msgid "Failed to update platform"
-msgstr "プラットフォームの更新に失敗しました"
+msgstr "Không thể cập nhật nền tảng"
 
 #: src/pages/WithdrawHistoryPage.jsx:100
 msgid "From"
-msgstr "送信元"
+msgstr "Từ"
 
 #: src/components/Navbar.jsx:92
 msgid "Get started by exploring our features"
-msgstr "機能を探索して始めましょう"
+msgstr "Bắt đầu bằng cách khám phá các tính năng của chúng tôi"
 
 #: src/pages/WithdrawHistoryPage.jsx:97
 msgid "Hash Link"
-msgstr "ハッシュリンク"
+msgstr "Liên kết Hash"
 
 #: src/pages/PlatformPage.jsx:341
 msgid "https://example.com"
@@ -396,13 +393,13 @@ msgstr "https://example.com"
 #: src/pages/EventPage.jsx:404
 #: src/pages/EventPage.jsx:674
 msgid "Event URL"
-msgstr "イベントURL"
+msgstr "URL sự kiện"
 
 #. js-lingui-explicit-id
 #: src/pages/EventPage.jsx:386
 #: src/pages/EventPage.jsx:656
 msgid "Image URL"
-msgstr "画像URL"
+msgstr "URL hình ảnh"
 
 #: src/pages/PlatformPage.jsx:458
 msgid "https://example.com/logo.png"
@@ -415,42 +412,54 @@ msgstr "https://example.com/title.png"
 #: src/pages/PlatformPage.jsx:550
 #: src/pages/EventPage.jsx:517
 msgid "Image"
-msgstr "画像"
+msgstr "Hình ảnh"
 
 #: src/pages/EventPage.jsx:383
 #: src/pages/EventPage.jsx:653
 msgid "Image URL"
-msgstr "画像URL"
+msgstr "URL hình ảnh"
 
 #. js-lingui-explicit-id
 #: src/pages/EventPage.jsx:138
 msgid "Image URL is required"
-msgstr "画像URLは必須です"
+msgstr "Yêu cầu URL hình ảnh"
+
+#: src/pages/EventPage.jsx:138
+#~ msgid "Image URL is required"
+#~ msgstr "Yêu cầu URL hình ảnh"
 
 #: src/pages/PlatformPage.jsx:556
 msgid "Label"
-msgstr "ラベル"
+msgstr "Nhãn"
 
 #: src/pages/PlatformPage.jsx:30
 msgid "Label is required"
-msgstr "ラベルは必須です"
+msgstr "Yêu cầu nhãn"
 
 #: src/pages/EventPage.jsx:419
 #: src/pages/EventPage.jsx:523
 #: src/pages/EventPage.jsx:689
 #: src/components/Navbar.jsx:142
 msgid "Language"
-msgstr "言語"
+msgstr "Ngôn ngữ"
 
 #. js-lingui-explicit-id
 #: src/pages/EventPage.jsx:146
 msgid "Language is required"
-msgstr "言語は必須です"
+msgstr "Yêu cầu ngôn ngữ"
+
+#: src/pages/EventPage.jsx:146
+#~ msgid "Language is required"
+#~ msgstr "Yêu cầu ngôn ngữ"
 
 #: src/pages/PlatformPage.jsx:413
 #: src/pages/PlatformPage.jsx:775
 msgid "Limit Price"
-msgstr "リミット価格"
+msgstr "Giá giới hạn"
+
+#: src/pages/EventPage.jsx:506
+#~ msgid "Loading"
+#~ msgstr "Đang tải"
 
 #: src/pages/WithdrawHistoryPage.jsx:81
 #: src/pages/UserPlatformWalletPage.jsx:61
@@ -458,336 +467,349 @@ msgstr "リミット価格"
 #: src/pages/PlatformPage.jsx:542
 #: src/pages/BindPage.jsx:104
 msgid "Loading..."
-msgstr "読み込み中..."
+msgstr "Đang tải..."
 
 #. js-lingui-explicit-id
 #: src/pages/EventPage.jsx:506
 msgid "Loading"
-msgstr "読み込み中"
+msgstr "Đang tải"
 
 #: src/pages/PlatformPage.jsx:454
 #: src/pages/PlatformPage.jsx:800
 msgid "Logo Image URL"
-msgstr "ロゴ画像URL"
+msgstr "URL Logo"
 
 #: src/pages/PlatformPage.jsx:463
 #: src/pages/PlatformPage.jsx:809
 msgid "Logo preview"
-msgstr "ロゴのプレビュー"
+msgstr "Xem trước logo"
 
 #: src/pages/PlatformPage.jsx:398
 #: src/pages/PlatformPage.jsx:568
 #: src/pages/PlatformPage.jsx:760
 msgid "Market Price"
-msgstr "市場価格"
+msgstr "Giá thị trường"
 
 #: src/components/AppSidebar.jsx:28
 msgid "Master Data"
-msgstr "マスターデータ"
+msgstr "Dữ liệu chính"
 
 #: src/pages/PlatformPage.jsx:291
 #: src/pages/PlatformPage.jsx:791
 msgid "Media"
-msgstr "メディア"
+msgstr "Phương tiện"
 
 #: src/components/ui/pagination.jsx:89
 msgid "More pages"
-msgstr "その他のページ"
+msgstr "Thêm trang"
 
 #: src/pages/PlatformPage.jsx:553
 msgid "Name"
-msgstr "名前"
+msgstr "Tên"
 
 #: src/pages/PlatformPage.jsx:29
 msgid "Name is required"
-msgstr "名前は必須です"
+msgstr "Yêu cầu tên"
 
 #: src/pages/WithdrawHistoryPage.jsx:94
 msgid "Network"
-msgstr "ネットワーク"
+msgstr "Mạng lưới"
 
 #: src/components/Navbar.jsx:230
 msgid "New Password"
-msgstr "新しいパスワード"
+msgstr "Mật khẩu mới"
 
 #: src/components/ui/pagination.jsx:80
 msgid "Next"
-msgstr "次へ"
+msgstr "Tiếp theo"
 
 #: src/pages/PlatformPage.jsx:523
 msgid "Next Step"
-msgstr "次のステップ"
+msgstr "Bước tiếp theo"
 
 #: src/pages/WithdrawHistoryPage.jsx:117
 #: src/pages/UserPlatformWalletPage.jsx:82
 #: src/pages/ReferralCodesPage.jsx:115
 #: src/pages/BindPage.jsx:132
 msgid "No data"
-msgstr "データがありません"
+msgstr "Không có dữ liệu"
 
 #. js-lingui-explicit-id
 #: src/pages/EventPage.jsx:543
 msgid "No events found"
-msgstr "イベントが見つかりません"
+msgstr "Không tìm thấy sự kiện"
 
-#: src/pages/EventPage.jsx:448
+#: src/pages/EventPage.jsx:543
 #~ msgid "No events found"
-#~ msgstr "予定が見つかりません"
+#~ msgstr "Không tìm thấy sự kiện"
 
 #: src/pages/PlatformPage.jsx:614
 msgid "No image"
-msgstr "画像がありません"
+msgstr "Không có hình ảnh"
 
 #. js-lingui-explicit-id
 #: src/pages/EventPage.jsx:574
 msgid "No image"
-msgstr "画像がありません"
+msgstr "Không có hình ảnh"
 
 #: src/pages/PlatformPage.jsx:579
 msgid "No platforms found"
-msgstr "プラットフォームが見つかりません"
+msgstr "Không tìm thấy nền tảng"
 
 #: src/components/Navbar.jsx:44
 msgid "Notifications"
-msgstr "通知"
+msgstr "Thông báo"
 
 #: src/components/ui/pagination.jsx:23
 msgid "Page {currentPage} of {totalPages}"
-msgstr "ページ {currentPage} / {totalPages}"
+msgstr "Trang {currentPage} / {totalPages}"
 
 #: src/pages/BindPage.jsx:93
 #: src/pages/BindPage.jsx:188
 msgid "Pending"
-msgstr "保留中"
+msgstr "Đang chờ"
 
 #: src/components/Navbar.jsx:55
 msgid "Pending Bind Requests"
-msgstr "保留中のバインドリクエスト"
+msgstr "Yêu cầu liên kết đang chờ"
 
 #: src/components/Navbar.jsx:72
 msgid "Pending Withdraw Requests"
-msgstr "保留中の出金リクエスト"
+msgstr "Yêu cầu rút tiền đang chờ"
 
 #: src/pages/UserPlatformWalletPage.jsx:71
 #: src/pages/BindPage.jsx:112
 msgid "Platform"
-msgstr "プラットフォーム"
+msgstr "Nền tảng"
 
 #: src/pages/PlatformPage.jsx:203
 msgid "Platform created successfully"
-msgstr "プラットフォームが正常に作成されました"
+msgstr "Tạo nền tảng thành công"
 
 #: src/pages/PlatformPage.jsx:446
 msgid "Platform Images"
-msgstr "プラットフォーム画像"
+msgstr "Hình ảnh nền tảng"
 
 #: src/pages/PlatformPage.jsx:307
 msgid "Platform Name*"
-msgstr "プラットフォーム名*"
+msgstr "Tên nền tảng*"
 
 #: src/pages/PlatformPage.jsx:149
 msgid "Platform updated successfully"
-msgstr "プラットフォームが正常に更新されました"
+msgstr "Cập nhật nền tảng thành công"
 
 #: src/pages/PlatformPage.jsx:338
 #: src/pages/PlatformPage.jsx:683
 msgid "Platform URL"
-msgstr "プラットフォームURL"
+msgstr "URL nền tảng"
 
 #: src/components/AppSidebar.jsx:47
 msgid "Platform Wallet"
-msgstr "プラットフォームウォレット"
+msgstr "Ví nền tảng"
 
 #: src/pages/PlatformPage.jsx:222
 #: src/pages/PlatformPage.jsx:238
 #: src/components/AppSidebar.jsx:32
 msgid "Platforms"
-msgstr "プラットフォーム"
+msgstr "Nền tảng"
 
 #: src/components/ui/pagination.jsx:68
 msgid "Previous"
-msgstr "前へ"
+msgstr "Trước"
 
 #: src/pages/PlatformPage.jsx:279
 #: src/pages/PlatformPage.jsx:390
 #: src/pages/PlatformPage.jsx:752
 msgid "Pricing"
-msgstr "価格"
+msgstr "Giá"
 
 #: src/components/Navbar.jsx:156
 msgid "Profile"
-msgstr "プロフィール"
+msgstr "Hồ sơ"
 
 #: src/pages/ReferralCodesPage.jsx:101
 msgid "Referral Code"
-msgstr "紹介コード"
+msgstr "Mã giới thiệu"
 
 #: src/pages/ReferralCodesPage.jsx:71
 #: src/pages/ReferralCodesPage.jsx:86
 #: src/components/AppSidebar.jsx:42
 msgid "Referral Codes"
-msgstr "紹介コード"
+msgstr "Mã giới thiệu"
 
 #: src/components/ReferralTree.jsx:150
 msgid "Referral Tree"
-msgstr "紹介ツリー"
+msgstr "Cây giới thiệu"
 
 #: src/pages/ReferralCodesPage.jsx:104
 msgid "Referred By"
-msgstr "参照元"
+msgstr "Được giới thiệu bởi"
 
 #: src/pages/BindPage.jsx:96
 #: src/pages/BindPage.jsx:191
 msgid "Rejected"
-msgstr "拒否"
+msgstr "Từ chối"
 
 #: src/components/AppSidebar.jsx:54
 msgid "Request"
-msgstr "リクエスト"
+msgstr "Yêu cầu"
 
 #: src/pages/PlatformPage.jsx:355
 #: src/pages/PlatformPage.jsx:702
 msgid "Rewards"
-msgstr "Recompensas"
+msgstr "Phần thưởng"
 
 #: src/pages/PlatformPage.jsx:697
 msgid "Rewards & Pricing"
-msgstr "報酬と価格"
+msgstr "Phần thưởng & Giá"
 
 #: src/pages/PlatformPage.jsx:857
 #: src/pages/EventPage.jsx:764
 #: src/components/Navbar.jsx:289
 msgid "Save Changes"
-msgstr "変更を保存"
+msgstr "Lưu thay đổi"
+
+#: src/pages/EventPage.jsx:321
+#~ msgid "Search events"
+#~ msgstr "Tìm kiếm sự kiện"
 
 #. js-lingui-explicit-id
 #: src/pages/EventPage.jsx:321
 msgid "Search events"
-msgstr "イベントを検索"
+msgstr "Tìm kiếm sự kiện"
 
 #: src/pages/PlatformPage.jsx:242
 msgid "Search platforms..."
-msgstr "プラットフォームを検索..."
+msgstr "Tìm kiếm nền tảng..."
 
 #: src/components/Navbar.jsx:170
 msgid "Security"
-msgstr "セキュリティ"
+msgstr "Bảo mật"
 
 #: src/components/Navbar.jsx:101
 msgid "See all notifications"
-msgstr "すべての通知を見る"
+msgstr "Xem tất cả thông báo"
 
 #. js-lingui-explicit-id
 #: src/pages/EventPage.jsx:424
 #: src/pages/EventPage.jsx:694
 msgid "Select language"
-msgstr "言語を選択"
+msgstr "Chọn ngôn ngữ"
+
+#: src/pages/EventPage.jsx:424
+#: src/pages/EventPage.jsx:694
+#~ msgid "Select language"
+#~ msgstr "Chọn ngôn ngữ"
 
 #: src/pages/SendCashbackPage.jsx:160
 #: src/components/AppSidebar.jsx:58
 msgid "Send Cashback"
-msgstr "キャッシュバックを送信"
+msgstr "Gửi hoàn tiền"
 
 #: src/pages/SendCashbackPage.jsx:160
 msgid "Sending..."
-msgstr "送信中..."
+msgstr "Đang gửi..."
 
 #: src/components/Navbar.jsx:125
 #: src/components/Navbar.jsx:139
 msgid "Settings"
-msgstr "設定"
+msgstr "Cài đặt"
 
 #: src/components/Navbar.jsx:128
 msgid "Sign out"
-msgstr "サインアウト"
+msgstr "Đăng xuất"
 
 #: src/pages/EventPage.jsx:449
 #: src/pages/EventPage.jsx:526
 #: src/pages/EventPage.jsx:719
 msgid "Start Date"
-msgstr "開始日"
+msgstr "Ngày bắt đầu"
 
 #. js-lingui-explicit-id
 #: src/pages/EventPage.jsx:150
 msgid "Start date is required"
-msgstr "開始日は必須です"
+msgstr "Yêu cầu ngày bắt đầu"
+
+#: src/pages/EventPage.jsx:150
+#~ msgid "Start date is required"
+#~ msgstr "Yêu cầu ngày bắt đầu"
 
 #: src/pages/WithdrawHistoryPage.jsx:109
 #: src/pages/BindPage.jsx:121
 msgid "Status"
-msgstr "ステータス"
+msgstr "Trạng thái"
 
 #: src/pages/EventPage.jsx:365
 #: src/pages/EventPage.jsx:635
 msgid "Subtitle"
-msgstr "サブタイトル"
+msgstr "Phụ đề"
 
 #. js-lingui-explicit-id
 #: src/pages/EventPage.jsx:134
 msgid "Subtitle is required"
-msgstr "サブタイトルは必須です"
+msgstr "Yêu cầu phụ đề"
+
+#: src/pages/EventPage.jsx:134
+#~ msgid "Subtitle is required"
+#~ msgstr "Yêu cầu phụ đề"
 
 #: src/pages/PlatformPage.jsx:148
 #: src/pages/PlatformPage.jsx:202
 msgid "Success"
-msgstr "成功"
+msgstr "Thành công"
 
 #. js-lingui-explicit-id
 #: src/pages/EventPage.jsx:60
 #: src/pages/EventPage.jsx:277
 msgid "Success"
-msgstr "成功"
+msgstr "Thành công"
 
 #: src/pages/EventPage.jsx:532
 msgid "Tags"
-msgstr "タグ"
+msgstr "Thẻ"
 
 #: src/pages/EventPage.jsx:480
 #: src/pages/EventPage.jsx:750
 msgid "Tags (comma-separated)"
-msgstr "タグ (カンマ区切り)"
+msgstr "Thẻ (phân cách bằng dấu phẩy)"
 
 #. js-lingui-explicit-id
 #: src/pages/EventPage.jsx:790
 msgid "Delete event warning"
-msgstr "イベント削除の警告"
-
-#: src/pages/EventPage.jsx:674
-#~ msgid "This action cannot be undone. This will permanently delete the event."
-#~ msgstr "この操作は元に戻せません。この操作はイベントを永久に削除します。"
+msgstr "Cảnh báo xóa sự kiện"
 
 #: src/pages/PlatformPage.jsx:879
 msgid "This action cannot be undone. This will permanently delete the platform."
-msgstr "この操作は元に戻せません。これはプラットフォームを完全に削除します。"
+msgstr "Hành động này không thể hoàn tác. Điều này sẽ xóa vĩnh viễn nền tảng."
 
 #: src/pages/EventPage.jsx:347
 #: src/pages/EventPage.jsx:520
 #: src/pages/EventPage.jsx:617
 msgid "Title"
-msgstr "タイトル"
+msgstr "Tiêu đề"
 
 #: src/pages/PlatformPage.jsx:481
 #: src/pages/PlatformPage.jsx:827
 msgid "Title Image URL"
-msgstr "タイトルイメージURL"
+msgstr "URL hình ảnh tiêu đề"
 
 #. js-lingui-explicit-id
 #: src/pages/EventPage.jsx:130
 msgid "Title is required"
-msgstr "タイトルは必須です"
+msgstr "Yêu cầu tiêu đề"
+
+#: src/pages/EventPage.jsx:130
+#~ msgid "Title is required"
+#~ msgstr "Yêu cầu tiêu đề"
 
 #: src/pages/PlatformPage.jsx:490
 #: src/pages/PlatformPage.jsx:836
 msgid "Title preview"
-msgstr "タイトルのプレビュー"
+msgstr "Xem trước tiêu đề"
 
 #: src/pages/WithdrawHistoryPage.jsx:103
 msgid "To"
-msgstr "宛先"
-
-#: src/pages/WithdrawHistoryPage.jsx:97
-#~ msgid "Type"
-#~ msgstr "種類"
+msgstr "Đến"
 
 #: src/pages/BindPage.jsx:118
 msgid "UID"
@@ -795,11 +817,11 @@ msgstr "UID"
 
 #: src/pages/BindPage.jsx:201
 msgid "Update"
-msgstr "更新"
+msgstr "Cập nhật"
 
 #: src/pages/BindPage.jsx:168
 msgid "Update Bind Status"
-msgstr "Update Bind Status"
+msgstr "Cập nhật trạng thái liên kết"
 
 #: src/pages/EventPage.jsx:401
 #: src/pages/EventPage.jsx:671
@@ -809,50 +831,43 @@ msgstr "URL"
 #. js-lingui-explicit-id
 #: src/pages/EventPage.jsx:142
 msgid "URL is required"
-msgstr "URLは必須です"
-
-#: src/pages/WithdrawHistoryPage.jsx:88
-#: src/pages/UserPlatformWalletPage.jsx:72
-#: src/pages/ReferralCodesPage.jsx:98
-#: src/pages/BindPage.jsx:115
-#~ msgid "user Email"
-#~ msgstr "ユーザー ID"
+msgstr "Yêu cầu URL"
 
 #: src/pages/WithdrawHistoryPage.jsx:88
 #: src/pages/UserPlatformWalletPage.jsx:68
 #: src/pages/ReferralCodesPage.jsx:98
 #: src/pages/BindPage.jsx:115
 msgid "User Email"
-msgstr "ユーザーID"
+msgstr "Email người dùng"
 
 #: src/pages/SendCashbackPage.jsx:109
 msgid "User Platform UID"
-msgstr "ユーザープラットフォームUID"
+msgstr "UID nền tảng người dùng"
 
 #: src/pages/UserPlatformWalletPage.jsx:56
 msgid "User Platform Wallet"
-msgstr "ユーザープラットフォーム財布"
+msgstr "Ví nền tảng người dùng"
 
 #: src/pages/ReferralCodesPage.jsx:133
 msgid "View Tree"
-msgstr "ツリーを表示"
+msgstr "Xem cây"
 
 #: src/components/Navbar.jsx:89
 msgid "Welcome to the platform"
-msgstr "プラットフォームへようこそ"
+msgstr "Chào mừng đến với nền tảng"
 
 #: src/pages/WithdrawHistoryPage.jsx:76
 msgid "Withdraw History"
-msgstr "出金履歴"
+msgstr "Lịch sử rút tiền"
 
 #: src/components/AppSidebar.jsx:68
 msgid "Withdraw Request"
-msgstr "出金リクエスト"
+msgstr "Yêu cầu rút tiền"
 
 #: src/components/Navbar.jsx:58
 msgid "You have 3 pending bind requests to review"
-msgstr "確認が必要な保留中のバインドリクエストが3件あります"
+msgstr "Bạn có 3 yêu cầu liên kết đang chờ xem xét"
 
 #: src/components/Navbar.jsx:75
 msgid "You have 4 pending withdraw requests to review"
-msgstr "確認が必要な保留中の出金リクエストが4件あります"
+msgstr "Bạn có 4 yêu cầu rút tiền đang chờ xem xét"

@@ -18,35 +18,85 @@ msgstr ""
 "X-Crowdin-File: /development/src/locales/en.po\n"
 "X-Crowdin-File-ID: 10\n"
 
-#. placeholder {0}: item.title
-#: src/components/AppSidebar.jsx:83
+#. js-lingui-explicit-id
+#: src/pages/PlatformPage.jsx:331
+#~ msgid "Enter display label"
+#~ msgstr "输入显示标签"
+
+#. js-lingui-explicit-id
+#: src/pages/PlatformPage.jsx:313
+#~ msgid "Enter platform name"
+#~ msgstr "输入平台名称"
+
+#. js-lingui-explicit-id
+#: src/pages/PlatformPage.jsx:350
+#~ msgid "Platform URL"
+#~ msgstr "平台网址"
+
+#. js-lingui-explicit-id
+#: src/pages/PlatformPage.jsx:470
+#~ msgid "Logo URL"
+#~ msgstr "标志网址"
+
+#. js-lingui-explicit-id
+#: src/pages/PlatformPage.jsx:500
+#~ msgid "Title URL"
+#~ msgstr "标题网址"
+
+#. js-lingui-explicit-id
+#: src/pages/PlatformPage.jsx:242
+#~ msgid "Search platforms"
+#~ msgstr "搜索平台"
+
+#. js-lingui-explicit-id
+#: src/pages/EventPage.jsx:412
+#: src/pages/EventPage.jsx:671
+#~ msgid "Enter language"
+#~ msgstr "输入语言"
+
+#. placeholder {0}: data.type === 'EARN' ? 'Platform' : 'Wallet'
+#. placeholder {0}: data.type === 'EARN' ? 'Wallet' : 'Cash'
+#. placeholder {0}: data.status
+#: src/pages/WithdrawHistoryPage.jsx:128
+#: src/pages/WithdrawHistoryPage.jsx:131
+#: src/pages/WithdrawHistoryPage.jsx:138
+#: src/components/AppSidebar.jsx:96
+#: src/components/AppSidebar.jsx:111
 msgid "{0}"
 msgstr "{0}"
 
-#: src/pages/SendCashbackPage.jsx:127
+#: src/pages/SendCashbackPage.jsx:145
 msgid "{error}"
-msgstr ""
+msgstr "{error}"
 
-#: src/components/AppSidebar.jsx:111
+#: src/components/Navbar.jsx:122
 msgid "Account"
 msgstr "账户"
 
-#: src/pages/ReferralCodesPage.jsx:94
-#: src/pages/PlatformPage.jsx:570
-#: src/pages/EventPage.jsx:424
+#: src/components/Navbar.jsx:180
+msgid "Account Management"
+msgstr "账户管理"
+
+#: src/components/Navbar.jsx:152
+msgid "Account Settings"
+msgstr "账户设置"
+
+#: src/pages/ReferralCodesPage.jsx:107
+#: src/pages/PlatformPage.jsx:571
+#: src/pages/EventPage.jsx:535
 #: src/pages/BindPage.jsx:124
 msgid "Actions"
 msgstr "行动"
 
-#: src/pages/EventPage.jsx:250
+#: src/pages/EventPage.jsx:332
 msgid "Add Event"
 msgstr "添加事件"
 
-#: src/pages/PlatformPage.jsx:255
+#: src/pages/PlatformPage.jsx:256
 msgid "Add New Platform"
 msgstr "添加新平台"
 
-#: src/pages/PlatformPage.jsx:249
+#: src/pages/PlatformPage.jsx:250
 msgid "Add Platform"
 msgstr "添加平台"
 
@@ -54,247 +104,601 @@ msgstr "添加平台"
 msgid "All Status"
 msgstr "所有状态"
 
+#: src/pages/WithdrawHistoryPage.jsx:91
+msgid "Amount"
+msgstr "金额"
+
 #: src/pages/BindPage.jsx:90
 #: src/pages/BindPage.jsx:181
 msgid "Approved"
 msgstr "已批准"
 
 #. placeholder {0}: platform.name
-#. placeholder {0}: event.title
-#: src/pages/PlatformPage.jsx:875
-#: src/pages/EventPage.jsx:640
+#: src/pages/PlatformPage.jsx:876
 msgid "Are you sure you want to delete {0}?"
 msgstr "您确定要删除 {0} 吗？"
 
-#: src/pages/SendCashbackPage.jsx:67
-msgid "Are you sure you want to send ${amount} to user ID: {uid}?"
-msgstr ""
+#. js-lingui-explicit-id
+#: src/pages/EventPage.jsx:783
+msgid "Delete event confirmation"
+msgstr "删除事件确认"
 
-#: src/pages/PlatformPage.jsx:429
-#: src/pages/PlatformPage.jsx:739
+#: src/pages/SendCashbackPage.jsx:67
+#~ msgid "Are you sure you want to send ${amount} to user Email: {uid}?"
+#~ msgstr "您确定要发送 ${amount} 到用户邮箱：{uid} 吗？"
+
+#: src/pages/SendCashbackPage.jsx:82
+msgid "Are you sure you want to send ${amount} to user platform UID: {uid}?"
+msgstr "您确定要发送 ${amount} 到用户平台 UID：{uid} 吗？"
+
+#: src/pages/PlatformPage.jsx:430
+#: src/pages/PlatformPage.jsx:740
 msgid "Average Rebate"
 msgstr "平均退款率"
 
-#: src/pages/PlatformPage.jsx:564
+#: src/pages/PlatformPage.jsx:565
 msgid "Avg. Rebate"
 msgstr "平均反转"
 
-#: src/pages/PlatformPage.jsx:266
+#: src/pages/UserPlatformWalletPage.jsx:74
+msgid "Balance"
+msgstr "余额"
+
+#: src/pages/PlatformPage.jsx:267
 msgid "Basic Info"
 msgstr "基本信息"
 
-#: src/pages/PlatformPage.jsx:644
+#: src/pages/PlatformPage.jsx:645
 msgid "Basic Information"
 msgstr "基本信息"
 
+#: src/components/AppSidebar.jsx:63
+msgid "Bind Request"
+msgstr "绑定请求"
+
+#: src/pages/UserPlatformWalletPage.jsx:40
 #: src/pages/BindPage.jsx:63
 #: src/pages/BindPage.jsx:79
 msgid "Bind Status"
 msgstr "Bind Status"
 
-#: src/pages/PlatformPage.jsx:853
-#: src/pages/PlatformPage.jsx:885
-#: src/pages/EventPage.jsx:618
-#: src/pages/EventPage.jsx:648
+#: src/pages/PlatformPage.jsx:854
+#: src/pages/PlatformPage.jsx:886
+#: src/pages/EventPage.jsx:761
+#: src/pages/EventPage.jsx:798
+#: src/components/Navbar.jsx:283
 msgid "Cancel"
 msgstr "取消"
 
-#: src/pages/PlatformPage.jsx:362
-#: src/pages/PlatformPage.jsx:558
-#: src/pages/PlatformPage.jsx:709
+#: src/pages/PlatformPage.jsx:363
+#: src/pages/PlatformPage.jsx:559
+#: src/pages/PlatformPage.jsx:710
 msgid "Cashback (%)"
 msgstr "Cashback (%)"
 
-#: src/pages/SendCashbackPage.jsx:108
+#: src/pages/SendCashbackPage.jsx:126
 msgid "Cashback Amount"
 msgstr "返现金额"
 
-#: src/pages/SendCashbackPage.jsx:133
+#: src/pages/SendCashbackPage.jsx:151
 msgid "Cashback sent successfully!"
 msgstr "返现成功发送！"
+
+#: src/components/Navbar.jsx:175
+#: src/components/Navbar.jsx:196
+msgid "Change Password"
+msgstr "更改密码"
 
 #: src/pages/BindPage.jsx:162
 msgid "Change Status"
 msgstr "更改状态"
 
-#: src/pages/SendCashbackPage.jsx:64
+#: src/pages/SendCashbackPage.jsx:79
 msgid "Confirm Cashback"
 msgstr "确认返金"
 
-#: src/pages/EventPage.jsx:386
+#: src/components/Navbar.jsx:254
+msgid "Confirm New Password"
+msgstr "确认新密码"
+
+#: src/pages/EventPage.jsx:494
 msgid "Create Event"
 msgstr "创建事件"
 
-#: src/pages/PlatformPage.jsx:528
+#: src/pages/PlatformPage.jsx:529
 msgid "Create Platform"
 msgstr "创建平台"
 
-#: src/pages/PlatformPage.jsx:869
-#: src/pages/PlatformPage.jsx:888
-#: src/pages/EventPage.jsx:634
-#: src/pages/EventPage.jsx:651
+#: src/components/Navbar.jsx:206
+msgid "Current Password"
+msgstr "当前密码"
+
+#: src/pages/WithdrawHistoryPage.jsx:106
+msgid "Date"
+msgstr "日期"
+
+#: src/pages/PlatformPage.jsx:870
+#: src/pages/PlatformPage.jsx:889
+#: src/pages/EventPage.jsx:777
+#: src/pages/EventPage.jsx:801
 msgid "Delete"
 msgstr "删除"
 
-#: src/pages/PlatformPage.jsx:377
-#: src/pages/PlatformPage.jsx:561
-#: src/pages/PlatformPage.jsx:724
+#: src/components/Navbar.jsx:185
+msgid "Delete Account"
+msgstr "删除账户"
+
+#: src/pages/EventPage.jsx:783
+#~ msgid "Delete event confirmation"
+#~ msgstr "删除事件确认"
+
+#: src/pages/EventPage.jsx:790
+#~ msgid "Delete event warning"
+#~ msgstr "删除事件警告"
+
+#: src/pages/PlatformPage.jsx:378
+#: src/pages/PlatformPage.jsx:562
+#: src/pages/PlatformPage.jsx:725
 msgid "Discount (%)"
 msgstr "折扣 (%)"
 
-#: src/pages/PlatformPage.jsx:321
-#: src/pages/PlatformPage.jsx:666
+#: src/pages/PlatformPage.jsx:322
+#: src/pages/PlatformPage.jsx:667
 msgid "Display Label*"
 msgstr "显示标签*"
 
-#: src/pages/PlatformPage.jsx:629
-#: src/pages/EventPage.jsx:483
+#: src/pages/PlatformPage.jsx:630
+#: src/pages/EventPage.jsx:600
 msgid "Edit"
 msgstr "编辑"
 
-#: src/pages/EventPage.jsx:489
+#: src/pages/EventPage.jsx:606
 msgid "Edit Event"
 msgstr "编辑事件"
 
 #. placeholder {0}: platformToEdit?.name
-#: src/pages/PlatformPage.jsx:635
+#: src/pages/PlatformPage.jsx:636
 msgid "Edit Platform: {0}"
 msgstr "编辑平台: {0}"
 
-#: src/pages/EventPage.jsx:356
-#: src/pages/EventPage.jsx:418
-#: src/pages/EventPage.jsx:591
+#: src/pages/EventPage.jsx:464
+#: src/pages/EventPage.jsx:529
+#: src/pages/EventPage.jsx:734
 msgid "End Date"
 msgstr "结束日期"
 
+#. js-lingui-explicit-id
+#: src/pages/EventPage.jsx:154
+msgid "End date is required"
+msgstr "结束日期是必填项"
+
+#: src/pages/EventPage.jsx:154
+#~ msgid "End date is required"
+#~ msgstr "需要结束日期"
+
+#: src/pages/PlatformPage.jsx:325
+msgid "Enter display label"
+msgstr "输入显示标签"
+
+#: src/pages/PlatformPage.jsx:310
+msgid "Enter platform name"
+msgstr "输入平台名称"
+
+#. js-lingui-explicit-id
+#: src/pages/EventPage.jsx:368
+#: src/pages/EventPage.jsx:638
+msgid "Enter subtitle"
+msgstr "输入副标题"
+
+#. js-lingui-explicit-id
+#: src/pages/EventPage.jsx:350
+#: src/pages/EventPage.jsx:620
+msgid "Enter title"
+msgstr "输入标题"
+
+#. js-lingui-explicit-id
+#: src/pages/SendCashbackPage.jsx:116
+msgid "Enter user Platform UID"
+msgstr "输入用户平台 UID"
+
+#: src/pages/SendCashbackPage.jsx:116
+#~ msgid "Enter user Platform UID"
+#~ msgstr "输入用户平台 UID"
+
+#: src/pages/PlatformPage.jsx:154
+#: src/pages/PlatformPage.jsx:210
+msgid "Error"
+msgstr "错误"
+
+#. js-lingui-explicit-id
+#: src/pages/EventPage.jsx:48
+#: src/pages/EventPage.jsx:213
+msgid "Error"
+msgstr "错误"
+
+#: src/pages/WithdrawHistoryPage.jsx:60
+msgid "Error Status"
+msgstr "错误状态"
+
 #. placeholder {0}: error.message || error
-#: src/pages/ReferralCodesPage.jsx:62
-#: src/pages/PlatformPage.jsx:226
+#: src/pages/WithdrawHistoryPage.jsx:65
+#: src/pages/UserPlatformWalletPage.jsx:45
+#: src/pages/ReferralCodesPage.jsx:76
+#: src/pages/PlatformPage.jsx:227
 #: src/pages/BindPage.jsx:68
 msgid "Error: {0}"
 msgstr "错误: {0}"
 
-#: src/pages/EventPage.jsx:224
-#: src/pages/EventPage.jsx:238
+#. js-lingui-explicit-id
+#: src/pages/EventPage.jsx:302
+msgid "Error: {error}"
+msgstr "错误：{error}"
+
+#: src/pages/EventPage.jsx:302
+#~ msgid "Error: {error}"
+#~ msgstr "错误：{error}"
+
+#. js-lingui-explicit-id
+#: src/pages/EventPage.jsx:115
+#: src/pages/EventPage.jsx:281
+msgid "Event created successfully"
+msgstr "事件创建成功"
+
+#: src/pages/EventPage.jsx:115
+#: src/pages/EventPage.jsx:281
+#~ msgid "Event created successfully"
+#~ msgstr "事件创建成功"
+
+#. js-lingui-explicit-id
+#: src/pages/EventPage.jsx:85
+msgid "Event deleted successfully"
+msgstr "事件删除成功"
+
+#: src/pages/EventPage.jsx:85
+#~ msgid "Event deleted successfully"
+#~ msgstr "事件删除成功"
+
+#. js-lingui-explicit-id
+#: src/pages/EventPage.jsx:100
+msgid "Event updated successfully"
+msgstr "事件更新成功"
+
+#: src/pages/EventPage.jsx:100
+#~ msgid "Event updated successfully"
+#~ msgstr "事件更新成功"
+
+#: src/pages/EventPage.jsx:404
+#: src/pages/EventPage.jsx:674
+#~ msgid "Event URL"
+#~ msgstr "事件网址"
+
+#: src/pages/EventPage.jsx:297
+#: src/pages/EventPage.jsx:317
+#: src/components/AppSidebar.jsx:37
 msgid "Events"
 msgstr "事件"
 
-#: src/pages/PlatformPage.jsx:549
-#: src/pages/EventPage.jsx:406
+#: src/components/ReferralTree.jsx:144
+#~ msgid "Expand bottom level"
+#~ msgstr "展开底层"
+
+#: src/components/ReferralTree.jsx:141
+#~ msgid "Expand top level"
+#~ msgstr "展开顶层"
+
+#. js-lingui-explicit-id
+#: src/pages/EventPage.jsx:120
+msgid "Failed to create event"
+msgstr "创建事件失败"
+
+#: src/pages/EventPage.jsx:120
+#~ msgid "Failed to create event"
+#~ msgstr "创建事件失败"
+
+#: src/pages/PlatformPage.jsx:211
+msgid "Failed to create platform"
+msgstr "创建平台失败"
+
+#. js-lingui-explicit-id
+#: src/pages/EventPage.jsx:90
+msgid "Failed to delete event"
+msgstr "删除事件失败"
+
+#: src/pages/EventPage.jsx:90
+#~ msgid "Failed to delete event"
+#~ msgstr "删除事件失败"
+
+#. js-lingui-explicit-id
+#: src/pages/EventPage.jsx:217
+msgid "Failed to fetch events"
+msgstr "获取事件失败"
+
+#: src/pages/EventPage.jsx:217
+#~ msgid "Failed to fetch events"
+#~ msgstr "获取事件失败"
+
+#. js-lingui-explicit-id
+#: src/pages/EventPage.jsx:105
+msgid "Failed to update event"
+msgstr "更新事件失败"
+
+#: src/pages/EventPage.jsx:105
+#~ msgid "Failed to update event"
+#~ msgstr "更新事件失败"
+
+#: src/pages/PlatformPage.jsx:155
+msgid "Failed to update platform"
+msgstr "更新平台失败"
+
+#: src/pages/WithdrawHistoryPage.jsx:100
+msgid "From"
+msgstr "从"
+
+#: src/components/Navbar.jsx:92
+msgid "Get started by exploring our features"
+msgstr "开始探索我们的功能"
+
+#: src/pages/WithdrawHistoryPage.jsx:97
+msgid "Hash Link"
+msgstr "哈希链接"
+
+#: src/pages/PlatformPage.jsx:341
+msgid "https://example.com"
+msgstr "https://example.com"
+
+#. js-lingui-explicit-id
+#: src/pages/EventPage.jsx:404
+#: src/pages/EventPage.jsx:674
+msgid "Event URL"
+msgstr "事件网址"
+
+#. js-lingui-explicit-id
+#: src/pages/EventPage.jsx:386
+#: src/pages/EventPage.jsx:656
+msgid "Image URL"
+msgstr "图片网址"
+
+#: src/pages/PlatformPage.jsx:458
+msgid "https://example.com/logo.png"
+msgstr "https://example.com/logo.png"
+
+#: src/pages/PlatformPage.jsx:485
+msgid "https://example.com/title.png"
+msgstr "https://example.com/title.png"
+
+#: src/pages/PlatformPage.jsx:550
+#: src/pages/EventPage.jsx:517
 msgid "Image"
 msgstr "图片"
 
-#: src/pages/EventPage.jsx:295
-#: src/pages/EventPage.jsx:530
+#: src/pages/EventPage.jsx:383
+#: src/pages/EventPage.jsx:653
 msgid "Image URL"
 msgstr "图片URL"
 
-#: src/pages/PlatformPage.jsx:555
+#. js-lingui-explicit-id
+#: src/pages/EventPage.jsx:138
+msgid "Image URL is required"
+msgstr "需要图片网址"
+
+#: src/pages/EventPage.jsx:138
+#~ msgid "Image URL is required"
+#~ msgstr "需要图片网址"
+
+#: src/pages/PlatformPage.jsx:556
 msgid "Label"
 msgstr "标签"
 
-#: src/pages/EventPage.jsx:325
-#: src/pages/EventPage.jsx:412
-#: src/pages/EventPage.jsx:560
+#: src/pages/PlatformPage.jsx:30
+msgid "Label is required"
+msgstr "标签是必填项"
+
+#: src/pages/EventPage.jsx:419
+#: src/pages/EventPage.jsx:523
+#: src/pages/EventPage.jsx:689
+#: src/components/Navbar.jsx:142
 msgid "Language"
 msgstr "语言"
 
-#: src/pages/PlatformPage.jsx:412
-#: src/pages/PlatformPage.jsx:774
+#. js-lingui-explicit-id
+#: src/pages/EventPage.jsx:146
+msgid "Language is required"
+msgstr "需要语言"
+
+#: src/pages/EventPage.jsx:146
+#~ msgid "Language is required"
+#~ msgstr "需要语言"
+
+#: src/pages/PlatformPage.jsx:413
+#: src/pages/PlatformPage.jsx:775
 msgid "Limit Price"
 msgstr "限制价格"
 
-#: src/pages/ReferralCodesPage.jsx:78
-#: src/pages/PlatformPage.jsx:541
-#: src/pages/EventPage.jsx:398
+#: src/pages/EventPage.jsx:506
+#~ msgid "Loading"
+#~ msgstr "加载中"
+
+#: src/pages/WithdrawHistoryPage.jsx:81
+#: src/pages/UserPlatformWalletPage.jsx:61
+#: src/pages/ReferralCodesPage.jsx:91
+#: src/pages/PlatformPage.jsx:542
 #: src/pages/BindPage.jsx:104
 msgid "Loading..."
 msgstr "加载中..."
 
-#: src/pages/PlatformPage.jsx:453
-#: src/pages/PlatformPage.jsx:799
+#. js-lingui-explicit-id
+#: src/pages/EventPage.jsx:506
+msgid "Loading"
+msgstr "加载中"
+
+#: src/pages/PlatformPage.jsx:454
+#: src/pages/PlatformPage.jsx:800
 msgid "Logo Image URL"
 msgstr "徽标图像 URL"
 
-#: src/pages/PlatformPage.jsx:397
-#: src/pages/PlatformPage.jsx:567
-#: src/pages/PlatformPage.jsx:759
+#: src/pages/PlatformPage.jsx:463
+#: src/pages/PlatformPage.jsx:809
+msgid "Logo preview"
+msgstr "标志预览"
+
+#: src/pages/PlatformPage.jsx:398
+#: src/pages/PlatformPage.jsx:568
+#: src/pages/PlatformPage.jsx:760
 msgid "Market Price"
 msgstr "市场价格"
 
-#: src/pages/PlatformPage.jsx:290
-#: src/pages/PlatformPage.jsx:790
+#: src/components/AppSidebar.jsx:28
+msgid "Master Data"
+msgstr "主数据"
+
+#: src/pages/PlatformPage.jsx:291
+#: src/pages/PlatformPage.jsx:791
 msgid "Media"
 msgstr "媒体"
 
-#: src/pages/PlatformPage.jsx:552
+#: src/components/ui/pagination.jsx:89
+msgid "More pages"
+msgstr "更多页面"
+
+#: src/pages/PlatformPage.jsx:553
 msgid "Name"
 msgstr "名称"
 
-#: src/pages/PlatformPage.jsx:522
+#: src/pages/PlatformPage.jsx:29
+msgid "Name is required"
+msgstr "名称是必填项"
+
+#: src/pages/WithdrawHistoryPage.jsx:94
+msgid "Network"
+msgstr "网络"
+
+#: src/components/Navbar.jsx:230
+msgid "New Password"
+msgstr "新密码"
+
+#: src/components/ui/pagination.jsx:80
+msgid "Next"
+msgstr "下一页"
+
+#: src/pages/PlatformPage.jsx:523
 msgid "Next Step"
 msgstr "下一步"
 
+#: src/pages/WithdrawHistoryPage.jsx:117
+#: src/pages/UserPlatformWalletPage.jsx:82
+#: src/pages/ReferralCodesPage.jsx:115
 #: src/pages/BindPage.jsx:132
 msgid "No data"
 msgstr "无数据"
 
-#: src/pages/EventPage.jsx:432
+#. js-lingui-explicit-id
+#: src/pages/EventPage.jsx:543
 msgid "No events found"
 msgstr "未找到事件"
 
-#: src/pages/PlatformPage.jsx:613
-#: src/pages/EventPage.jsx:460
-msgid "No image"
-msgstr "没有图像"
+#: src/pages/EventPage.jsx:448
+#~ msgid "No events found"
+#~ msgstr "未找到事件"
 
-#: src/pages/PlatformPage.jsx:578
+#: src/pages/PlatformPage.jsx:614
+msgid "No image"
+msgstr "无图片"
+
+#. js-lingui-explicit-id
+#: src/pages/EventPage.jsx:574
+msgid "No image"
+msgstr "无图片"
+
+#: src/pages/PlatformPage.jsx:579
 msgid "No platforms found"
 msgstr "未找到平台"
+
+#: src/components/Navbar.jsx:44
+msgid "Notifications"
+msgstr "通知"
+
+#: src/components/ui/pagination.jsx:23
+msgid "Page {currentPage} of {totalPages}"
+msgstr "第 {currentPage} 页，共 {totalPages} 页"
 
 #: src/pages/BindPage.jsx:93
 #: src/pages/BindPage.jsx:188
 msgid "Pending"
 msgstr "待定"
 
+#: src/components/Navbar.jsx:55
+msgid "Pending Bind Requests"
+msgstr "待处理的绑定请求"
+
+#: src/components/Navbar.jsx:72
+msgid "Pending Withdraw Requests"
+msgstr "待处理的提现请求"
+
+#: src/pages/UserPlatformWalletPage.jsx:71
 #: src/pages/BindPage.jsx:112
 msgid "Platform"
 msgstr "平台"
 
-#: src/pages/PlatformPage.jsx:445
+#: src/pages/PlatformPage.jsx:203
+msgid "Platform created successfully"
+msgstr "平台创建成功"
+
+#: src/pages/PlatformPage.jsx:446
 msgid "Platform Images"
 msgstr "平台图像"
 
-#: src/pages/PlatformPage.jsx:306
+#: src/pages/PlatformPage.jsx:307
 msgid "Platform Name*"
 msgstr "平台名称*"
 
-#: src/pages/PlatformPage.jsx:337
-#: src/pages/PlatformPage.jsx:682
+#: src/pages/PlatformPage.jsx:149
+msgid "Platform updated successfully"
+msgstr "平台更新成功"
+
+#: src/pages/PlatformPage.jsx:338
+#: src/pages/PlatformPage.jsx:683
 msgid "Platform URL"
 msgstr "平台 URL"
 
-#: src/pages/PlatformPage.jsx:221
-#: src/pages/PlatformPage.jsx:237
+#: src/components/AppSidebar.jsx:47
+msgid "Platform Wallet"
+msgstr "平台钱包"
+
+#: src/pages/PlatformPage.jsx:222
+#: src/pages/PlatformPage.jsx:238
+#: src/components/AppSidebar.jsx:32
 msgid "Platforms"
 msgstr "平台"
 
-#: src/pages/PlatformPage.jsx:278
-#: src/pages/PlatformPage.jsx:389
-#: src/pages/PlatformPage.jsx:751
+#: src/components/ui/pagination.jsx:68
+msgid "Previous"
+msgstr "上一页"
+
+#: src/pages/PlatformPage.jsx:279
+#: src/pages/PlatformPage.jsx:390
+#: src/pages/PlatformPage.jsx:752
 msgid "Pricing"
 msgstr "定价"
 
-#: src/pages/ReferralCodesPage.jsx:88
+#: src/components/Navbar.jsx:156
+msgid "Profile"
+msgstr "个人资料"
+
+#: src/pages/ReferralCodesPage.jsx:101
 msgid "Referral Code"
 msgstr "推荐代码"
 
-#: src/pages/ReferralCodesPage.jsx:57
-#: src/pages/ReferralCodesPage.jsx:73
+#: src/pages/ReferralCodesPage.jsx:71
+#: src/pages/ReferralCodesPage.jsx:86
+#: src/components/AppSidebar.jsx:42
 msgid "Referral Codes"
 msgstr "推荐码"
 
-#: src/pages/ReferralCodesPage.jsx:91
+#: src/components/ReferralTree.jsx:150
+msgid "Referral Tree"
+msgstr "推荐树"
+
+#: src/pages/ReferralCodesPage.jsx:104
 msgid "Referred By"
 msgstr "引用者"
 
@@ -303,78 +707,174 @@ msgstr "引用者"
 msgid "Rejected"
 msgstr "已拒绝"
 
-#: src/pages/PlatformPage.jsx:354
-#: src/pages/PlatformPage.jsx:701
+#: src/components/AppSidebar.jsx:54
+msgid "Request"
+msgstr "请求"
+
+#: src/pages/PlatformPage.jsx:355
+#: src/pages/PlatformPage.jsx:702
 msgid "Rewards"
 msgstr "奖励"
 
-#: src/pages/PlatformPage.jsx:696
+#: src/pages/PlatformPage.jsx:697
 msgid "Rewards & Pricing"
 msgstr "奖励与价格"
 
-#: src/pages/PlatformPage.jsx:856
-#: src/pages/EventPage.jsx:621
+#: src/pages/PlatformPage.jsx:857
+#: src/pages/EventPage.jsx:764
+#: src/components/Navbar.jsx:289
 msgid "Save Changes"
 msgstr "保存更改"
 
-#: src/pages/SendCashbackPage.jsx:142
+#: src/pages/EventPage.jsx:321
+#~ msgid "Search events"
+#~ msgstr "搜索事件"
+
+#. js-lingui-explicit-id
+#: src/pages/EventPage.jsx:321
+msgid "Search events"
+msgstr "搜索事件"
+
+#: src/pages/PlatformPage.jsx:242
+msgid "Search platforms..."
+msgstr "搜索平台..."
+
+#: src/components/Navbar.jsx:170
+msgid "Security"
+msgstr "安全"
+
+#: src/components/Navbar.jsx:101
+msgid "See all notifications"
+msgstr "查看所有通知"
+
+#. js-lingui-explicit-id
+#: src/pages/EventPage.jsx:424
+#: src/pages/EventPage.jsx:694
+msgid "Select language"
+msgstr "选择语言"
+
+#: src/pages/EventPage.jsx:424
+#: src/pages/EventPage.jsx:694
+#~ msgid "Select language"
+#~ msgstr "选择语言"
+
+#: src/pages/SendCashbackPage.jsx:160
+#: src/components/AppSidebar.jsx:58
 msgid "Send Cashback"
 msgstr "发送返金"
 
-#: src/pages/SendCashbackPage.jsx:142
+#: src/pages/SendCashbackPage.jsx:160
 msgid "Sending..."
 msgstr "正在发送..."
 
-#: src/components/AppSidebar.jsx:114
+#: src/components/Navbar.jsx:125
+#: src/components/Navbar.jsx:139
 msgid "Settings"
 msgstr "设置"
 
-#: src/components/AppSidebar.jsx:117
+#: src/components/Navbar.jsx:128
 msgid "Sign out"
 msgstr "登出"
 
-#: src/pages/EventPage.jsx:341
-#: src/pages/EventPage.jsx:415
-#: src/pages/EventPage.jsx:576
+#: src/pages/EventPage.jsx:449
+#: src/pages/EventPage.jsx:526
+#: src/pages/EventPage.jsx:719
 msgid "Start Date"
 msgstr "开始日期"
 
+#. js-lingui-explicit-id
+#: src/pages/EventPage.jsx:150
+msgid "Start date is required"
+msgstr "开始日期是必填项"
+
+#: src/pages/EventPage.jsx:150
+#~ msgid "Start date is required"
+#~ msgstr "需要开始日期"
+
+#: src/pages/WithdrawHistoryPage.jsx:109
 #: src/pages/BindPage.jsx:121
 msgid "Status"
 msgstr "状态"
 
-#: src/pages/EventPage.jsx:280
-#: src/pages/EventPage.jsx:515
+#: src/pages/EventPage.jsx:365
+#: src/pages/EventPage.jsx:635
 msgid "Subtitle"
 msgstr "字幕"
 
-#: src/pages/EventPage.jsx:421
+#. js-lingui-explicit-id
+#: src/pages/EventPage.jsx:134
+msgid "Subtitle is required"
+msgstr "副标题是必填项"
+
+#: src/pages/EventPage.jsx:134
+#~ msgid "Subtitle is required"
+#~ msgstr "需要副标题"
+
+#: src/pages/PlatformPage.jsx:148
+#: src/pages/PlatformPage.jsx:202
+msgid "Success"
+msgstr "成功"
+
+#. js-lingui-explicit-id
+#: src/pages/EventPage.jsx:60
+#: src/pages/EventPage.jsx:277
+msgid "Success"
+msgstr "成功"
+
+#: src/pages/EventPage.jsx:532
 msgid "Tags"
 msgstr "标签"
 
-#: src/pages/EventPage.jsx:372
-#: src/pages/EventPage.jsx:607
+#: src/pages/EventPage.jsx:480
+#: src/pages/EventPage.jsx:750
 msgid "Tags (comma-separated)"
 msgstr "标签(逗号分隔)"
 
-#: src/pages/EventPage.jsx:643
-msgid "This action cannot be undone. This will permanently delete the event."
-msgstr "此操作无法撤销。这将永久删除此事件。"
+#. js-lingui-explicit-id
+#: src/pages/EventPage.jsx:790
+msgid "Delete event warning"
+msgstr "删除事件警告"
 
-#: src/pages/PlatformPage.jsx:878
+#: src/pages/EventPage.jsx:674
+#~ msgid "This action cannot be undone. This will permanently delete the event."
+#~ msgstr "此操作无法撤销。这将永久删除此事件。"
+
+#: src/pages/PlatformPage.jsx:879
 msgid "This action cannot be undone. This will permanently delete the platform."
 msgstr "此操作无法撤销。这将永久删除平台。"
 
-#: src/pages/EventPage.jsx:265
-#: src/pages/EventPage.jsx:409
-#: src/pages/EventPage.jsx:500
+#: src/pages/EventPage.jsx:347
+#: src/pages/EventPage.jsx:520
+#: src/pages/EventPage.jsx:617
 msgid "Title"
 msgstr "标题"
 
-#: src/pages/PlatformPage.jsx:480
-#: src/pages/PlatformPage.jsx:826
+#: src/pages/PlatformPage.jsx:481
+#: src/pages/PlatformPage.jsx:827
 msgid "Title Image URL"
 msgstr "标题图像 URL"
+
+#. js-lingui-explicit-id
+#: src/pages/EventPage.jsx:130
+msgid "Title is required"
+msgstr "需要标题"
+
+#: src/pages/EventPage.jsx:130
+#~ msgid "Title is required"
+#~ msgstr "需要标题"
+
+#: src/pages/PlatformPage.jsx:490
+#: src/pages/PlatformPage.jsx:836
+msgid "Title preview"
+msgstr "标题预览"
+
+#: src/pages/WithdrawHistoryPage.jsx:103
+msgid "To"
+msgstr "至"
+
+#: src/pages/WithdrawHistoryPage.jsx:97
+#~ msgid "Type"
+#~ msgstr "类型"
 
 #: src/pages/BindPage.jsx:118
 msgid "UID"
@@ -388,14 +888,62 @@ msgstr "更新"
 msgid "Update Bind Status"
 msgstr "Update Bind Status"
 
-#: src/pages/EventPage.jsx:310
-#: src/pages/EventPage.jsx:545
+#: src/pages/EventPage.jsx:401
+#: src/pages/EventPage.jsx:671
 msgid "URL"
 msgstr "网址"
 
-#: src/pages/SendCashbackPage.jsx:94
-#: src/pages/ReferralCodesPage.jsx:85
-#: src/pages/BindPage.jsx:115
-msgid "User ID"
-msgstr "用户 ID"
+#. js-lingui-explicit-id
+#: src/pages/EventPage.jsx:142
+msgid "URL is required"
+msgstr "需要URL"
 
+#: src/pages/EventPage.jsx:142
+#~ msgid "URL is required"
+#~ msgstr "需要URL"
+
+#: src/pages/WithdrawHistoryPage.jsx:88
+#: src/pages/UserPlatformWalletPage.jsx:72
+#: src/pages/ReferralCodesPage.jsx:98
+#: src/pages/BindPage.jsx:115
+#~ msgid "user Email"
+#~ msgstr "用户 ID"
+
+#: src/pages/WithdrawHistoryPage.jsx:88
+#: src/pages/UserPlatformWalletPage.jsx:68
+#: src/pages/ReferralCodesPage.jsx:98
+#: src/pages/BindPage.jsx:115
+msgid "User Email"
+msgstr "用户邮箱"
+
+#: src/pages/SendCashbackPage.jsx:109
+msgid "User Platform UID"
+msgstr "用户平台 UID"
+
+#: src/pages/UserPlatformWalletPage.jsx:56
+msgid "User Platform Wallet"
+msgstr "用户平台钱包"
+
+#: src/pages/ReferralCodesPage.jsx:133
+msgid "View Tree"
+msgstr "查看树形图"
+
+#: src/components/Navbar.jsx:89
+msgid "Welcome to the platform"
+msgstr "欢迎使用平台"
+
+#: src/pages/WithdrawHistoryPage.jsx:76
+msgid "Withdraw History"
+msgstr "提现记录"
+
+#: src/components/AppSidebar.jsx:68
+msgid "Withdraw Request"
+msgstr "提现请求"
+
+#: src/components/Navbar.jsx:58
+msgid "You have 3 pending bind requests to review"
+msgstr "您有3个待审核的绑定请求"
+
+#: src/components/Navbar.jsx:75
+msgid "You have 4 pending withdraw requests to review"
+msgstr "您有4个待审核的提现请求"

@@ -112,7 +112,7 @@ export default function BindStatus() {
                     <Trans>Platform</Trans>
                   </TableHead>
                   <TableHead className="font-semibold">
-                    <Trans>User ID</Trans>
+                    <Trans>User Email</Trans>
                   </TableHead>
                   <TableHead className="font-semibold">
                     <Trans>UID</Trans>
@@ -136,7 +136,7 @@ export default function BindStatus() {
                   response.map((binding, index) => (
                     <TableRow key={index} className="hover:bg-muted/50">
                       <TableCell className="font-medium">{binding.platformName}</TableCell>
-                      <TableCell className="font-mono text-sm">{binding.userId}</TableCell>
+                      <TableCell className="font-mono text-sm">{binding.userEmail}</TableCell>
                       <TableCell className="font-mono text-sm">{binding.uid}</TableCell>
                       <TableCell>
                         <span

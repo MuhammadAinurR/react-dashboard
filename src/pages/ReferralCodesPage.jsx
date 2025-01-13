@@ -17,7 +17,7 @@ export default function ReferralCodesPage() {
   const [totalPages, setTotalPages] = useState(1);
   const [selectedTree, setSelectedTree] = useState(null);
   const [treeModalOpen, setTreeModalOpen] = useState(false);
-  const [requestedUserId, setRequestedUserId] = useState(null);
+  const [requesteduserEmail, setRequesteduserEmail] = useState(null);
   const [treeLevel, setTreeLevel] = useState([1, 1]);
 
   const fetchReferralCodes = async (page = 1) => {
@@ -35,11 +35,11 @@ export default function ReferralCodesPage() {
     }
   };
 
-  const fetchReferralTree = async (userId, treeLevel) => {
+  const fetchReferralTree = async (userEmail, treeLevel) => {
     try {
-      setRequestedUserId(userId);
+      setRequesteduserEmail(userEmail);
       const res = await fetch(
-        `/referral-codes/tree/${userId}?ancestorLevels=${treeLevel[0]}&descendantLevels=${treeLevel[1]}`
+        `/referral-codes/tree/${userEmail}?ancestorLevels=${treeLevel[0]}&descendantLevels=${treeLevel[1]}`
       );
       const data = await res.json();
       setSelectedTree(data);
@@ -51,12 +51,12 @@ export default function ReferralCodesPage() {
 
   const increaseTopLevelTree = () => {
     setTreeLevel([treeLevel[0] + 1, treeLevel[1]]);
-    fetchReferralTree(requestedUserId, [treeLevel[0] + 1, treeLevel[1]]);
+    fetchReferralTree(requesteduserEmail, [treeLevel[0] + 1, treeLevel[1]]);
   };
 
   const increaseBottomLevelTree = () => {
     setTreeLevel([treeLevel[0], treeLevel[1] + 1]);
-    fetchReferralTree(requestedUserId, [treeLevel[0], treeLevel[1] + 1]);
+    fetchReferralTree(requesteduserEmail, [treeLevel[0], treeLevel[1] + 1]);
   };
 
   useEffect(() => {
@@ -95,7 +95,7 @@ export default function ReferralCodesPage() {
               <TableHeader>
                 <TableRow className="bg-muted/50">
                   <TableHead className="font-semibold">
-                    <Trans>User ID</Trans>
+                    <Trans>User Email</Trans>
                   </TableHead>
                   <TableHead className="font-semibold">
                     <Trans>Referral Code</Trans>
@@ -112,13 +112,13 @@ export default function ReferralCodesPage() {
                 {!response || response.length === 0 ? (
                   <TableRow>
                     <TableCell colSpan={3} className="text-center h-24">
-                      No data
+                      <Trans>No data</Trans>
                     </TableCell>
                   </TableRow>
                 ) : (
                   response.map((referral, index) => (
                     <TableRow key={index} className="hover:bg-muted/50">
-                      <TableCell className="font-mono text-sm">{referral.userId}</TableCell>
+                      <TableCell className="font-mono text-sm">{referral.userEmail}</TableCell>
                       <TableCell className="font-mono text-sm">{referral.referralCode}</TableCell>
                       <TableCell className="font-mono text-sm">{referral.referredBy}</TableCell>
                       <TableCell>
@@ -126,11 +126,11 @@ export default function ReferralCodesPage() {
                           variant="outline"
                           size="sm"
                           onClick={() => {
-                            fetchReferralTree(referral.userId, [1, 1]);
+                            fetchReferralTree(referral.userEmail, [1, 1]);
                             setTreeLevel([1, 1]);
                           }}
                         >
-                          View Tree
+                          <Trans>View Tree</Trans>
                         </Button>
                       </TableCell>
                     </TableRow>
@@ -155,7 +155,7 @@ export default function ReferralCodesPage() {
           isOpen={treeModalOpen}
           onClose={() => setTreeModalOpen(false)}
           treeData={selectedTree}
-          requestedUserId={requestedUserId}
+          requesteduserEmail={requesteduserEmail}
           increaseTopLevelTree={increaseTopLevelTree}
           increaseBottomLevelTree={increaseBottomLevelTree}
           treeLevel={treeLevel}

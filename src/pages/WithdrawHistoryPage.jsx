@@ -57,7 +57,7 @@ export default function WithdrawHistoryPage() {
       <Card className="max-w-4xl mx-auto mt-8">
         <CardHeader>
           <CardTitle>
-            <Trans>Bind Status</Trans>
+            <Trans>Error Status</Trans>
           </CardTitle>
         </CardHeader>
         <CardContent>
@@ -68,7 +68,7 @@ export default function WithdrawHistoryPage() {
       </Card>
     );
   }
-
+  console.log(response);
   return (
     <Card className="max-w-6xl mx-auto mt-8">
       <CardHeader className="flex flex-row items-center justify-between">
@@ -85,7 +85,7 @@ export default function WithdrawHistoryPage() {
               <TableHeader>
                 <TableRow className="bg-muted/50">
                   <TableHead className="font-semibold">
-                    <Trans>User ID</Trans>
+                    <Trans>User Email</Trans>
                   </TableHead>
                   <TableHead className="font-semibold">
                     <Trans>Amount</Trans>
@@ -94,7 +94,13 @@ export default function WithdrawHistoryPage() {
                     <Trans>Network</Trans>
                   </TableHead>
                   <TableHead className="font-semibold">
-                    <Trans>Type</Trans>
+                    <Trans>Hash Link</Trans>
+                  </TableHead>
+                  <TableHead className="font-semibold">
+                    <Trans>From</Trans>
+                  </TableHead>
+                  <TableHead className="font-semibold">
+                    <Trans>To</Trans>
                   </TableHead>
                   <TableHead className="font-semibold">
                     <Trans>Date</Trans>
@@ -114,18 +120,22 @@ export default function WithdrawHistoryPage() {
                 ) : (
                   response.map((data) => (
                     <TableRow key={data.id} className="hover:bg-muted/50">
-                      <TableCell className="font-mono text-sm">{data.userId}</TableCell>
+                      <TableCell className="font-mono text-sm">{data.userEmail}</TableCell>
                       <TableCell className="font-mono text-sm">{formatToUSD(data.amount)}</TableCell>
                       <TableCell>{data.network || '-'}</TableCell>
+                      <TableCell>{data.hashLink || '-'}</TableCell>
                       <TableCell>
-                        {data.type === 'EARN' ? 'Platform => Wallet' : 'Wallet => Cash'}
+                        <Trans>{data.type === 'EARN' ? 'Platform' : 'Wallet'}</Trans>
+                      </TableCell>
+                      <TableCell>
+                        <Trans>{data.type === 'EARN' ? 'Wallet' : 'Cash'}</Trans>
                       </TableCell>
                       <TableCell className="font-mono text-sm">
                         {new Date(data.createdAt).toLocaleDateString()}
                       </TableCell>
                       <TableCell>
                         <Badge variant={getStatusBadgeVariant(data.status)}>
-                          {data.status}
+                          <Trans>{data.status}</Trans>
                         </Badge>
                       </TableCell>
                     </TableRow>

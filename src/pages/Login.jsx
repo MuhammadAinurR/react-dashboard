@@ -40,7 +40,7 @@ export default function LoginPage() {
 
       login(data.token);
 
-      const from = searchParams.get("from") || "/dashboard";
+      const from = searchParams.get("from") || "/platforms";
       navigate(from);
     } catch (error) {
       console.log(error);

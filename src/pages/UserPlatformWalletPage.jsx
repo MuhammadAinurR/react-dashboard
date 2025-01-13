@@ -2,9 +2,6 @@ import { useState, useEffect } from "react";
 import { privateFetch } from "@/hooks/useFetch";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Pagination } from "@/components/ui/pagination";
 import { Trans } from "@lingui/react/macro";
 import { formatToUSD } from "@/utils/formater";
@@ -21,7 +18,6 @@ export default function UserPlatformWalletPage() {
       const query = `?page=${page}`;
       const res = await fetch(`/platform-transaction${query}`);
       const data = await res.json();
-      console.log(data);
       setResponse(data.platformTransactions);
       setTotalPages(data.totalPages);
       setError(null);
@@ -69,7 +65,7 @@ export default function UserPlatformWalletPage() {
               <TableHeader>
                 <TableRow className="bg-muted/50">
                   <TableHead className="font-semibold">
-                    <Trans>User ID</Trans>
+                    <Trans>User Email</Trans>
                   </TableHead>
                   <TableHead className="font-semibold">
                     <Trans>Platform</Trans>
@@ -89,7 +85,7 @@ export default function UserPlatformWalletPage() {
                 ) : (
                   response.map((data, index) => (
                     <TableRow key={index} className="hover:bg-muted/50">
-                      <TableCell className="font-mono text-sm">{data.userId}</TableCell>
+                      <TableCell className="font-mono text-sm">{data.userEmail}</TableCell>
                       <TableCell className="font-medium">{data.platformName}</TableCell>
                       <TableCell className="font-mono text-sm">{formatToUSD(data.balance)}</TableCell>
                     </TableRow>

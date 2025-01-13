@@ -25,8 +25,19 @@ import { Textarea } from "@/components/ui/textarea";
 import { toast, useToast } from "@/hooks/use-toast";
 import { eventsApi } from "@/services/api/events";
 import { Trans } from "@lingui/react/macro";
+import { t } from "@lingui/core/macro";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
 const ITEMS_PER_PAGE = 10;
+
+const LANGUAGE_OPTIONS = [
+  { value: "ch", label: "Chinese" },
+  { value: "en", label: "English" },
+  { value: "id", label: "Indonesian" },
+  { value: "ja", label: "Japanese" },
+  { value: "ko", label: "Korean" },
+  { value: "vn", label: "Vietnamese" },
+];
 
 const useEventOperations = (fetch) => {
   const api = eventsApi(fetch);
@@ -34,7 +45,10 @@ const useEventOperations = (fetch) => {
 
   const handleApiError = (error, customMessage) => {
     toast({
-      title: "Error",
+      title: t({
+        id: "Error",
+        message: "Error"
+      }),
       description: error.message || customMessage,
       variant: "destructive",
     });
@@ -43,7 +57,10 @@ const useEventOperations = (fetch) => {
 
   const handleSuccess = (message) => {
     toast({
-      title: "Success",
+      title: t({
+        id: "Success",
+        message: "Success"
+      }),
       description: message,
       variant: "success",
     });
@@ -65,40 +82,79 @@ const useEventOperations = (fetch) => {
     deleteEvent: async (eventId) => {
       try {
         await api.deleteEvent(eventId);
-        handleSuccess("Event deleted successfully");
+        handleSuccess(t({
+          id: "Event deleted successfully",
+          message: "Event deleted successfully"
+        }));
       } catch (error) {
-        throw handleApiError(error, "Failed to delete event");
+        throw handleApiError(error, t({
+          id: "Failed to delete event",
+          message: "Failed to delete event"
+        }));
       }
     },
 
     updateEvent: async (eventId, data) => {
       try {
         await api.updateEvent(eventId, data);
-        handleSuccess("Event updated successfully");
+        handleSuccess(t({
+          id: "Event updated successfully",
+          message: "Event updated successfully"
+        }));
       } catch (error) {
-        throw handleApiError(error, "Failed to update event");
+        throw handleApiError(error, t({
+          id: "Failed to update event",
+          message: "Failed to update event"
+        }));
       }
     },
 
     createEvent: async (data) => {
       try {
         await api.createEvent(data);
-        handleSuccess("Event created successfully");
+        handleSuccess(t({
+          id: "Event created successfully",
+          message: "Event created successfully"
+        }));
       } catch (error) {
-        throw handleApiError(error, "Failed to create event");
+        throw handleApiError(error, t({
+          id: "Failed to create event",
+          message: "Failed to create event"
+        }));
       }
     },
   };
 };
 
 const eventFormSchema = z.object({
-  title: z.string().min(1, "Title is required"),
-  subTitle: z.string().min(1, "Subtitle is required"),
-  imageUrl: z.string().min(1, "Image URL is required"),
-  url: z.string().min(1, "URL is required"),
-  language: z.string().min(1, "Language is required"),
-  startDate: z.string().min(1, "Start date is required"),
-  endDate: z.string().min(1, "End date is required"),
+  title: z.string().min(1, t({
+    id: "Title is required",
+    message: "Title is required"
+  })),
+  subTitle: z.string().min(1, t({
+    id: "Subtitle is required",
+    message: "Subtitle is required"
+  })),
+  imageUrl: z.string().min(1, t({
+    id: "Image URL is required",
+    message: "Image URL is required"
+  })),
+  url: z.string().min(1, t({
+    id: "URL is required",
+    message: "URL is required"
+  })),
+  language: z.string().min(1, t({
+    id: "Language is required",
+    message: "Language is required"
+  })),
+  startDate: z.string().min(1, t({
+    id: "Start date is required",
+    message: "Start date is required"
+  })),
+  endDate: z.string().min(1, t({
+    id: "End date is required",
+    message: "End date is required"
+  })),
   tags: z.string().optional(),
 });
 
@@ -124,7 +180,7 @@ export default function EventPage() {
       subTitle: "",
       imageUrl: "",
       url: "",
-      language: "",
+      language: "en",
       startDate: "",
       endDate: "",
       tags: "",
@@ -138,7 +194,7 @@ export default function EventPage() {
       subTitle: "",
       imageUrl: "",
       url: "",
-      language: "",
+      language: "en",
       startDate: "",
       endDate: "",
       tags: "",
@@ -154,8 +210,14 @@ export default function EventPage() {
     } catch (err) {
       setError(err);
       toast({
-        title: "Error",
-        description: err.message || "Failed to fetch events",
+        title: t({
+          id: "Error",
+          message: "Error"
+        }),
+        description: err.message || t({
+          id: "Failed to fetch events",
+          message: "Failed to fetch events"
+        }),
         variant: "destructive",
       });
     } finally {
@@ -211,6 +273,17 @@ export default function EventPage() {
       await fetchEvents(currentPage, searchQuery);
       setIsAddDialogOpen(false);
       addEventForm.reset();
+      toast({
+        title: t({
+          id: "Success",
+          message: "Success"
+        }),
+        description: t({
+          id: "Event created successfully",
+          message: "Event created successfully"
+        }),
+        variant: "success",
+      });
     } catch (err) {
       setError(err);
     }
@@ -225,7 +298,13 @@ export default function EventPage() {
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <p className="text-destructive">Error: {error.message || error}</p>
+          <p className="text-destructive">
+            {t({
+              id: "Error: {error}",
+              message: "Error: {error}",
+              values: { error: error.message || error }
+            })}
+          </p>
         </CardContent>
       </Card>
     );
@@ -239,7 +318,10 @@ export default function EventPage() {
         </CardTitle>
         <div className="flex gap-4">
           <Input
-            placeholder="Search events..."
+            placeholder={t({
+              id: "Search events",
+              message: "Search events..."
+            })}
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className="w-[250px]"
@@ -265,7 +347,10 @@ export default function EventPage() {
                           <Trans>Title</Trans>
                         </FormLabel>
                         <FormControl>
-                          <Input {...field} />
+                          <Input placeholder={t({
+                            id: "Enter title",
+                            message: "Enter title"
+                          })} {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -280,7 +365,10 @@ export default function EventPage() {
                           <Trans>Subtitle</Trans>
                         </FormLabel>
                         <FormControl>
-                          <Textarea {...field} />
+                          <Textarea placeholder={t({
+                            id: "Enter subtitle",
+                            message: "Enter subtitle"
+                          })} {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -295,7 +383,10 @@ export default function EventPage() {
                           <Trans>Image URL</Trans>
                         </FormLabel>
                         <FormControl>
-                          <Input {...field} />
+                          <Input placeholder={t({
+                            id: "Image URL",
+                            message: "https://example.com/image.png"
+                          })} {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -310,7 +401,10 @@ export default function EventPage() {
                           <Trans>URL</Trans>
                         </FormLabel>
                         <FormControl>
-                          <Input {...field} />
+                          <Input placeholder={t({
+                            id: "Event URL",
+                            message: "https://example.com/event"
+                          })} {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -324,9 +418,23 @@ export default function EventPage() {
                         <FormLabel>
                           <Trans>Language</Trans>
                         </FormLabel>
-                        <FormControl>
-                          <Input {...field} />
-                        </FormControl>
+                        <Select onValueChange={field.onChange} defaultValue={field.value}>
+                          <FormControl>
+                            <SelectTrigger>
+                              <SelectValue placeholder={t({
+                                id: "Select language",
+                                message: "Select language"
+                              })} />
+                            </SelectTrigger>
+                          </FormControl>
+                          <SelectContent>
+                            {LANGUAGE_OPTIONS.map((option) => (
+                              <SelectItem key={option.value} value={option.value}>
+                                {option.label}
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
                         <FormMessage />
                       </FormItem>
                     )}
@@ -395,7 +503,10 @@ export default function EventPage() {
       <CardContent>
         {isLoading ? (
           <p>
-            <Trans>Loading...</Trans>
+            {t({
+              id: "Loading",
+              message: "Loading..."
+            })}
           </p>
         ) : (
           <>
@@ -429,7 +540,10 @@ export default function EventPage() {
                 {events.length === 0 ? (
                   <TableRow>
                     <TableCell colSpan={7} className="text-center h-24">
-                      <Trans>No events found</Trans>
+                      {t({
+                        id: "No events found",
+                        message: "No events found"
+                      })}
                     </TableCell>
                   </TableRow>
                 ) : (
@@ -457,7 +571,10 @@ export default function EventPage() {
                         ) : (
                           <div className="w-16 h-12 bg-muted rounded-lg flex items-center justify-center">
                             <span className="text-xs text-muted-foreground">
-                              <Trans>No image</Trans>
+                              {t({
+                                id: "No image",
+                                message: "No image"
+                              })}
                             </span>
                           </div>
                         )}
@@ -500,7 +617,10 @@ export default function EventPage() {
                                           <Trans>Title</Trans>
                                         </FormLabel>
                                         <FormControl>
-                                          <Input {...field} />
+                                          <Input placeholder={t({
+                                            id: "Enter title",
+                                            message: "Enter title"
+                                          })} {...field} />
                                         </FormControl>
                                         <FormMessage />
                                       </FormItem>
@@ -515,7 +635,10 @@ export default function EventPage() {
                                           <Trans>Subtitle</Trans>
                                         </FormLabel>
                                         <FormControl>
-                                          <Textarea {...field} />
+                                          <Textarea placeholder={t({
+                                            id: "Enter subtitle",
+                                            message: "Enter subtitle"
+                                          })} {...field} />
                                         </FormControl>
                                         <FormMessage />
                                       </FormItem>
@@ -530,7 +653,10 @@ export default function EventPage() {
                                           <Trans>Image URL</Trans>
                                         </FormLabel>
                                         <FormControl>
-                                          <Input {...field} />
+                                          <Input placeholder={t({
+                                            id: "Image URL",
+                                            message: "https://example.com/image.png"
+                                          })} {...field} />
                                         </FormControl>
                                         <FormMessage />
                                       </FormItem>
@@ -545,7 +671,10 @@ export default function EventPage() {
                                           <Trans>URL</Trans>
                                         </FormLabel>
                                         <FormControl>
-                                          <Input {...field} />
+                                          <Input placeholder={t({
+                                            id: "Event URL",
+                                            message: "https://example.com/event"
+                                          })} {...field} />
                                         </FormControl>
                                         <FormMessage />
                                       </FormItem>
@@ -559,9 +688,23 @@ export default function EventPage() {
                                         <FormLabel>
                                           <Trans>Language</Trans>
                                         </FormLabel>
-                                        <FormControl>
-                                          <Input {...field} />
-                                        </FormControl>
+                                        <Select onValueChange={field.onChange} defaultValue={field.value}>
+                                          <FormControl>
+                                            <SelectTrigger>
+                                              <SelectValue placeholder={t({
+                                                id: "Select language",
+                                                message: "Select language"
+                                              })} />
+                                            </SelectTrigger>
+                                          </FormControl>
+                                          <SelectContent>
+                                            {LANGUAGE_OPTIONS.map((option) => (
+                                              <SelectItem key={option.value} value={option.value}>
+                                                {option.label}
+                                              </SelectItem>
+                                            ))}
+                                          </SelectContent>
+                                        </Select>
                                         <FormMessage />
                                       </FormItem>
                                     )}
@@ -637,10 +780,17 @@ export default function EventPage() {
                             <AlertDialogContent>
                               <AlertDialogHeader>
                                 <AlertDialogTitle>
-                                  <Trans>Are you sure you want to delete {event.title}?</Trans>
+                                  {t({
+                                    id: "Delete event confirmation",
+                                    message: "Are you sure you want to delete {title}?",
+                                    values: { title: event.title }
+                                  })}
                                 </AlertDialogTitle>
                                 <AlertDialogDescription>
-                                  <Trans>This action cannot be undone. This will permanently delete the event.</Trans>
+                                  {t({
+                                    id: "Delete event warning",
+                                    message: "This action cannot be undone. This will permanently delete the event."
+                                  })}
                                 </AlertDialogDescription>
                               </AlertDialogHeader>
                               <AlertDialogFooter>

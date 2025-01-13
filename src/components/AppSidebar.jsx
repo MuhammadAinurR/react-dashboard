@@ -1,5 +1,7 @@
 import { Calendar, ChevronUp, Home, Inbox, Search, Settings, Send, Code, History, Wallet, Server } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
+import { t } from "@lingui/core/macro";
+import { useLingui } from "@lingui/react";
 
 import {
   Sidebar,
@@ -10,117 +12,117 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-  SidebarFooter,
+  SidebarMenuSub,
+  SidebarMenuSubItem,
 } from "@/components/ui/sidebar";
 import { Link, useLocation } from "react-router-dom";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "./ui/dropdown-menu";
-import { useAuth } from "@/context/AuthContext";
-import LanguageToggler from "./LanguageToggler";
 import { Trans } from "@lingui/react/macro";
-
-// Menu items.
-const items = [
-  {
-    title: "Home",
-    url: "/dashboard",
-    icon: Home,
-  },
-  {
-    title: "Bind Status",
-    url: "/bind-status",
-    icon: Inbox,
-  },
-  {
-    title: "Events",
-    url: "/events",
-    icon: Calendar,
-  },
-  {
-    title: "Platforms",
-    url: "/platforms",
-    icon: Server,
-  },
-  {
-    title: "Referral Codes",
-    url: "/referral-codes",
-    icon: Code,
-  },
-  {
-    title: "Send Cashback",
-    url: "/send-cashback",
-    icon: Send,
-  },
-  {
-    title: "Platform Wallet",
-    url: "/platform-wallet",
-    icon: Wallet,
-  },
-  {
-    title: "Withdraw History",
-    url: "/withdraw-history",
-    icon: History,
-  },
-];
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "./ui/collapsible";
 
 export function AppSidebar() {
   const location = useLocation();
-  const { user, logout } = useAuth();
-  const handleLogout = () => {
-    logout();
+  const { i18n } = useLingui();
+
+  const items = [
+    {
+      category: i18n._(t`Master Data`),
+      icon: Settings,
+      items: [
+        {
+          title: i18n._(t`Platforms`),
+          url: "/platforms",
+          icon: Server,
+        },
+        {
+          title: i18n._(t`Events`),
+          url: "/events",
+          icon: Calendar,
+        },
+        {
+          title: i18n._(t`Referral Codes`),
+          url: "/referral-codes",
+          icon: Code,
+        },
+        {
+          title: i18n._(t`Platform Wallet`),
+          url: "/platform-wallet",
+          icon: Wallet,
+        },
+      ],
+    },
+    {
+      category: i18n._(t`Request`),
+      icon: Send,
+      items: [
+        {
+          title: i18n._(t`Send Cashback`),
+          url: "/send-cashback",
+          icon: Send,
+        },
+        {
+          title: i18n._(t`Bind Request`),
+          url: "/bind-status",
+          icon: Inbox,
+        },
+        {
+          title: i18n._(t`Withdraw Request`),
+          url: "/withdraw-history",
+          icon: History,
+        },
+      ],
+    },
+  ];
+
+  const isCategoryActive = (category) => {
+    return category.items.some(item => location.pathname === item.url);
   };
+
   return (
-    <Sidebar>
+    <Sidebar className="mt-16">
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>Menu</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
-              {items.map((item) => (
-                <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild isActive={location.pathname === item.url}>
-                    <Link to={item.url}>
-                      <item.icon />
-                      <Trans>{item.title}</Trans>
-                    </Link>
-                  </SidebarMenuButton>
-                </SidebarMenuItem>
+              {items.map((category) => (
+                <Collapsible 
+                  className="group/collapsible" 
+                  key={category.category}
+                  defaultOpen={isCategoryActive(category)}
+                >
+                  <SidebarMenuItem>
+                    <CollapsibleTrigger asChild>
+                      <SidebarMenuButton>
+                        <category.icon />
+                        <Trans>{category.category}</Trans>
+                        <ChevronUp className="ml-auto h-4 w-4 text-muted-foreground/50 transition-transform group-data-[state=closed]/collapsible:rotate-180" />
+                      </SidebarMenuButton>
+                    </CollapsibleTrigger>
+                    <CollapsibleContent>
+                      <SidebarMenuSub>
+                        {category.items.map((item) => (
+                          <SidebarMenuSubItem key={item.title}>
+                            <SidebarMenuButton 
+                              asChild 
+                              isActive={location.pathname === item.url}
+                              className="whitespace-normal h-auto py-2"
+                            >
+                              <Link to={item.url}>
+                                <span className="line-clamp-2">
+                                  <Trans>{item.title}</Trans>
+                                </span>
+                              </Link>
+                            </SidebarMenuButton>
+                          </SidebarMenuSubItem>
+                        ))}
+                      </SidebarMenuSub>
+                    </CollapsibleContent>
+                  </SidebarMenuItem>
+                </Collapsible>
               ))}
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
-      <div className="p-1">
-        <LanguageToggler />
-      </div>
-      <SidebarFooter>
-        <SidebarMenu>
-          <SidebarMenuItem>
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <SidebarMenuButton>
-                  <Avatar className="h-6 w-6 mr-2">
-                    <AvatarImage src="https://github.com/shadcn.png" alt="Profile" />
-                    <AvatarFallback>{user?.username?.charAt(0)?.toUpperCase() || "U"}</AvatarFallback>
-                  </Avatar>
-                  {user?.username}
-                  <ChevronUp className="ml-auto" />
-                </SidebarMenuButton>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent side="top" className="w-[--radix-popper-anchor-width]">
-                <DropdownMenuItem>
-                  <Trans>Account</Trans>
-                </DropdownMenuItem>
-                <DropdownMenuItem>
-                  <Trans>Settings</Trans>
-                </DropdownMenuItem>
-                <DropdownMenuItem onClick={handleLogout}>
-                  <Trans>Sign out</Trans>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-          </SidebarMenuItem>
-        </SidebarMenu>
-      </SidebarFooter>
     </Sidebar>
   );
 }
